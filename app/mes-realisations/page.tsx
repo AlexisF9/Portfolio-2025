@@ -27,9 +27,19 @@ export default function Page() {
       </h1>
       {data.length > 0 && (
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-9">
-          {data.map((el: any, index) => {
-            return <Card key={index} card={el} />;
-          })}
+          {data.map(
+            (
+              el: {
+                id: number;
+                title: string;
+                pictures: string[];
+                shortDescription: string;
+              },
+              index
+            ) => {
+              return <Card key={index} card={el} />;
+            }
+          )}
         </div>
       )}
     </div>
