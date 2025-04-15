@@ -31,6 +31,7 @@ export default function Page() {
             (
               el: {
                 id: number;
+                name: string;
                 title: string;
                 pictures: string[];
                 shortDescription: string;

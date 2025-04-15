@@ -9,6 +9,7 @@ export function Card({
 }: {
   card: {
     id: number;
+    name: string;
     title: string;
     pictures: string[];
     shortDescription: string;
@@ -64,7 +65,7 @@ export function Card({
         <h2 className="text-lg font-bold">{card.title}</h2>
         <p className="text-sm">{card.shortDescription}</p>
         <Link
-          href={"#"}
+          href={`/mes-realisations/${card.name}`}
           className="font-gothic text-sm w-fit flex items-center gap-2"
         >
           En savoir plus <MoveRight />
