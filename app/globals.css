@@ -20,6 +20,9 @@
 @theme {
   --font-inconsolata: "Inconsolata", monospace;
   --font-gothic: "Special Gothic Expanded One", sans-serif;
+
+  --color-react: #60d9f8;
+  --color-vue: #3fb984;
 }
 
 body {

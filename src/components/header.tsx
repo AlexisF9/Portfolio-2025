@@ -36,6 +36,10 @@ export function Header() {
     document.documentElement.style.overflow = openMenu ? "hidden" : "inherit";
   }, [openMenu]);
 
+  useEffect(() => {
+    setOpenMenu(false);
+  }, [pathname]);
+
   const toggleTheme = () => {
     if (theme === "dark") {
       document.documentElement.classList.remove("dark");
