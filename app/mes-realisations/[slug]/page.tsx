@@ -5,5 +5,9 @@ export default async function Page({
 }) {
   const { slug } = await params;
 
+  //if (slug === "test") {
+  //  notFound();
+  //}
+
   return <div>My Post: {slug}</div>;
 }
