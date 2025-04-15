@@ -23,8 +23,8 @@ export default function Home() {
         <div className="flex flex-col gap-4">
           <h3 className="text-xl font-gothic dark:text-white">Qui suis-je ?</h3>
           <p className="dark:text-white">
-            Je suis Alexis, j'ai 23 ans je suis développeur front-end depuis
-            2022
+            Je suis Alexis, j&apos;ai 23 ans je suis développeur front-end
+            depuis 2022
           </p>
         </div>
       </div>
