@@ -27,11 +27,11 @@ export default function Home() {
           </h3>
           <p className="dark:text-white">
             Je suis Alexis, j&apos;ai 23 ans je suis développeur front-end
-            depuis 2022. J&apos;ai tout d'abord fait un{" "}
+            depuis 2022. J&apos;ai tout d&apos;abord fait un{" "}
             <span className="font-bold">DUT MMI</span> (Métiers du Multimédia et
             de l&apos;Internet) à Grenoble en 2 ans. A la fin de ce DUT
             j&apos;ai réalisé un stage en tant qu&apos;intégrateur web et
-            webdesigner dans l'agence{" "}
+            webdesigner dans l&apos;agence{" "}
             <span className="font-bold">6tematik</span>. Puis je me suis
             spécialisé dans le développement web en faisant la troisième année
             du <span className="font-bold">Bachelor Développeur Web</span> à
