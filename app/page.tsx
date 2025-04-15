@@ -23,7 +23,7 @@ export default function Home() {
       </div>
       <div>
         <div className="flex flex-col gap-4">
-          <h3 className="text-l md:text-2xl font-gothic dark:text-white">
+          <h3 className="text-xl md:text-2xl font-gothic dark:text-white">
             Qui suis-je ?
           </h3>
           <p className="dark:text-white">
