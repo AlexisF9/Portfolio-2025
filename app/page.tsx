@@ -1,3 +1,4 @@
+import { Github, Linkedin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -26,7 +27,7 @@ export default function Home() {
             Qui suis-je ?
           </h3>
           <p className="dark:text-white">
-            Je suis Alexis, j&apos;ai 23 ans je suis développeur front-end
+            Je suis Alexis, j&apos;ai 23 ans et je suis développeur front-end
             depuis 2022. J&apos;ai tout d&apos;abord fait un{" "}
             <span className="font-bold">DUT MMI</span> (Métiers du Multimédia et
             de l&apos;Internet) à Grenoble en 2 ans. A la fin de ce DUT
@@ -39,7 +40,7 @@ export default function Home() {
             alternance en tant que développeur front-end dans l&apos;agence de
             pub <span className="font-bold">TBWA\Paris</span>.
           </p>
-          <p>
+          <p className="dark:text-white">
             À la fin de mes études, j&apos;ai intégré en CDI l&apos;agence{" "}
             <span className="font-bold">Ascanio</span> à Meylan durant 2 mois
             comme développeur front-end{" "}
@@ -53,13 +54,29 @@ export default function Home() {
           </p>
         </div>
 
-        <Link
-          className="block font-gothic mx-auto mt-9 w-fit border rounded-full py-2 px-4 bg-linear-to-r hover:from-white hover:to-white from-react to-vue transition duration-300 ease-in-out"
-          href={"./alexis-flacher-cv.pdf"}
-          target="_blank"
-        >
-          Télécharger mon CV
-        </Link>
+        <div className="flex flex-col md:flex-row mt-9 items-center gap-4 justify-center">
+          <Link
+            className="block font-gothic w-fit border border-transparent rounded-full py-2 px-4 bg-linear-to-r hover:from-transparent hover:to-transparent hover:dark:text-white hover:border-neutral-600 hover:dark:border-white from-react to-vue transition duration-300 ease-in-out"
+            href={"./alexis-flacher-cv.pdf"}
+            target="_blank"
+          >
+            Télécharger mon CV
+          </Link>
+          <div className="flex gap-4">
+            <Link
+              className="block font-gothic w-fit border border-neutral-600 rounded-full p-2 dark:text-white dark:border-white"
+              href={"https://www.linkedin.com/in/alexis-flacher-772ba7197/"}
+            >
+              <Linkedin />
+            </Link>
+            <Link
+              className="block font-gothic w-fit border border-neutral-600 rounded-full p-2 dark:text-white dark:border-white"
+              href={"https://github.com/AlexisF9"}
+            >
+              <Github />
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );
