@@ -1,20 +1,9 @@
+import { Realisation } from "@/app/mes-realisations/page";
 import { MoveRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import "swiper/css";
-import "swiper/css/navigation";
 
-export function Card({
-  card,
-}: {
-  card: {
-    id: number;
-    name: string;
-    title: string;
-    pictures: string[];
-    shortDescription: string;
-  };
-}) {
+export function Card({ card }: { card: Realisation }) {
   return (
     <div className="relative">
       <div className="rounded-2xl shadow-lg overflow-hidden">
@@ -27,42 +16,17 @@ export function Card({
         />
       </div>
 
-      {/* 
-      <Swiper
-          slidesPerView={1}
-          modules={[Navigation]}
-          navigation={{
-            nextEl: `.custom-next-${card.id}`,
-            prevEl: `.custom-prev-${card.id}`,
-          }}
-        >
-          {card.pictures.map((el: string) => {
-            return (
-              <SwiperSlide>
-                <Image
-                  className="w-full aspect-[4/2] object-cover"
-                  src={el}
-                  width={400}
-                  height={300}
-                  alt=""
-                />
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
-      <div>
-              <button className={`custom-prev-${card.id} cursor-pointer`}>
-                <ChevronLeft />
-              </button>
-              <button className={`custom-next-${card.id} cursor-pointer`}>
-                <ChevronRight />
-              </button>
-            </div>
-      
-      */}
-
       <div className="flex flex-col mt-4 gap-2 dark:text-white">
-        <h2 className="text-lg font-bold">{card.title}</h2>
+        <div className="flex items-center gap-2 flex-wrap-reverse justify-between">
+          <h2 className="text-lg font-bold">{card.title}</h2>
+          <div className="flex items-center gap-2">
+            <p className="text-sm">{card.date}</p>
+            <p className="border rounded-full px-2 py-px w-fit text-sm">
+              Projet {card.type}
+            </p>
+          </div>
+        </div>
+
         <p className="text-sm">{card.shortDescription}</p>
         <Link
           href={`/mes-realisations/${card.name}`}

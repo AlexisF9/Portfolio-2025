@@ -7,7 +7,10 @@ export interface Realisation {
   name: string;
   title: string;
   pictures: string[];
+  description: string;
   shortDescription: string;
+  type: string;
+  date: string;
 }
 
 export default function Page() {
