@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Header } from "@/src/components/header";
 import { Footer } from "@/src/components/footer";
+import LenisScroll from "./lenis-scroll";
 
 export const metadata: Metadata = {
   title: "Mon portfolio",
@@ -16,6 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="light">
       <body className="max-w-5xl mx-auto pr-9 pl-9 bg-white dark:bg-neutral-900">
+        <LenisScroll />
         <Header />
         {children}
         <Footer />

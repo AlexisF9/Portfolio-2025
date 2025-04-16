@@ -1,8 +1,85 @@
+"use client";
+import gsap from "gsap";
 import { Github, Linkedin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useRef } from "react";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
+  const titleRef = useRef(null);
+  const title2Ref = useRef(null);
+  const pictureRef = useRef(null);
+  const subtitleRef = useRef(null);
+
+  useEffect(() => {
+    gsap.fromTo(
+      titleRef.current,
+      { opacity: 0, x: 50 },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 1,
+        delay: 1,
+      }
+    );
+    gsap.fromTo(
+      title2Ref.current,
+      { opacity: 0, x: -50 },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 1,
+        delay: 1,
+      }
+    );
+    gsap.fromTo(
+      subtitleRef.current,
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        delay: 1,
+      }
+    );
+    gsap.fromTo(
+      pictureRef.current,
+      { opacity: 0 },
+      {
+        opacity: 1,
+        duration: 1,
+      }
+    );
+
+    const elements = gsap.utils.toArray(".fade-in");
+
+    elements.forEach((el) => {
+      const t = el as HTMLElement;
+      gsap.fromTo(
+        t,
+        { opacity: 0, y: 40 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: t,
+            start: "top 80%",
+            //toggleActions: "play none none reverse",
+          },
+        }
+      );
+    });
+
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
+  }, []);
+
   return (
     <div>
       <div className="h-dvh flex justify-center items-center">
@@ -10,23 +87,30 @@ export default function Home() {
           src={"/Alexis.jpg"}
           width={400}
           height={600}
-          alt=""
-          className="rounded-full absolute aspect-[2/3] w-auto h-[400px] sm:h-[500px] md:h-[600px] max-h-dvh object-cover z-[-1] p-4"
+          alt="Photo Alexis Flacher"
+          ref={pictureRef}
+          className="opacity-[0] rounded-full absolute aspect-[2/3] w-auto h-[400px] sm:h-[500px] md:h-[600px] max-h-dvh object-cover z-[-1] p-4"
         />
         <div className="flex flex-col dark:text-white w-full gap-9 md:gap-4 h-[440px] sm:h-[540px] md:h-[640px] max-h-dvh justify-between">
           <h1 className="font-gothic text-5xl sm:text-7xl md:text-8xl uppercase flex flex-col items-center text-white mix-blend-difference">
-            <span className="self-start">Alexis</span>
-            <span className="self-end">Flacher</span>
+            <span ref={titleRef} className="opacity-[0] self-start">
+              Alexis
+            </span>
+            <span ref={title2Ref} className="opacity-[0] self-end">
+              Flacher
+            </span>
           </h1>
-          <h2 className="text-xl text-center">Développeur Front-end</h2>
+          <h2 ref={subtitleRef} className="opacity-[0] text-xl text-center">
+            Développeur Front-end
+          </h2>
         </div>
       </div>
       <div>
         <div className="flex flex-col gap-4">
-          <h3 className="text-xl md:text-2xl font-gothic dark:text-white">
+          <h3 className="fade-in text-xl md:text-2xl font-gothic dark:text-white">
             Qui suis-je ?
           </h3>
-          <p className="dark:text-white">
+          <p className="fade-in dark:text-white">
             Je suis Alexis, j&apos;ai 23 ans et je suis développeur front-end
             depuis 2022. J&apos;ai tout d&apos;abord fait un{" "}
             <span className="font-bold">DUT MMI</span> (Métiers du Multimédia et
@@ -40,7 +124,7 @@ export default function Home() {
             alternance en tant que développeur front-end dans l&apos;agence de
             pub <span className="font-bold">TBWA\Paris</span>.
           </p>
-          <p className="dark:text-white">
+          <p className="fade-in dark:text-white">
             À la fin de mes études, j&apos;ai intégré en CDI l&apos;agence{" "}
             <span className="font-bold">Ascanio</span> à Meylan durant 2 mois
             comme développeur front-end{" "}
