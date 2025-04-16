@@ -67,7 +67,7 @@ export function Header() {
         <div
           className={`flex gap-4 ${
             openMenu
-              ? "flex-col fixed inset-[0] bg-white dark:bg-neutral-600 z-[9] md:dark:bg-transparent md:bg-transparent"
+              ? "flex-col fixed inset-[0] bg-white dark:bg-neutral-800 z-[9] md:dark:bg-transparent md:bg-transparent"
               : "hidden md:flex"
           } md:relative justify-center items-center`}
         >
