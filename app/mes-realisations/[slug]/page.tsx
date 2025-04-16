@@ -3,7 +3,7 @@ import { Realisation } from "../page";
 import realisations from "@/public/realisations.json";
 import Link from "next/link";
 import { Slider } from "@/src/components/slider";
-import { Github } from "lucide-react";
+import { Github, SquareArrowOutUpRight } from "lucide-react";
 
 export default async function Page({
   params,
@@ -21,7 +21,7 @@ export default async function Page({
   return (
     <div className="pt-40">
       <div className="flex items-center flex-wrap-reverse justify-between mb-9">
-        <h1 className="text-xl md:text-2xl dark:text-white font-gothic">
+        <h1 className="text-xl md:text-4xl dark:text-white font-gothic">
           {rea.title}
         </h1>
         <div className="flex items-center gap-2">
@@ -31,7 +31,7 @@ export default async function Page({
           </p>
         </div>
       </div>
-      <p className="pb-9">{rea.description}</p>
+      <p className="pb-9 dark:text-white">{rea.description}</p>
 
       <Slider pictures={rea.pictures} />
 
@@ -39,11 +39,11 @@ export default async function Page({
         <div className="flex items-center gap-4 w-fit mx-auto pt-9">
           {rea.link && (
             <Link
-              className="block font-gothic w-fit border border-transparent rounded-full py-2 px-4 bg-linear-to-r hover:from-transparent hover:to-transparent hover:dark:text-white hover:border-neutral-600 hover:dark:border-white from-react to-vue transition duration-300 ease-in-out"
+              className="flex items-center gap-2 font-gothic w-fit border border-transparent rounded-full py-2 px-4 bg-linear-to-r hover:from-transparent hover:to-transparent hover:dark:text-white hover:border-neutral-600 hover:dark:border-white from-react to-vue transition duration-300 ease-in-out"
               href={rea.link}
               target="_blank"
             >
-              Voir le site
+              Voir le site <SquareArrowOutUpRight className="w-[20px]" />
             </Link>
           )}
           {rea.github && (

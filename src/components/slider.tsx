@@ -44,14 +44,14 @@ export function Slider({ pictures }: { pictures: string[] }) {
                 key={index}
                 className={`${
                   currentSlide === index + 1
-                    ? "bg-transparent"
-                    : "bg-neutral-600"
-                } block border border-neutral-600 w-[10px] aspect-square rounded-full`}
+                    ? "bg-neutral-600 dark:bg-white"
+                    : "bg-transparent"
+                } block border border-neutral-600 dark:border-white w-[10px] aspect-square rounded-full`}
               ></span>
             );
           })}
         </div>
-        <div className="flex items-center">
+        <div className="flex items-center dark:text-white">
           <button className="custom-prev cursor-pointer">
             <ChevronLeft className="w-[30px] h-auto" />
           </button>

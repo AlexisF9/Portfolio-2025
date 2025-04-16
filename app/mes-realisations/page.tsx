@@ -9,6 +9,7 @@ export interface Realisation {
   pictures: string[];
   description: string;
   shortDescription: string;
+  technos: { name: string; label: string }[];
   type: string;
   date: string;
 }

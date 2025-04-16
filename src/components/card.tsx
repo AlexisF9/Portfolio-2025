@@ -5,10 +5,10 @@ import Link from "next/link";
 
 export function Card({ card }: { card: Realisation }) {
   return (
-    <div className="relative">
+    <div className="relative group">
       <div className="rounded-2xl shadow-lg overflow-hidden">
         <Image
-          className="w-full aspect-[4/2] object-cover"
+          className="w-full aspect-[4/2] object-cover group-hover:scale-110 transition duration-300 ease-in-out"
           src={card.pictures[0]}
           width={400}
           height={300}
@@ -24,13 +24,25 @@ export function Card({ card }: { card: Realisation }) {
             <p className="border rounded-full px-2 py-px w-fit text-sm">
               Projet {card.type}
             </p>
+            <div className="flex items-center gap-2">
+              {card.technos.map((techno, index) => {
+                return (
+                  <Image
+                    key={index}
+                    src={`/images/logo-${techno.name}.png`}
+                    width={20}
+                    height={20}
+                    alt={`logo ${techno.label}`}
+                  />
+                );
+              })}
+            </div>
           </div>
         </div>
-
         <p className="text-sm">{card.shortDescription}</p>
         <Link
           href={`/mes-realisations/${card.name}`}
-          className="font-gothic text-sm w-fit flex items-center gap-2"
+          className="font-gothic text-sm w-fit flex items-center gap-2 after:absolute after:inset-[0]"
         >
           En savoir plus <MoveRight />
         </Link>
