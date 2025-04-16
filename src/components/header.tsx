@@ -65,11 +65,11 @@ export function Header() {
         </button>
 
         <div
-          className={`${
+          className={`flex gap-4 ${
             openMenu
-              ? "fixed inset-[0] bg-white dark:bg-neutral-600 z-[9] md:dark:bg-transparent md:bg-transparent"
-              : "hidden md:block"
-          } md:relative flex justify-center items-center `}
+              ? "flex-col fixed inset-[0] bg-white dark:bg-neutral-600 z-[9] md:dark:bg-transparent md:bg-transparent"
+              : "hidden md:flex"
+          } md:relative justify-center items-center`}
         >
           <button
             className={`${
@@ -79,6 +79,7 @@ export function Header() {
           >
             <X />
           </button>
+
           <ul
             className={`gap-4 text-neutral-950 dark:text-white h-fit flex flex-col md:flex-row`}
           >
@@ -93,14 +94,14 @@ export function Header() {
               <Link href={"/mes-realisations"}>Réalisations</Link>
             </li>
           </ul>
-        </div>
 
-        <button
-          onClick={toggleTheme}
-          className="cursor-pointer text-neutral-950 dark:text-white"
-        >
-          {theme === "dark" ? <Sun /> : <Moon />}
-        </button>
+          <button
+            onClick={toggleTheme}
+            className="cursor-pointer text-neutral-950 dark:text-white"
+          >
+            {theme === "dark" ? <Sun /> : <Moon />}
+          </button>
+        </div>
       </div>
     </nav>
   );
