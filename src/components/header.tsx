@@ -1,38 +1,36 @@
 "use client";
-import gsap from "gsap";
 import { Menu, Moon, Sun, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 export function Header() {
   const pathname = usePathname();
 
-  const headerRef = useRef(null);
+  //const headerRef = useRef(null);
 
   const [theme, setTheme] = useState<"light" | "dark">();
   const [openMenu, setOpenMenu] = useState(false);
-  const [hasAlreadyAnimated, setHasAlreadyAnimated] = useState(false);
+  //const [hasAlreadyAnimated, setHasAlreadyAnimated] = useState(false);
 
   useEffect(() => {
-    const alreadyAnimated = sessionStorage.getItem("fadeAnimated");
-    setHasAlreadyAnimated(alreadyAnimated ? true : false);
+    //const alreadyAnimated = sessionStorage.getItem("fadeAnimated");
+    //setHasAlreadyAnimated(alreadyAnimated ? true : false);
 
-    if (!alreadyAnimated && headerRef.current) {
-      gsap.fromTo(
-        headerRef.current,
-        { y: -150 },
-        {
-          y: 0,
-          duration: 1.5,
-          delay: 2,
-          onComplete: () => {
-            // marquer comme déjà animé
-            sessionStorage.setItem("fadeAnimated", "true");
-          },
-        }
-      );
-    }
+    //if (!alreadyAnimated && headerRef.current) {
+    //  gsap.fromTo(
+    //    headerRef.current,
+    //    { opacity: 0 },
+    //    {
+    //      opacity: 1,
+    //      duration: 1.5,
+    //      delay: 2,
+    //      onComplete: () => {
+    //        sessionStorage.setItem("fadeAnimated", "true");
+    //      },
+    //    }
+    //  );
+    //}
 
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
@@ -75,10 +73,7 @@ export function Header() {
 
   return (
     <nav
-      ref={headerRef}
-      className={`${
-        hasAlreadyAnimated ? "translate-y-[0]" : "translate-y-[-150px]"
-      } top-4 md:top-9 right-[0] fixed flex w-full justify-center z-[9]`}
+      className={`top-4 md:top-9 right-[0] fixed flex w-full justify-center z-[9]`}
     >
       <div
         className={`${
