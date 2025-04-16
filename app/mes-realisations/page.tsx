@@ -1,6 +1,5 @@
 "use client";
 import { Card } from "@/src/components/card";
-import { useEffect, useState } from "react";
 import realisations from "@/public/realisations.json";
 
 export interface Realisation {
