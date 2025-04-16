@@ -22,9 +22,9 @@ export function Slider({ pictures }: { pictures: string[] }) {
         }}
         onSlideChange={(swiper) => setCurrentSlide(swiper.realIndex + 1)}
       >
-        {pictures.map((el: string) => {
+        {pictures.map((el: string, index) => {
           return (
-            <SwiperSlide>
+            <SwiperSlide key={index}>
               <Image
                 className="w-full aspect-[4/2] object-cover"
                 src={el}

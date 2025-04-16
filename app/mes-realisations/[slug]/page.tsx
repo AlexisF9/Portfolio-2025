@@ -18,8 +18,6 @@ export default async function Page({
     notFound();
   }
 
-  console.log(rea);
-
   return (
     <div className="pt-40">
       <div className="flex items-center flex-wrap-reverse justify-between mb-9">
