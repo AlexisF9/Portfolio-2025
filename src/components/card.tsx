@@ -44,7 +44,10 @@ export function Card({ card }: { card: Realisation }) {
           href={`/mes-realisations/${card.name}`}
           className="font-gothic text-sm w-fit flex items-center gap-2 after:absolute after:inset-[0]"
         >
-          En savoir plus <MoveRight />
+          En savoir plus{" "}
+          <span className="group-hover:translate-x-2 transition duration-300 ease-in-out">
+            <MoveRight />
+          </span>
         </Link>
       </div>
     </div>

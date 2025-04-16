@@ -4,6 +4,7 @@ import realisations from "@/public/realisations.json";
 import Link from "next/link";
 import { Slider } from "@/src/components/slider";
 import { Github, SquareArrowOutUpRight } from "lucide-react";
+import Image from "next/image";
 
 export default async function Page({
   params,
@@ -24,11 +25,24 @@ export default async function Page({
         <h1 className="text-xl md:text-4xl dark:text-white font-gothic">
           {rea.title}
         </h1>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 dark:text-white">
           <p className="text-sm">{rea.date}</p>
           <p className="border rounded-full px-2 py-px w-fit text-sm">
             Projet {rea.type}
           </p>
+          <div className="flex items-center gap-2">
+            {rea.technos.map((techno, index) => {
+              return (
+                <Image
+                  key={index}
+                  src={`/images/logo-${techno.name}.png`}
+                  width={20}
+                  height={20}
+                  alt={`logo ${techno.label}`}
+                />
+              );
+            })}
+          </div>
         </div>
       </div>
       <p className="pb-9 dark:text-white">{rea.description}</p>
