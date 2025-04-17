@@ -86,7 +86,7 @@ export function Navbar() {
     <nav>
       <div
         ref={headerRef}
-        className={`fixed z-[9] top-4 md:top-9 left-[50%] translate-x-[-50%] p-4 border bg-white/20 border-neutral-600 dark:border-neutral-300 rounded-full backdrop-blur-sm ${
+        className={`fixed z-[9] top-4 left-[50%] translate-x-[-50%] p-4 border bg-white/20 border-neutral-600 dark:border-neutral-300 rounded-full backdrop-blur-sm ${
           !hasAlreadyAnimated && "translate-y-[-150px]"
         }`}
       >
