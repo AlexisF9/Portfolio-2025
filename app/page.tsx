@@ -50,7 +50,7 @@ export default function Home() {
       { opacity: 0 },
       {
         opacity: 1,
-        duration: 1,
+        duration: 1.3,
       }
     );
 
@@ -89,14 +89,17 @@ export default function Home() {
           height={600}
           alt="Photo Alexis Flacher"
           ref={pictureRef}
-          className="opacity-[0] rounded-full absolute aspect-[2/3] w-auto h-[400px] sm:h-[500px] md:h-[600px] max-h-dvh object-cover z-[-1] p-4"
+          className="opacity-[0] rounded-full absolute aspect-[2/3] w-auto h-[400px] sm:h-[65%] max-h-dvh object-cover z-[-1] p-4"
         />
-        <div className="flex flex-col dark:text-white w-full gap-9 md:gap-4 h-[440px] sm:h-[540px] md:h-[640px] max-h-dvh justify-between">
-          <h1 className="font-gothic text-5xl sm:text-7xl md:text-8xl uppercase flex flex-col items-center text-white mix-blend-difference">
-            <span ref={titleRef} className="opacity-[0] self-start">
+        <div className="flex flex-col dark:text-white w-full gap-9 md:gap-4 h-[440px] sm:h-[70%] max-h-dvh justify-between">
+          <h1 className="font-gothic text-5xl md:text-[6vw] flex flex-col text-center md:text-start md:grid grid-rows-2 grid-cols-2 mx-auto uppercase text-white mix-blend-difference">
+            <span ref={titleRef} className="opacity-[0] justify-self-end">
               Alexis
             </span>
-            <span ref={title2Ref} className="opacity-[0] self-end">
+            <span
+              ref={title2Ref}
+              className="opacity-[0] row-start-2 col-start-2"
+            >
               Flacher
             </span>
           </h1>
