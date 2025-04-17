@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Header } from "@/src/components/header";
 import { Footer } from "@/src/components/footer";
 import LenisScroll from "./lenis-scroll";
 import { Navbar } from "@/src/components/navbar";
