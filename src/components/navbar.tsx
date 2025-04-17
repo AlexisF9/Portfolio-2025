@@ -1,5 +1,5 @@
 "use client";
-import { Menu, Moon, Sun } from "lucide-react";
+import { Menu, Moon, Sun, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -62,7 +62,7 @@ export function Navbar() {
 
   return (
     <nav>
-      <div className="fixed z-[9] p-4 border bg-white/20 border-neutral-600 dark:border-neutral-300 rounded-full backdrop-blur-sm">
+      <div className="fixed z-[9] top-4 md:top-9 left-[50%] translate-x-[-50%] p-4 border bg-white/20 border-neutral-600 dark:border-neutral-300 rounded-full backdrop-blur-sm">
         <button
           onClick={() => setOpenMenu(true)}
           className="cursor-pointer text-neutral-950 dark:text-white block md:hidden"
@@ -93,32 +93,40 @@ export function Navbar() {
         </div>
       </div>
       <div
-        className={`flex md:hidden fixed inset-[0] w-full z-[9] flex-col bg-red-600 transition-all duration-300 ease-in-out ${
+        className={`flex md:hidden fixed inset-[0] w-full z-[9] flex-col bg-white dark:bg-neutral-800 transition-all duration-300 ease-in-out ${
           openMenu
             ? "opacity-100 translate-x-0"
             : "opacity-0 translate-x-[100%] pointer-events-none"
         }`}
       >
-        <ul>
-          {links.map((link, index) => {
-            return (
-              <li
-                key={index}
-                className={`${
-                  pathname === link.link && "opacity-[.5]"
-                } dark:text-white`}
-              >
-                <Link href={link.link}>{link.label}</Link>
-              </li>
-            );
-          })}
-        </ul>
         <button
-          onClick={toggleTheme}
-          className="cursor-pointer text-neutral-950 dark:text-white"
+          className="cursor-pointer absolute dark:text-white top-4 right-4"
+          onClick={() => setOpenMenu(false)}
         >
-          {theme === "dark" ? <Sun /> : <Moon />}
+          <X />
         </button>
+        <div className="flex flex-col gap-4 items-center justify-center h-full">
+          <ul className="flex flex-col gap-4">
+            {links.map((link, index) => {
+              return (
+                <li
+                  key={index}
+                  className={`${
+                    pathname === link.link && "opacity-[.5]"
+                  } dark:text-white`}
+                >
+                  <Link href={link.link}>{link.label}</Link>
+                </li>
+              );
+            })}
+          </ul>
+          <button
+            onClick={toggleTheme}
+            className="cursor-pointer text-neutral-950 dark:text-white"
+          >
+            {theme === "dark" ? <Sun /> : <Moon />}
+          </button>
+        </div>
       </div>
     </nav>
   );
