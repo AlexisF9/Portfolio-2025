@@ -1,15 +1,37 @@
 "use client";
+import gsap from "gsap";
 import { Menu, Moon, Sun, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export function Navbar() {
   const pathname = usePathname();
   const [theme, setTheme] = useState<"light" | "dark">();
   const [openMenu, setOpenMenu] = useState(false);
+  const [hasAlreadyAnimated, setHasAlreadyAnimated] = useState(false);
+
+  const headerRef = useRef(null);
 
   useEffect(() => {
+    const alreadyAnimated = sessionStorage.getItem("fadeAnimated");
+    setHasAlreadyAnimated(alreadyAnimated || pathname !== "/" ? true : false);
+
+    if (!alreadyAnimated && pathname === "/" && headerRef.current) {
+      gsap.fromTo(
+        headerRef.current,
+        { y: -150 },
+        {
+          y: 0,
+          duration: 1.5,
+          delay: 2,
+          onComplete: () => {
+            sessionStorage.setItem("fadeAnimated", "true");
+          },
+        }
+      );
+    }
+
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
       setTheme("dark");
@@ -62,7 +84,12 @@ export function Navbar() {
 
   return (
     <nav>
-      <div className="fixed z-[9] top-4 md:top-9 left-[50%] translate-x-[-50%] p-4 border bg-white/20 border-neutral-600 dark:border-neutral-300 rounded-full backdrop-blur-sm">
+      <div
+        ref={headerRef}
+        className={`fixed z-[9] top-4 md:top-9 left-[50%] translate-x-[-50%] p-4 border bg-white/20 border-neutral-600 dark:border-neutral-300 rounded-full backdrop-blur-sm ${
+          !hasAlreadyAnimated && "translate-y-[-150px]"
+        }`}
+      >
         <button
           onClick={() => setOpenMenu(true)}
           className="cursor-pointer text-neutral-950 dark:text-white block md:hidden"
