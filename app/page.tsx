@@ -1,7 +1,6 @@
 "use client";
 import gsap from "gsap";
 import { Github, Linkedin } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 import ScrollTrigger from "gsap/ScrollTrigger";
