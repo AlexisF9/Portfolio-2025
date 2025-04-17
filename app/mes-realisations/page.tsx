@@ -31,11 +31,12 @@ export default function Page() {
         {
           opacity: 1,
           y: 0,
+          delay: 0.3,
           duration: 1,
           ease: "power3.out",
           scrollTrigger: {
             trigger: t,
-            start: "top 80%",
+            start: "top 95%",
           },
         }
       );
