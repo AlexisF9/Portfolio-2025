@@ -89,10 +89,10 @@ export default function Home() {
           height={500}
           alt="Photo Alexis Flacher"
           ref={pictureRef}
-          className="opacity-[0] rounded-full absolute aspect-[2/3] w-auto h-[400px] sm:h-[65%] max-h-[500px] object-cover z-[-1] p-4"
+          className="opacity-[0] rounded-full absolute aspect-[2/3] w-auto h-[400px] md:h-[65%] max-h-[500px] object-cover z-[-1] p-4"
         />
-        <div className="flex flex-col dark:text-white w-full gap-9 md:gap-4 h-[440px] sm:h-[70%] max-h-[540px] justify-between">
-          <h1 className="font-gothic text-5xl md:text-[6vw] flex flex-col text-center md:text-start md:grid grid-rows-2 grid-cols-2 mx-auto uppercase text-white mix-blend-difference">
+        <div className="flex flex-col dark:text-white w-full gap-9 md:gap-4 h-[440px] md:h-[70%] max-h-[540px] justify-between">
+          <h1 className="font-gothic text-fluid flex flex-col text-center leading-none md:text-start md:grid grid-rows-2 grid-cols-2 mx-auto uppercase text-white mix-blend-difference">
             <span ref={titleRef} className="opacity-[0] justify-self-end">
               Alexis
             </span>

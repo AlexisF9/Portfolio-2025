@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap');
 
 @import "tailwindcss";
-
+@tailwind utilities;
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
@@ -23,6 +23,12 @@
 
   --color-react: #60d9f8;
   --color-vue: #3fb984;
+}
+
+@layer utilities {
+  .text-fluid {
+    font-size: clamp(48px, 6vw, 100px);
+  }
 }
 
 body {
