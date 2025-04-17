@@ -85,8 +85,8 @@ export default function Home() {
       <div className="h-dvh flex justify-center items-center">
         <Image
           src={"/Alexis.jpg"}
-          width={300}
-          height={500}
+          width={500}
+          height={700}
           alt="Photo Alexis Flacher"
           ref={pictureRef}
           className="opacity-[0] rounded-full absolute aspect-[2/3] w-auto h-[400px] md:h-[65%] max-h-[500px] object-cover z-[-1] p-4"

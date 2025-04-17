@@ -29,6 +29,10 @@
   .text-fluid {
     font-size: clamp(48px, 8vw, 100px);
   }
+
+  .base-fluid {
+    font-size: clamp(14px, 280px, .95vw);
+  }
 }
 
 body {
