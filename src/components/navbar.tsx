@@ -93,7 +93,7 @@ export function Navbar() {
         </div>
       </div>
       <div
-        className={`flex md:hidden fixed inset-[0] w-full z-[9] flex-col bg-white dark:bg-neutral-800 transition-all duration-300 ease-in-out ${
+        className={`flex md:hidden fixed inset-[0] w-full z-[9] flex-col bg-neutral-200 dark:bg-neutral-800 transition-all duration-300 ease-in-out ${
           openMenu
             ? "opacity-100 translate-x-0"
             : "opacity-0 translate-x-[100%] pointer-events-none"
