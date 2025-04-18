@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="light">
-      <body className="max-w-5xl mx-auto pr-9 pl-9 bg-white dark:bg-neutral-900 overflow-x-hidden">
+      <body className="max-w-5xl mx-auto pr-4 pl-4 md:pr-9 md:pl-9 bg-white dark:bg-neutral-900 overflow-x-hidden">
         <LenisScroll />
         <Navbar />
         {children}
