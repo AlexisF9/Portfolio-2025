@@ -8,6 +8,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
+  const pageRef = useRef(null);
   const titleRef = useRef(null);
   const title2Ref = useRef(null);
   const pictureRef = useRef(null);
@@ -67,7 +68,7 @@ export default function Home() {
           ease: "power3.out",
           scrollTrigger: {
             trigger: t,
-            start: "top 80%",
+            start: "top 90%",
             //toggleActions: "play none none reverse",
           },
         }
@@ -80,7 +81,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
+    <div ref={pageRef}>
       <div className="h-dvh flex justify-center items-center">
         <img
           src={"/Alexis.jpg"}
