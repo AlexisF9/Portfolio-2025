@@ -86,9 +86,9 @@ export default function Home() {
           src={"/Alexis.jpg"}
           alt="Photo Alexis Flacher"
           ref={pictureRef}
-          className="opacity-[0] rounded-full absolute aspect-[2/3] w-auto h-[400px] md:h-[65%] portrait:max-h-[500px] object-cover z-[0] p-4"
+          className="opacity-[0] rounded-full absolute aspect-[2/3] w-auto h-[400px] md:h-[65%] md:max-h-[700px] portrait:max-h-[500px] object-cover z-[0] p-4"
         />
-        <div className="flex flex-col dark:text-white w-full gap-9 md:gap-4 h-[440px] md:h-[70%] portrait:max-h-[540px] justify-between">
+        <div className="flex flex-col dark:text-white w-full gap-9 md:gap-4 h-[440px] md:h-[70%] md:max-h-[740px] portrait:max-h-[540px] justify-between">
           <h1 className="font-gothic text-fluid flex flex-col text-center leading-none md:text-start md:grid grid-rows-2 grid-cols-2 mx-auto uppercase text-white mix-blend-difference">
             <span ref={titleRef} className="opacity-[0] justify-self-end">
               Alexis
