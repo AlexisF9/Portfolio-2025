@@ -25,7 +25,7 @@ export function Footer() {
   return (
     <footer
       ref={footerRef}
-      className="w-fit flex flex-col align-center gap-2 max-w-5xl mx-auto flex items-center justify-center my-10 md:my-20 py-9 px-9 bg-neutral-800 rounded-full dark:bg-transparent border border-transparent dark:border-white"
+      className="w-fit flex flex-col align-center gap-2 max-w-5xl mx-auto flex items-center justify-center my-20 py-9 px-9 bg-neutral-800 rounded-full dark:bg-transparent border border-transparent dark:border-white"
     >
       <p className="w-max font-gothic text-xl md:text-4xl text-white">
         Alexis Flacher
