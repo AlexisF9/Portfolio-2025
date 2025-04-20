@@ -127,8 +127,8 @@ export default function Home() {
         </div>
       </div>
       <div>
-        <div className="flex flex-col gap-4">
-          <h3 className="translate-anim text-xl md:text-2xl font-gothic dark:text-white">
+        <div className="flex flex-col">
+          <h3 className="translate-anim text-xl md:text-2xl font-gothic dark:text-white mb-9">
             Qui suis-je ?
           </h3>
           <p className="translate-anim dark:text-white">
@@ -145,7 +145,7 @@ export default function Home() {
             alternance en tant que développeur front-end dans l&apos;agence de
             pub <span className="font-bold">TBWA\Paris</span>.
           </p>
-          <div className="opacity-anim flex gap-4">
+          <div className="opacity-anim flex gap-4 mt-4">
             <Link
               className="block font-gothic w-fit border border-neutral-600 rounded-full p-2 dark:text-white dark:border-white"
               href={"https://www.linkedin.com/in/alexis-flacher-772ba7197/"}
@@ -162,7 +162,7 @@ export default function Home() {
         </div>
 
         <div className="mt-16">
-          <h3 className="translate-anim text-xl md:text-2xl font-gothic dark:text-white mb-4">
+          <h3 className="translate-anim text-xl md:text-2xl font-gothic dark:text-white mb-9">
             Mes expériences
           </h3>
           <ul className="flex flex-col gap-4">
