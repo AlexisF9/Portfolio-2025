@@ -4,6 +4,8 @@ import { Github, Linkedin } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import experiences from "@/public/experiences.json";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -54,22 +56,40 @@ export default function Home() {
       }
     );
 
-    const elements = gsap.utils.toArray(".fade-in");
+    const elements = gsap.utils.toArray(".translate-anim");
 
     elements.forEach((el) => {
       const t = el as HTMLElement;
       gsap.fromTo(
         t,
-        { opacity: 0, y: 40 },
+        { opacity: 0, x: 40 },
         {
           opacity: 1,
-          y: 0,
+          x: 0,
           duration: 1,
           ease: "power3.out",
           scrollTrigger: {
             trigger: t,
-            start: "top 90%",
-            //toggleActions: "play none none reverse",
+            start: "top 80%",
+          },
+        }
+      );
+    });
+
+    const buttons = gsap.utils.toArray(".opacity-anim");
+
+    buttons.forEach((el) => {
+      const t = el as HTMLElement;
+      gsap.fromTo(
+        t,
+        { opacity: 0 },
+        {
+          opacity: 1,
+          duration: 1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: t,
+            start: "top 80%",
           },
         }
       );
@@ -108,10 +128,10 @@ export default function Home() {
       </div>
       <div>
         <div className="flex flex-col gap-4">
-          <h3 className="fade-in text-xl md:text-2xl font-gothic dark:text-white">
+          <h3 className="translate-anim text-xl md:text-2xl font-gothic dark:text-white">
             Qui suis-je ?
           </h3>
-          <p className="fade-in dark:text-white">
+          <p className="translate-anim dark:text-white">
             Je suis Alexis, j&apos;ai 23 ans et je suis développeur front-end
             depuis 2022. J&apos;ai tout d&apos;abord fait un{" "}
             <span className="font-bold">DUT MMI</span> (Métiers du Multimédia et
@@ -125,29 +145,7 @@ export default function Home() {
             alternance en tant que développeur front-end dans l&apos;agence de
             pub <span className="font-bold">TBWA\Paris</span>.
           </p>
-          <p className="fade-in dark:text-white">
-            À la fin de mes études, j&apos;ai intégré en CDI l&apos;agence{" "}
-            <span className="font-bold">Ascanio</span> à Meylan durant 2 mois
-            comme développeur front-end{" "}
-            <span className="text-react font-bold">React</span>, puis
-            l&apos;agence <span className="font-bold">Big Boss Studio</span> en
-            full remote durant 1 an comme développeur front-end{" "}
-            <span className="text-react font-bold">React</span> et{" "}
-            <span className="font-bold">Next</span>. Enfin j&apos;ai intégré
-            l&apos;agence <span className="font-bold">Mezcalito</span> à
-            Grenoble durant 1 an comme intégrateur web.
-          </p>
-        </div>
-
-        <div className="flex flex-col md:flex-row mt-9 items-center gap-4 justify-center">
-          <Link
-            className="block font-gothic w-fit border border-transparent rounded-full py-2 px-4 bg-linear-to-r hover:from-transparent hover:to-transparent hover:dark:text-white hover:border-neutral-600 hover:dark:border-white from-react to-vue transition duration-300 ease-in-out"
-            href={"./alexis-flacher-cv.pdf"}
-            target="_blank"
-          >
-            Télécharger mon CV
-          </Link>
-          <div className="flex gap-4">
+          <div className="opacity-anim flex gap-4">
             <Link
               className="block font-gothic w-fit border border-neutral-600 rounded-full p-2 dark:text-white dark:border-white"
               href={"https://www.linkedin.com/in/alexis-flacher-772ba7197/"}
@@ -161,6 +159,61 @@ export default function Home() {
               <Github />
             </Link>
           </div>
+        </div>
+
+        <div className="mt-16">
+          <h3 className="translate-anim text-xl md:text-2xl font-gothic dark:text-white mb-4">
+            Mes expériences
+          </h3>
+          <ul className="flex flex-col gap-4">
+            {experiences.map((exp, index) => {
+              return (
+                <li key={index} className="translate-anim">
+                  <div className="flex flex-col gap-2">
+                    <div className="flex flex-wrap items-center justify-between">
+                      <div className="flex items-center gap-2">
+                        <h4 className="font-gothic">{exp.company}</h4>
+                        <p className="text-sm border px-2 rounded-full">
+                          {exp.type}
+                        </p>
+                      </div>
+                      <p>
+                        {exp.date} | {exp.loc}
+                      </p>
+                    </div>
+                    <div className="flex flex-wrap items-center gap-4">
+                      <p>{exp.role}</p>
+                      {exp.technos && (
+                        <div className="flex items-center gap-2">
+                          {exp.technos.map((techno, index) => {
+                            return (
+                              <Image
+                                key={index}
+                                src={`/images/logo-${techno}.png`}
+                                width={20}
+                                height={20}
+                                alt={`logo ${techno}`}
+                              />
+                            );
+                          })}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+
+        <div className="opacity-anim flex justify-center mt-9">
+          <Link
+            className="block font-gothic w-fit border border-transparent rounded-full py-2 px-4 bg-linear-to-r hover:from-transparent hover:to-transparent hover:dark:text-white hover:border-neutral-600 hover:dark:border-white from-react to-vue transition duration-300 ease-in-out"
+            href={"./alexis-flacher-cv.pdf"}
+            target="_blank"
+          >
+            Télécharger mon CV
+          </Link>
         </div>
       </div>
     </div>

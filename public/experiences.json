@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "company": "Mezcalito",
+        "date": "Dec2023 - Dec2024",
+        "type": "CDI",
+        "role": "Intégrateur web",
+        "loc": "Grenoble",
+        "technos": ["stimulus"]
+    },
+    {
+        "id": 2,
+        "company": "Big Boss Studio",
+        "date": "Dec2022 - Dec2023",
+        "type": "CDI",
+        "role": "Développeur Front-end",
+        "loc": "Full remote",
+        "technos": ["react", "next", "storybook"]
+    },
+    {
+        "id": 3,
+        "company": "Ascanio",
+        "date": "Sept2022 - Nov2022",
+        "type": "CDI",
+        "role": "Développeur Front-end",
+        "loc": "Montbonnot-Saint-Martin",
+        "technos": ["react"]
+    },
+    {
+        "id": 4,
+        "company": "TBWA/Paris",
+        "date": "Sept2021 - Aout2022",
+        "type": "Alternance",
+        "role": "Développeur Front-end",
+        "loc": "Boulogne-Billancourt",
+        "technos": ["next"]
+    }, 
+    {
+        "id": 5,
+        "company": "6tematik",
+        "date": "2021",
+        "type": "Stage",
+        "role": "Intégrateur web et webdesigner",
+        "loc": "Romans-sur-Isère",
+        "technos": null
+    }
+]
