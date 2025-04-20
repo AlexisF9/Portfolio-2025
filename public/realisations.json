@@ -118,6 +118,10 @@
       {
         "name": "storybook",
         "label": "Storybook"
+      },
+      {
+        "name": "styled",
+        "label": "Styled component"
       }
     ],
     "link": "https://informationproduit.balenciaga.com/fr/",
