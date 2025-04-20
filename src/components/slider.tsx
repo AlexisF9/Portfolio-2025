@@ -28,7 +28,7 @@ export function Slider({ pictures }: { pictures: string[] }) {
               <Image
                 className="w-full aspect-[4/2] object-cover"
                 src={el}
-                width={600}
+                width={900}
                 height={500}
                 alt=""
               />

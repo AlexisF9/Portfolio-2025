@@ -10,7 +10,7 @@ export function Card({ card }: { card: Realisation }) {
         <Image
           className="w-full aspect-[4/2] object-cover group-hover:scale-110 transition duration-300 ease-in-out"
           src={card.pictures[0]}
-          width={400}
+          width={500}
           height={300}
           alt=""
         />

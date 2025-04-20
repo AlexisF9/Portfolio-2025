@@ -15,7 +15,7 @@
         "type": "CDI",
         "role": "Développeur Front-end",
         "loc": "Full remote",
-        "technos": ["react", "next", "storybook"]
+        "technos": ["react", "next", "storybook", "styled"]
     },
     {
         "id": 3,

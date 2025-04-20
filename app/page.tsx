@@ -168,7 +168,7 @@ export default function Home() {
           <ul className="flex flex-col gap-4">
             {experiences.map((exp, index) => {
               return (
-                <li key={index} className="translate-anim">
+                <li key={index} className="translate-anim dark:text-white">
                   <div className="flex flex-col gap-2">
                     <div className="flex flex-wrap items-center justify-between">
                       <div className="flex items-center gap-2">
@@ -193,6 +193,7 @@ export default function Home() {
                                 width={20}
                                 height={20}
                                 alt={`logo ${techno}`}
+                                className="h-[20px] w-auto"
                               />
                             );
                           })}
@@ -206,7 +207,7 @@ export default function Home() {
           </ul>
         </div>
 
-        <div className="opacity-anim flex justify-center mt-9">
+        <div className="opacity-anim flex justify-center mt-20">
           <Link
             className="block font-gothic w-fit border border-transparent rounded-full py-2 px-4 bg-linear-to-r hover:from-transparent hover:to-transparent hover:dark:text-white hover:border-neutral-600 hover:dark:border-white from-react to-vue transition duration-300 ease-in-out"
             href={"./alexis-flacher-cv.pdf"}
