@@ -2,7 +2,7 @@
 import gsap from "gsap";
 import { Github, Linkedin } from "lucide-react";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { RefObject, useEffect, useRef } from "react";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import experiences from "@/public/experiences.json";
 import Image from "next/image";
@@ -15,6 +15,7 @@ export default function Home() {
   const title2Ref = useRef(null);
   const pictureRef = useRef(null);
   const subtitleRef = useRef(null);
+  const skillsRef = useRef<(HTMLLIElement | null)[]>([]);
 
   useEffect(() => {
     gsap.fromTo(
@@ -94,6 +95,20 @@ export default function Home() {
         }
       );
     });
+
+    if (skillsRef.current.length > 0) {
+      gsap.from(skillsRef.current, {
+        opacity: 0,
+        y: 30,
+        stagger: 0.2,
+        duration: 0.6,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: skillsRef.current,
+          start: "top 80%",
+        },
+      });
+    }
 
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
@@ -270,10 +285,16 @@ export default function Home() {
           <h3 className="translate-anim text-xl md:text-2xl font-gothic dark:text-white mb-9">
             Mes compétences clés
           </h3>
-          <ul className="flex flex-wrap items-center gap-4">
+          <ul className="flex flex-wrap items-center gap-4 md:gap-9">
             {skills.map((skill, index) => {
               return (
-                <li key={index} className="relative group">
+                <li
+                  key={index}
+                  ref={(el) => {
+                    skillsRef.current[index] = el;
+                  }}
+                  className="flex items-center gap-2"
+                >
                   <Image
                     src={`/images/logos/logo-${skill.name}.png`}
                     width={24}
@@ -281,9 +302,7 @@ export default function Home() {
                     alt={`logo ${skill.name}`}
                     className="h-[24px] w-auto"
                   />
-                  <span className="absolute text-sm hidden group-hover:block group-active:block z-[1] bg-red-600">
-                    {skill.label}
-                  </span>
+                  <span className="text-sm">{skill.label}</span>
                 </li>
               );
             })}
