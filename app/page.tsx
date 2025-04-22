@@ -100,6 +100,65 @@ export default function Home() {
     };
   }, []);
 
+  const skills = [
+    {
+      name: "js",
+      label: "JavaScript",
+    },
+    {
+      name: "ts",
+      label: "TypeScript",
+    },
+    {
+      name: "sass",
+      label: "Sass",
+    },
+    {
+      name: "react",
+      label: "ReactJs",
+    },
+    {
+      name: "next",
+      label: "NextJs",
+    },
+    {
+      name: "vue",
+      label: "VueJs",
+    },
+    {
+      name: "stimulus",
+      label: "Stimulus",
+    },
+    {
+      name: "tailwind",
+      label: "TailwindCSS",
+    },
+    {
+      name: "strapi",
+      label: "Strapi",
+    },
+    {
+      name: "twig",
+      label: "Twig",
+    },
+    {
+      name: "figma",
+      label: "Figma",
+    },
+    {
+      name: "styled",
+      label: "Styled Component",
+    },
+    {
+      name: "storybook",
+      label: "Storybook",
+    },
+    {
+      name: "algolia",
+      label: "Algolia",
+    },
+  ];
+
   return (
     <div ref={pageRef}>
       <div className="h-dvh flex justify-center items-center">
@@ -201,6 +260,30 @@ export default function Home() {
                       )}
                     </div>
                   </div>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+
+        <div className="mt-16">
+          <h3 className="translate-anim text-xl md:text-2xl font-gothic dark:text-white mb-9">
+            Mes compétences clés
+          </h3>
+          <ul className="flex flex-wrap items-center gap-4">
+            {skills.map((skill, index) => {
+              return (
+                <li key={index} className="relative group">
+                  <Image
+                    src={`/images/logos/logo-${skill.name}.png`}
+                    width={24}
+                    height={24}
+                    alt={`logo ${skill.name}`}
+                    className="h-[24px] w-auto"
+                  />
+                  <span className="absolute text-sm hidden group-hover:block group-active:block z-[1] bg-red-600">
+                    {skill.label}
+                  </span>
                 </li>
               );
             })}
