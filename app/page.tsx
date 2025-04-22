@@ -263,7 +263,7 @@ export default function Home() {
                             return (
                               <Image
                                 key={index}
-                                src={`/images/logo-${techno}.png`}
+                                src={`/images/logos/logo-${techno}.png`}
                                 width={20}
                                 height={20}
                                 alt={`logo ${techno}`}

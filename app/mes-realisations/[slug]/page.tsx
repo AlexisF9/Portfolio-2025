@@ -35,7 +35,7 @@ export default async function Page({
               return (
                 <Image
                   key={index}
-                  src={`/images/logo-${techno.name}.png`}
+                  src={`/images/logos/logo-${techno.name}.png`}
                   width={20}
                   height={20}
                   alt={`logo ${techno.label}`}
