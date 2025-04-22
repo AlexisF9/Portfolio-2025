@@ -2,7 +2,7 @@
 import gsap from "gsap";
 import { Github, Linkedin } from "lucide-react";
 import Link from "next/link";
-import { RefObject, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import experiences from "@/public/experiences.json";
 import Image from "next/image";
