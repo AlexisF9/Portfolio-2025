@@ -48,7 +48,7 @@ export default function Page() {
   }, []);
 
   return (
-    <div className="pt-40">
+    <div className="pt-30 md:pt-40">
       <h1 className="fade-in text-xl mb-9 md:text-2xl dark:text-white font-gothic">
         Mes réalisations
       </h1>
