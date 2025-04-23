@@ -6,7 +6,6 @@ import { useEffect, useRef } from "react";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import experiences from "@/public/experiences.json";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -17,7 +16,6 @@ export default function Home() {
   const pictureRef = useRef(null);
   const subtitleRef = useRef(null);
   const skillsRef = useRef<(HTMLLIElement | null)[]>([]);
-  const pathname = usePathname();
 
   useEffect(() => {
     gsap.fromTo(
