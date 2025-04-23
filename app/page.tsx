@@ -293,7 +293,7 @@ export default function Home() {
                   ref={(el) => {
                     skillsRef.current[index] = el;
                   }}
-                  className="flex items-center gap-2"
+                  className="flex items-center gap-2 dark:text-white"
                 >
                   <Image
                     src={`/images/logos/logo-${skill.name}.png`}
