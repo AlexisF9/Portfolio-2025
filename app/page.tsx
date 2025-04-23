@@ -220,7 +220,7 @@ export default function Home() {
     <div ref={pageRef}>
       <div ref={intro} className="h-dvh flex justify-center items-center">
         <img
-          src={"/Alexis.jpg"}
+          src={"/Alexis.webp"}
           alt="Photo Alexis Flacher"
           ref={pictureRef}
           className="opacity-[0] rounded-full absolute aspect-[2/3] w-auto h-[400px] md:h-[65%] md:max-h-[700px] portrait:max-h-[500px] object-cover z-[0] p-4"
@@ -266,12 +266,14 @@ export default function Home() {
               className="block font-gothic w-fit border border-neutral-600 rounded-full p-2 dark:text-white dark:border-white"
               href={"https://www.linkedin.com/in/alexis-flacher-772ba7197/"}
             >
+              <span className="sr-only">Linkedin</span>
               <Linkedin />
             </Link>
             <Link
               className="block font-gothic w-fit border border-neutral-600 rounded-full p-2 dark:text-white dark:border-white"
               href={"https://github.com/AlexisF9"}
             >
+              <span className="sr-only">Github</span>
               <Github />
             </Link>
           </div>

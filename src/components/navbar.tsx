@@ -115,6 +115,9 @@ export function Navbar() {
             onClick={toggleTheme}
             className="cursor-pointer text-neutral-950 dark:text-white"
           >
+            <span className="sr-only">
+              {theme === "dark" ? "Dark mode" : "Light mode"}
+            </span>
             {theme === "dark" ? <Sun /> : <Moon />}
           </button>
         </div>
@@ -152,6 +155,9 @@ export function Navbar() {
               onClick={toggleTheme}
               className="cursor-pointer text-neutral-950 dark:text-white"
             >
+              <span className="sr-only">
+                {theme === "dark" ? "Dark mode" : "Light mode"}
+              </span>
               {theme === "dark" ? <Sun /> : <Moon />}
             </button>
           </div>
