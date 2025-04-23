@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "Alexis Flacher - Portfolio",
   description:
     "Bienvenue sur mon portfolio ! Je suis Alexis Flacher, développeur front-end à Grenoble.",
+  icons: {
+    icon: [{ url: "/favicon.ico" }, { url: "/favicon.jpg", type: "image/jpg" }],
+  },
 };
 
 export default function RootLayout({
