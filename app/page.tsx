@@ -228,12 +228,12 @@ export default function Home() {
         <div className="flex flex-col dark:text-white w-full gap-9 md:gap-4 h-[440px] md:h-[70%] md:max-h-[740px] portrait:max-h-[540px] justify-between">
           <h1
             ref={h1Ref}
-            className="font-gothic text-fluid flex flex-col text-center sm:max-w-[90%] sm:w-full leading-none md:text-start mx-auto uppercase text-white mix-blend-difference"
+            className="font-gothic text-fluid flex flex-col text-center md:max-w-[90%] md:w-full leading-none mx-auto uppercase text-white mix-blend-difference"
           >
-            <span ref={titleRef} className="opacity-[0] sm:self-start">
+            <span ref={titleRef} className="opacity-[0] md:self-start">
               Alexis
             </span>
-            <span ref={title2Ref} className="opacity-[0] sm:self-end">
+            <span ref={title2Ref} className="opacity-[0] md:self-end">
               Flacher
             </span>
           </h1>
