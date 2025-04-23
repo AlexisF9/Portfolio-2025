@@ -132,27 +132,29 @@ export function Navbar() {
         >
           <X />
         </button>
-        <div className="flex flex-col gap-4 items-center justify-center h-full">
-          <ul className="flex flex-col gap-4">
-            {links.map((link, index) => {
-              return (
-                <li
-                  key={index}
-                  className={`${
-                    pathname === link.link && "opacity-[.5]"
-                  } dark:text-white`}
-                >
-                  <Link href={link.link}>{link.label}</Link>
-                </li>
-              );
-            })}
-          </ul>
-          <button
-            onClick={toggleTheme}
-            className="cursor-pointer text-neutral-950 dark:text-white"
-          >
-            {theme === "dark" ? <Sun /> : <Moon />}
-          </button>
+        <div className="flex items-center justify-center h-full">
+          <div className="flex flex-col gap-4">
+            <ul className="flex flex-col gap-4">
+              {links.map((link, index) => {
+                return (
+                  <li
+                    key={index}
+                    className={`text-xl ${
+                      pathname === link.link && "opacity-[.5]"
+                    } dark:text-white`}
+                  >
+                    <Link href={link.link}>{link.label}</Link>
+                  </li>
+                );
+              })}
+            </ul>
+            <button
+              onClick={toggleTheme}
+              className="cursor-pointer text-neutral-950 dark:text-white"
+            >
+              {theme === "dark" ? <Sun /> : <Moon />}
+            </button>
+          </div>
         </div>
       </div>
     </nav>
