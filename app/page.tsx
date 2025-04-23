@@ -6,6 +6,7 @@ import { useEffect, useRef } from "react";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import experiences from "@/public/experiences.json";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -16,6 +17,7 @@ export default function Home() {
   const pictureRef = useRef(null);
   const subtitleRef = useRef(null);
   const skillsRef = useRef<(HTMLLIElement | null)[]>([]);
+  const pathname = usePathname();
 
   useEffect(() => {
     gsap.fromTo(
@@ -96,10 +98,12 @@ export default function Home() {
       );
     });
 
-    if (skillsRef.current.length > 0) {
-      gsap.from(skillsRef.current, {
-        opacity: 0,
-        y: 30,
+    gsap.fromTo(
+      skillsRef.current,
+      { opacity: 0, y: 30 },
+      {
+        opacity: 1,
+        y: 0,
         stagger: 0.2,
         duration: 0.6,
         ease: "power2.out",
@@ -107,8 +111,9 @@ export default function Home() {
           trigger: skillsRef.current,
           start: "top 80%",
         },
-      });
-    }
+      }
+    );
+    console.log("cc");
 
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
@@ -151,6 +156,10 @@ export default function Home() {
     {
       name: "strapi",
       label: "Strapi",
+    },
+    {
+      name: "gsap",
+      label: "GSAP",
     },
     {
       name: "twig",
@@ -200,7 +209,7 @@ export default function Home() {
           </h2>
         </div>
       </div>
-      <div>
+      <div className="overflow-x-hidden">
         <div className="flex flex-col">
           <h3 className="translate-anim text-xl md:text-2xl font-gothic dark:text-white mb-9">
             Qui suis-je ?
