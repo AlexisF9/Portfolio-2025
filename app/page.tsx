@@ -102,7 +102,7 @@ export default function Home() {
       {
         opacity: 1,
         y: 0,
-        stagger: 0.2,
+        stagger: 0.1,
         duration: 0.6,
         ease: "power2.out",
         scrollTrigger: {
@@ -111,7 +111,6 @@ export default function Home() {
         },
       }
     );
-    console.log("cc");
 
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
@@ -191,14 +190,11 @@ export default function Home() {
           className="opacity-[0] rounded-full absolute aspect-[2/3] w-auto h-[400px] md:h-[65%] md:max-h-[700px] portrait:max-h-[500px] object-cover z-[0] p-4"
         />
         <div className="flex flex-col dark:text-white w-full gap-9 md:gap-4 h-[440px] md:h-[70%] md:max-h-[740px] portrait:max-h-[540px] justify-between">
-          <h1 className="font-gothic text-fluid flex flex-col text-center leading-none md:text-start md:grid grid-rows-2 grid-cols-2 mx-auto uppercase text-white mix-blend-difference">
-            <span ref={titleRef} className="opacity-[0] justify-self-end">
+          <h1 className="font-gothic text-fluid flex flex-col text-center sm:max-w-[90%] sm:w-full leading-none md:text-start mx-auto uppercase text-white mix-blend-difference">
+            <span ref={titleRef} className="opacity-[0] sm:self-start">
               Alexis
             </span>
-            <span
-              ref={title2Ref}
-              className="opacity-[0] row-start-2 col-start-2"
-            >
+            <span ref={title2Ref} className="opacity-[0] sm:self-end">
               Flacher
             </span>
           </h1>
