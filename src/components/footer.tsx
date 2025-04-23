@@ -1,31 +1,51 @@
 "use client";
 import gsap from "gsap";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export function Footer() {
   const footerRef = useRef(null);
+  const [hasAnimated, setHasAnimated] = useState(false);
+
   useEffect(() => {
-    gsap.fromTo(
-      footerRef.current,
-      { opacity: 0, width: "60%" },
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+
+        if (entry.isIntersecting && !hasAnimated) {
+          gsap.fromTo(
+            footerRef.current,
+            { opacity: 0, width: "60%" },
+            {
+              opacity: 1,
+              width: "100%",
+              duration: 1.5,
+              ease: "power3.out",
+            }
+          );
+
+          setHasAnimated(true);
+          observer.disconnect();
+        }
+      },
       {
-        opacity: 1,
-        width: "100%",
-        duration: 1.5,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: footerRef.current,
-          start: "top 90%",
-        },
+        threshold: 0.2, // Commence à 20% visible
       }
     );
-  }, []);
+
+    if (footerRef.current) {
+      observer.observe(footerRef.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [hasAnimated]);
 
   return (
     <footer
       ref={footerRef}
-      className="w-fit flex flex-col align-center gap-2 mx-auto flex items-center justify-center mt-20 py-20 px-9 bg-neutral-800 rounded-t-4xl dark:bg-white"
+      className="opacity-[0] w-[60%] flex flex-col align-center gap-2 mx-auto flex items-center justify-center mt-20 py-20 px-9 bg-neutral-800 rounded-t-4xl dark:bg-white"
     >
       <p className="w-max font-gothic text-xl md:text-4xl text-white dark:text-neutral-950">
         Alexis Flacher
