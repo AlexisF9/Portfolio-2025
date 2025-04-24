@@ -23,6 +23,10 @@ export default function Page() {
   const [filter, setFilter] = useState<"all" | "perso" | "pro">("all");
 
   useEffect(() => {
+    if (sessionStorage.getItem("filters")) {
+      setFilter(sessionStorage.getItem("filters") as "all" | "perso" | "pro");
+    }
+
     const elements = gsap.utils.toArray(".fade-in");
 
     elements.forEach((el) => {
@@ -48,6 +52,11 @@ export default function Page() {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
+
+  const handleFilterChange = (newFilter: "all" | "perso" | "pro") => {
+    setFilter(newFilter);
+    sessionStorage.setItem("filters", newFilter);
+  };
 
   const filters = [
     {
@@ -79,7 +88,9 @@ export default function Page() {
                   ? "bg-linear-to-r from-react to-vue text-neutral-950 dark:border-transparent"
                   : "dark:text-white dark:border-white"
               }`}
-              onClick={() => setFilter(item.name as "all" | "perso" | "pro")}
+              onClick={() =>
+                handleFilterChange(item.name as "all" | "perso" | "pro")
+              }
             >
               {item.label}
             </button>
