@@ -204,7 +204,7 @@ export default function Home() {
     },
     {
       name: "styled",
-      label: "Styled Component",
+      label: "Styled Components",
     },
     {
       name: "storybook",
