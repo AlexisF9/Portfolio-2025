@@ -69,7 +69,7 @@ export default function Page() {
       <h1 className="fade-in text-xl mb-4 md:text-2xl dark:text-white font-gothic">
         Mes réalisations
       </h1>
-      <div className="fade-in flex items-center gap-2 mb-9">
+      <div className="fade-in flex items-center flex-wrap gap-2 mb-9">
         {filters.map((item, index) => {
           return (
             <button
