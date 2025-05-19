@@ -1,6 +1,50 @@
 [
   {
     "id": 0,
+    "name": "my-immo",
+    "title": "MyImmo",
+    "date": "2025",
+    "shortDescription": "Développement d'un site d'annonces immobilières. Ce projet m'a permis d'apprendre les bases de Angular",
+    "description": "MyImmo est un site d'annonces immobilières développé avec Angular. Sur MyImmo il est possible de rechercher par ville, de trier des annonces immobilières et de mettre en favoris les annonces. Je me suis inspiré de sites similaires comme Logic Immo ou SeLoger. L'enregistrement des annonces en favoris marche en local, j'enregistre les IDs des annonces dans le localstorage du navigateur. Pour le back-end j'ai utilisé Strapi, un headless CMS open source.",
+    "type": "perso",
+    "pictures": ["/images/myimmo/my-immo-1.jpg", "/images/myimmo/my-immo-2.jpg", "/images/myimmo/my-immo-3.jpg", "/images/myimmo/my-immo-4.jpg", "/images/myimmo/my-immo-5.jpg", "/images/myimmo/my-immo-6.jpg", "/images/myimmo/my-immo-7.jpg", "/images/myimmo/my-immo-8.jpg"],
+    "technos": [
+      {
+        "name": "angular",
+        "label": "Angular"
+      },
+      {
+        "name": "tailwind",
+        "label": "TailwindCSS"
+      },
+      {
+        "name": "strapi",
+        "label": "Strapi"
+      }
+    ],
+    "link": "https://my-immo.vercel.app/",
+    "github": "https://github.com/AlexisF9/MyImmo"
+  },
+  {
+    "id": 1,
+    "name": "griddy",
+    "title": "Griddy",
+    "date": "2025",
+    "shortDescription": "Développement d'une plateforme de gestion des tâches comme Trello ou Jira.",
+    "description": "Griddy est une plateforme de création et de gestion de tâches, développé en React. Sur Griddy il est possible de créer, trier, modifier et supprimer des colonnes et des tâches. Je me suis notamment inspiré de plateformes similaire (comme Jira, Trello..etc) et d'un ancien test technique. Griddy fonctionne en local, les données sont enregistrées dans le localstorage du navigateur. J'utilise Zustand pour la gestion de l'état, React DnD pour le drag and drop des tâches et React Router.",
+    "type": "perso",
+    "pictures": ["/images/griddy/griddy-1.webp", "/images/griddy/griddy-2.webp", "/images/griddy/griddy-3.webp", "/images/griddy/griddy-4.webp", "/images/griddy/griddy-5.webp", "/images/griddy/griddy-6.webp", "/images/griddy/griddy-7.webp", "/images/griddy/griddy-8.webp"],
+    "technos": [
+      {
+        "name": "react",
+        "label": "ReactJS"
+      }
+    ],
+    "link": "https://griddy-pi.vercel.app/",
+    "github": null
+  },
+  {
+    "id": 2,
     "name": "daitem",
     "title": "Daitem",
     "date": "2024",
@@ -18,7 +62,7 @@
     "github": null
   },
   {
-    "id": 1,
+    "id": 3,
     "name": "bongenie",
     "title": "Bongénie",
     "date": "2024",
@@ -36,25 +80,7 @@
     "github": null
   },
   {
-    "id": 2,
-    "name": "griddy",
-    "title": "Griddy",
-    "date": "2024",
-    "shortDescription": "Développement d'une plateforme de gestion des tâches. Le site est encore en développement mais vous pouvez visiter la v1.",
-    "description": "Griddy est une plateforme de création et de gestion de tâches, développé en React. Sur Griddy il est possible de créer, trier, modifier et supprimer des colonnes et des tâches. Je me suis notamment inspiré de plateformes similaire (comme Jira, Trello..etc) et d'un ancien test technique. Griddy fonctionne en local, les données sont enregistrées dans le localstorage du navigateur. J'utilise Zustand pour la gestion de l'état, React DnD pour le drag and drop des tâches et React Router.",
-    "type": "perso",
-    "pictures": ["/images/griddy/griddy-1.webp", "/images/griddy/griddy-2.webp", "/images/griddy/griddy-3.webp", "/images/griddy/griddy-4.webp", "/images/griddy/griddy-5.webp", "/images/griddy/griddy-6.webp", "/images/griddy/griddy-7.webp", "/images/griddy/griddy-8.webp"],
-    "technos": [
-      {
-        "name": "react",
-        "label": "ReactJS"
-      }
-    ],
-    "link": "https://griddy-pi.vercel.app/",
-    "github": null
-  },
-  {
-    "id": 3,
+    "id": 4,
     "name": "clap",
     "title": "Clap",
     "date": "2024",
@@ -76,7 +102,7 @@
     "github": "https://github.com/AlexisF9/Clap"
   },
   {
-    "id": 4,
+    "id": 5,
     "name": "qui-veut-du-fromage",
     "title": "Qui veut du fromage ?",
     "date": "2023",
@@ -102,7 +128,7 @@
     "github": null
   },
   {
-    "id": 5,
+    "id": 6,
     "name": "balenciaga-sustainability",
     "title": "Balenciaga Sustainability",
     "date": "2023",
@@ -128,7 +154,7 @@
     "github": null
   },
   {
-    "id": 6,
+    "id": 7,
     "name": "gmf",
     "title": "Landing GMF",
     "date": "2022",
@@ -146,7 +172,7 @@
     "github": null
   },
   {
-    "id": 7,
+    "id": 8,
     "name": "izicarte",
     "title": "La caisse d'épargne",
     "date": "2022",
