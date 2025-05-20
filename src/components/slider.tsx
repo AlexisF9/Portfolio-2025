@@ -11,31 +11,33 @@ export function Slider({ pictures }: { pictures: string[] }) {
   const [currentSlide, setCurrentSlide] = useState(1);
 
   return (
-    <div>
-      <Swiper
-        slidesPerView={1}
-        modules={[Navigation]}
-        loop={true}
-        navigation={{
-          nextEl: `.custom-next`,
-          prevEl: `.custom-prev`,
-        }}
-        onSlideChange={(swiper) => setCurrentSlide(swiper.realIndex + 1)}
-      >
-        {pictures.map((el: string, index) => {
-          return (
-            <SwiperSlide key={index}>
-              <Image
-                className="w-full aspect-[4/2] object-cover"
-                src={el}
-                width={900}
-                height={500}
-                alt=""
-              />
-            </SwiperSlide>
-          );
-        })}
-      </Swiper>
+    <div className="relative">
+      <div className="shadow-lg">
+        <Swiper
+          slidesPerView={1}
+          modules={[Navigation]}
+          loop={true}
+          navigation={{
+            nextEl: `.custom-next`,
+            prevEl: `.custom-prev`,
+          }}
+          onSlideChange={(swiper) => setCurrentSlide(swiper.realIndex + 1)}
+        >
+          {pictures.map((el: string, index) => {
+            return (
+              <SwiperSlide key={index}>
+                <Image
+                  className="w-full aspect-[4/2] object-cover"
+                  src={el}
+                  width={900}
+                  height={500}
+                  alt=""
+                />
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+      </div>
       <div className="flex items-center justify-between pt-4">
         <div className="flex gap-2">
           {pictures.map((_, index) => {
@@ -51,12 +53,12 @@ export function Slider({ pictures }: { pictures: string[] }) {
             );
           })}
         </div>
-        <div className="flex items-center dark:text-white">
-          <button className="custom-prev cursor-pointer">
-            <ChevronLeft className="w-[30px] h-auto" />
+        <div className="dark:text-white">
+          <button className="custom-prev absolute z-1 top-[50%] -translate-y-[50%] left-2 md:left-4 cursor-pointer bg-neutral-200 dark:bg-neutral-600 rounded-full p-2">
+            <ChevronLeft className="w-[20px] md:w-[30px] h-auto" />
           </button>
-          <button className="custom-next cursor-pointer">
-            <ChevronRight className="w-[30px] h-auto" />
+          <button className="custom-next absolute z-1 top-[50%] -translate-y-[50%] right-2 md:right-4 cursor-pointer bg-neutral-200 dark:bg-neutral-600 rounded-full p-2">
+            <ChevronRight className="w-[20px] md:w-[30px] h-auto" />
           </button>
         </div>
       </div>
