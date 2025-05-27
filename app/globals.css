@@ -38,3 +38,8 @@
 body {
   font-family: var(--font-inconsolata);
 }
+
+.picture-animation-reset {
+  opacity: 0;
+  clip-path: inset(0% 0% 100% 0%);
+}

@@ -59,10 +59,15 @@ export default function Home() {
     );
     gsap.fromTo(
       pictureRef.current,
-      { opacity: 0 },
+      {
+        opacity: 0,
+        clipPath: "inset(0% 0% 100% 0%)",
+      },
       {
         opacity: 1,
-        duration: 1.3,
+        clipPath: "inset(0% 0% 0% 0%)",
+        duration: 1.8,
+        ease: "power2.inOut",
       }
     );
 
@@ -223,7 +228,7 @@ export default function Home() {
           src={"/Alexis.webp"}
           alt="Photo Alexis Flacher"
           ref={pictureRef}
-          className="opacity-[0] rounded-full absolute aspect-[2/3] w-auto h-[400px] md:h-[65%] md:max-h-[700px] portrait:max-h-[500px] object-cover z-[0] p-4"
+          className="picture-animation-reset rounded-full absolute aspect-[2/3] w-auto h-[400px] md:h-[65%] md:max-h-[700px] portrait:max-h-[500px] object-cover z-[0] p-4"
         />
         <div className="flex flex-col dark:text-white w-full gap-9 md:gap-4 h-[440px] md:h-[70%] md:max-h-[740px] portrait:max-h-[540px] justify-between">
           <h1
