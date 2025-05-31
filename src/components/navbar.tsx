@@ -24,7 +24,7 @@ export function Navbar() {
         {
           y: 0,
           duration: 1.5,
-          delay: 2,
+          delay: 1.5,
           onComplete: () => {
             sessionStorage.setItem("fadeAnimated", "true");
           },
@@ -32,13 +32,7 @@ export function Navbar() {
       );
     }
 
-    if (theme === "dark") {
-      document.documentElement.classList.add("dark");
-      setTheme("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-      setTheme("light");
-    }
+    setThemeClass();
   }, []);
 
   useEffect(() => {
@@ -48,10 +42,33 @@ export function Navbar() {
       }
     };
 
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+    const handleChange = () => {
+      setTheme(mediaQuery.matches ? "dark" : "light");
+      setThemeClass();
+    };
+
+    handleChange(); // Détecte au chargement
+    mediaQuery.addEventListener("change", handleChange); // Écoute les changements
+
     handleResize();
     window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    return () => {
+      mediaQuery.removeEventListener("change", handleChange);
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
+
+  const setThemeClass = () => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+      setTheme("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+      setTheme("light");
+    }
+  };
 
   useEffect(() => {
     document.documentElement.style.overflow = openMenu ? "hidden" : "inherit";
