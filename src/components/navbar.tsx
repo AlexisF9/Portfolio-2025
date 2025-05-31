@@ -7,7 +7,7 @@ import { useEffect, useRef, useState } from "react";
 
 export function Navbar() {
   const pathname = usePathname();
-  const [theme, setTheme] = useState<"light" | "dark">();
+  const [theme, setTheme] = useState<"light" | "dark">("light");
   const [openMenu, setOpenMenu] = useState(false);
   const [hasAlreadyAnimated, setHasAlreadyAnimated] = useState(false);
 
@@ -31,42 +31,46 @@ export function Navbar() {
         }
       );
     }
-
-    setThemeClass();
   }, []);
 
   useEffect(() => {
+    //Theme
+    const matchMedia = window.matchMedia("(prefers-color-scheme: dark)");
+    setTheme(matchMedia.matches ? "dark" : "light");
+    setThemeClass(matchMedia.matches ? "dark" : "light");
+
+    const handler = (e: MediaQueryListEvent) => {
+      setTheme(e.matches ? "dark" : "light");
+      setThemeClass(matchMedia.matches ? "dark" : "light");
+    };
+
+    matchMedia.addEventListener("change", handler);
+
+    // Resize
     const handleResize = () => {
       if (window.innerWidth < 768) {
         setOpenMenu(false);
       }
     };
 
-    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-
-    const handleChange = () => {
-      setTheme(mediaQuery.matches ? "dark" : "light");
-      setThemeClass();
-    };
-
-    handleChange(); // Détecte au chargement
-    mediaQuery.addEventListener("change", handleChange); // Écoute les changements
-
     handleResize();
     window.addEventListener("resize", handleResize);
+
     return () => {
-      mediaQuery.removeEventListener("change", handleChange);
       window.removeEventListener("resize", handleResize);
+      matchMedia.removeEventListener("change", handler);
     };
   }, []);
 
-  const setThemeClass = () => {
-    if (theme === "dark") {
+  const setThemeClass = (t: "dark" | "light") => {
+    if (t === "dark") {
+      document.documentElement.classList.remove("light");
       document.documentElement.classList.add("dark");
-      setTheme("dark");
+      setTheme(t);
     } else {
       document.documentElement.classList.remove("dark");
-      setTheme("light");
+      document.documentElement.classList.add("light");
+      setTheme(t);
     }
   };
 

@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="light">
+    <html lang="fr">
       <body className="max-w-5xl mx-auto bg-white dark:bg-neutral-900 overflow-x-hidden">
         <LenisScroll />
         <Navbar />
