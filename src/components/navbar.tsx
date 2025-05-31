@@ -7,7 +7,7 @@ import { useEffect, useRef, useState } from "react";
 
 export function Navbar() {
   const pathname = usePathname();
-  const [theme, setTheme] = useState<"light" | "dark">();
+  const [theme, setTheme] = useState<"light" | "dark">("light");
   const [openMenu, setOpenMenu] = useState(false);
   const [hasAlreadyAnimated, setHasAlreadyAnimated] = useState(false);
 
@@ -24,24 +24,29 @@ export function Navbar() {
         {
           y: 0,
           duration: 1.5,
-          delay: 2,
+          delay: 1.5,
           onComplete: () => {
             sessionStorage.setItem("fadeAnimated", "true");
           },
         }
       );
     }
-
-    if (theme === "dark") {
-      document.documentElement.classList.add("dark");
-      setTheme("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-      setTheme("light");
-    }
   }, []);
 
   useEffect(() => {
+    //Theme
+    const matchMedia = window.matchMedia("(prefers-color-scheme: dark)");
+    setTheme(matchMedia.matches ? "dark" : "light");
+    setThemeClass(matchMedia.matches ? "dark" : "light");
+
+    const handler = (e: MediaQueryListEvent) => {
+      setTheme(e.matches ? "dark" : "light");
+      setThemeClass(matchMedia.matches ? "dark" : "light");
+    };
+
+    matchMedia.addEventListener("change", handler);
+
+    // Resize
     const handleResize = () => {
       if (window.innerWidth < 768) {
         setOpenMenu(false);
@@ -50,8 +55,24 @@ export function Navbar() {
 
     handleResize();
     window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      matchMedia.removeEventListener("change", handler);
+    };
   }, []);
+
+  const setThemeClass = (t: "dark" | "light") => {
+    if (t === "dark") {
+      document.documentElement.classList.remove("light");
+      document.documentElement.classList.add("dark");
+      setTheme(t);
+    } else {
+      document.documentElement.classList.remove("dark");
+      document.documentElement.classList.add("light");
+      setTheme(t);
+    }
+  };
 
   useEffect(() => {
     document.documentElement.style.overflow = openMenu ? "hidden" : "inherit";
