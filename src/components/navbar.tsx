@@ -12,6 +12,7 @@ export function Navbar() {
   const [hasAlreadyAnimated, setHasAlreadyAnimated] = useState(false);
 
   const headerRef = useRef(null);
+  const linksRef = useRef<(HTMLLIElement | HTMLButtonElement | null)[]>([]);
 
   useEffect(() => {
     const alreadyAnimated = sessionStorage.getItem("fadeAnimated");
@@ -76,6 +77,21 @@ export function Navbar() {
 
   useEffect(() => {
     document.documentElement.style.overflow = openMenu ? "hidden" : "inherit";
+
+    if (openMenu) {
+      gsap.fromTo(
+        linksRef.current,
+        { opacity: 0, x: 30 },
+        {
+          opacity: 1,
+          x: 0,
+          stagger: 0.1,
+          duration: 0.6,
+          delay: 0.5,
+          ease: "power2.out",
+        }
+      );
+    }
   }, [openMenu]);
 
   useEffect(() => {
@@ -107,7 +123,7 @@ export function Navbar() {
     <nav>
       <div
         ref={headerRef}
-        className={`fixed z-[9] top-4 left-[50%] translate-x-[-50%] p-4 border bg-neutral-600/20 dark:bg-white/20 border-neutral-600 dark:border-neutral-300 rounded-full backdrop-blur-sm ${
+        className={`fixed z-[9] top-4 left-[50%] translate-x-[-50%] p-4 border border-neutral-600 dark:border-neutral-300 rounded-full backdrop-blur-md ${
           !hasAlreadyAnimated && "translate-y-[-150px]"
         }`}
       >
@@ -124,8 +140,10 @@ export function Navbar() {
                 <li
                   key={index}
                   className={`${
-                    pathname === link.link && "opacity-[.5]"
-                  } dark:text-white`}
+                    pathname === link.link
+                      ? "text-neutral-500"
+                      : "dark:text-white"
+                  }`}
                 >
                   <Link href={link.link}>{link.label}</Link>
                 </li>
@@ -145,9 +163,7 @@ export function Navbar() {
       </div>
       <div
         className={`flex md:hidden fixed inset-[0] w-full z-[9] flex-col bg-neutral-200 dark:bg-neutral-800 transition-all duration-300 ease-in-out ${
-          openMenu
-            ? "opacity-100 translate-x-0"
-            : "opacity-0 translate-x-[100%] pointer-events-none"
+          openMenu ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
       >
         <button
@@ -163,9 +179,14 @@ export function Navbar() {
                 return (
                   <li
                     key={index}
+                    ref={(el) => {
+                      linksRef.current[index] = el;
+                    }}
                     className={`text-xl ${
-                      pathname === link.link && "opacity-[.5]"
-                    } dark:text-white`}
+                      pathname === link.link
+                        ? "text-neutral-500"
+                        : "dark:text-white"
+                    }`}
                   >
                     <Link href={link.link}>{link.label}</Link>
                   </li>
@@ -174,6 +195,9 @@ export function Navbar() {
             </ul>
             <button
               onClick={toggleTheme}
+              ref={(el) => {
+                linksRef.current[links.length] = el;
+              }}
               className="cursor-pointer text-neutral-950 dark:text-white"
             >
               <span className="sr-only">
