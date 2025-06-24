@@ -1,8 +1,8 @@
 "use client";
 import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
-import ScrollTrigger from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -10,21 +10,22 @@ export function Footer() {
   const footer = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
-    if (footer.current) {
-      const ytop = footer.current.getBoundingClientRect().top + window.scrollY;
-
-      gsap.to(footer.current, {
-        maxWidth: "100%",
+    gsap.fromTo(
+      footer.current,
+      { opacity: 0, width: "50%" },
+      {
         opacity: 1,
-        ease: "none",
+        width: "100%",
+        duration: 1,
+        ease: "power3.out",
         scrollTrigger: {
-          start: `${ytop} bottom`,
-          end: `bottom bottom`,
-          scrub: true,
+          trigger: footer.current,
+          start: "top bottom",
+          end: "bottom bottom",
           markers: false,
         },
-      });
-    }
+      }
+    );
 
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
@@ -34,7 +35,7 @@ export function Footer() {
   return (
     <footer
       ref={footer}
-      className="flex flex-col align-center gap-2 items-center justify-center max-w-[70%] opacity-0 w-full mx-auto mt-20 py-20 px-9 bg-neutral-800 rounded-t-4xl dark:bg-white"
+      className="flex flex-col align-center gap-2 items-center justify-center opacity-0 w-full mx-auto my-20 py-16 px-9 bg-neutral-800 rounded-full dark:bg-white"
     >
       <p className="w-max font-gothic text-xl md:text-4xl text-white dark:text-neutral-950">
         Alexis Flacher
