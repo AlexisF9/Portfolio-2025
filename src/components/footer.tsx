@@ -12,10 +12,6 @@ export function Footer() {
   useEffect(() => {
     if (footer.current) {
       const ytop = footer.current.getBoundingClientRect().top + window.scrollY;
-      const ybottom =
-        footer.current.getBoundingClientRect().top +
-        window.scrollY +
-        footer.current.offsetHeight;
 
       gsap.to(footer.current, {
         maxWidth: "100%",
