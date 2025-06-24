@@ -23,7 +23,7 @@ export function Footer() {
         ease: "none",
         scrollTrigger: {
           start: `${ytop} bottom`,
-          end: `${ybottom} bottom`,
+          end: `bottom bottom`,
           scrub: true,
           markers: false,
         },
