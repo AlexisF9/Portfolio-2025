@@ -123,7 +123,7 @@ export function Navbar() {
     <nav>
       <div
         ref={headerRef}
-        className={`fixed z-[9] top-4 left-[50%] translate-x-[-50%] p-4 border bg-white/20 dark:bg-neutral-900/20 border-neutral-600 dark:border-neutral-300 rounded-full backdrop-blur-md ${
+        className={`fixed z-[9] top-4 left-[50%] translate-x-[-50%] p-4 border bg-white/40 dark:bg-neutral-900/40 border-neutral-600 dark:border-neutral-300 rounded-full backdrop-blur-sm ${
           !hasAlreadyAnimated && "translate-y-[-150px]"
         }`}
       >
@@ -139,10 +139,8 @@ export function Navbar() {
               return (
                 <li
                   key={index}
-                  className={`${
-                    pathname === link.link
-                      ? "text-neutral-500"
-                      : "dark:text-white"
+                  className={`dark:text-white ${
+                    pathname === link.link && "opacity-50"
                   }`}
                 >
                   <Link href={link.link}>{link.label}</Link>
