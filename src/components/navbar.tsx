@@ -180,13 +180,15 @@ export function Navbar() {
                     ref={(el) => {
                       linksRef.current[index] = el;
                     }}
-                    className={`text-xl ${
-                      pathname === link.link
-                        ? "text-neutral-500"
-                        : "dark:text-white"
-                    }`}
                   >
-                    <Link href={link.link}>{link.label}</Link>
+                    <Link
+                      className={`text-xl dark:text-white ${
+                        pathname === link.link && "opacity-50"
+                      }`}
+                      href={link.link}
+                    >
+                      {link.label}
+                    </Link>
                   </li>
                 );
               })}
