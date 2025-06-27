@@ -103,11 +103,37 @@
   },
   {
     "id": 5,
+    "name": "qpark",
+    "title": "Qpark France",
+    "date": "2023",
+    "shortDescription": "Refonte de l'application web de gestion d'équipes internes de Qpark France",
+    "description": "Refonte de l'application web de gestion d'équipes internes de Qpark France. Développement des outils de gestion des formulaires, tableaux de données, gestion des droits, gestion du temps, gestion et historique des missions, tunnels d'étapes et gestion des accès selon les droits des utilisateurs. Première phase d'intégration et test des composants sur Storybook avant dynamisation.",
+    "type": "pro",
+    "pictures": ["/images/qpark.webp"],
+    "technos": [
+      {
+        "name": "react",
+        "label": "ReactJS"
+      },
+      {
+        "name": "storybook",
+        "label": "Storybook"
+      },
+      {
+        "name": "styled",
+        "label": "Styled component"
+      }
+    ],
+    "link": "https://big-boss-studio.com/fr/project/q-parkmaincourante",
+    "github": null
+  },
+  {
+    "id": 6,
     "name": "qui-veut-du-fromage",
     "title": "Qui veut du fromage ?",
     "date": "2023",
     "shortDescription": "Refonte du site de \"Qui veut du fromage ?\", une filiale du groupe Savencia.",
-    "description": "Refonte du site de \"Qui veut du fromage ?\", une filiale du groupe Savencia.",
+    "description": "Refonte du site de \"Qui veut du fromage ?\", une filiale du groupe Savencia. Site multipage avec connexion à une API. Première phase d'intégration des composants sur Storybook avant dynamisation.",
     "type": "pro",
     "pictures": ["/images/qvdf/qvdf-1.webp", "/images/qvdf/qvdf-2.webp", "/images/qvdf/qvdf-3.webp", "/images/qvdf/qvdf-4.webp", "/images/qvdf/qvdf-5.webp", "/images/qvdf/qvdf-6.webp"],
     "technos": [
@@ -128,7 +154,7 @@
     "github": null
   },
   {
-    "id": 6,
+    "id": 7,
     "name": "balenciaga-sustainability",
     "title": "Balenciaga Sustainability",
     "date": "2023",
@@ -154,7 +180,7 @@
     "github": null
   },
   {
-    "id": 7,
+    "id": 8,
     "name": "gmf",
     "title": "Landing GMF",
     "date": "2022",
@@ -172,7 +198,7 @@
     "github": null
   },
   {
-    "id": 8,
+    "id": 9,
     "name": "izicarte",
     "title": "La caisse d'épargne",
     "date": "2022",
