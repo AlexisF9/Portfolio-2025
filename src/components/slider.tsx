@@ -26,33 +26,30 @@ export function Slider({ pictures }: { pictures: string[] }) {
           {pictures.map((el: string, index) => {
             return (
               <SwiperSlide key={index}>
-                <Image
-                  className="w-full aspect-[4/2] object-cover"
-                  src={el}
-                  width={900}
-                  height={500}
-                  alt=""
-                />
+                <img className="w-full" src={el} alt="" />
               </SwiperSlide>
             );
           })}
         </Swiper>
       </div>
       <div className="flex items-center justify-between pt-4">
-        <div className="flex gap-2">
-          {pictures.map((_, index) => {
-            return (
-              <span
-                key={index}
-                className={`${
-                  currentSlide === index + 1
-                    ? "bg-neutral-600 dark:bg-white"
-                    : "bg-transparent"
-                } block border border-neutral-600 dark:border-white w-[10px] aspect-square rounded-full`}
-              ></span>
-            );
-          })}
-        </div>
+        {pictures.length > 1 && (
+          <div className="flex gap-2">
+            {pictures.map((_, index) => {
+              return (
+                <span
+                  key={index}
+                  className={`${
+                    currentSlide === index + 1
+                      ? "bg-neutral-600 dark:bg-white"
+                      : "bg-transparent"
+                  } block border border-neutral-600 dark:border-white w-[10px] aspect-square rounded-full`}
+                ></span>
+              );
+            })}
+          </div>
+        )}
+
         <div className="dark:text-white">
           <button className="custom-prev absolute z-1 top-[50%] -translate-y-[50%] left-2 md:left-4 cursor-pointer bg-neutral-200 dark:bg-neutral-600 rounded-full p-2">
             <ChevronLeft className="w-[20px] md:w-[30px] h-auto" />

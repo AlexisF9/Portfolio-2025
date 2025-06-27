@@ -8,7 +8,7 @@ export function Card({ card }: { card: Realisation }) {
     <div className="relative group">
       <div className="rounded-2xl shadow-lg overflow-hidden">
         <Image
-          className="w-full aspect-[4/2] object-cover group-hover:scale-110 transition duration-300 ease-in-out"
+          className="w-full aspect-[2/1] group-hover:scale-110 transition duration-300 ease-in-out"
           src={card.pictures[0]}
           width={500}
           height={300}
