@@ -256,11 +256,12 @@ export default function Home() {
             Je suis Alexis, j&apos;ai 23 ans et je suis développeur front-end à
             Grenoble depuis 2022. Durant mon parcours j&apos;ai pu travailler
             sur des projets variés allant de la création de site vitrine à des
-            applications web complexes, collaborer étroitement avec des équipes
-            créatives et techniques où j&apos;ai appris à traduire les maquettes
-            visuelles Figma en code propre et fonctionnel et à concevoir des
-            interfaces dynamiques et fluides tout en respectant les contraintes
-            et les spécifications de chaque projets.
+            applications web complexes. J&apos;ai pu collaborer étroitement avec
+            des équipes créatives et techniques où j&apos;ai appris à traduire
+            les maquettes visuelles Figma en code propre et fonctionnel et
+            j&apos;ai appris à concevoir des interfaces dynamiques et fluides
+            tout en respectant les contraintes et les spécifications de chaque
+            projets.
           </p>
           <p className="translate-anim dark:text-white">
             Aujourd&apos;hui, ma maîtrise de l&apos;écosystème JavaScript et des
