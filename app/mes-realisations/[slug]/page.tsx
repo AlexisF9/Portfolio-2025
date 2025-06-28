@@ -5,6 +5,26 @@ import Link from "next/link";
 import { Slider } from "@/src/components/slider";
 import { Github, SquareArrowOutUpRight } from "lucide-react";
 import Image from "next/image";
+import { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  const rea = realisations.find((el: Realisation) => el.name === params.slug);
+
+  if (!rea) {
+    return {
+      title: "404",
+    };
+  }
+
+  return {
+    title: `${rea.title}`,
+    description: rea.shortDescription,
+  };
+}
 
 export default async function Page({
   params,
