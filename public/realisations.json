@@ -4,8 +4,8 @@
     "name": "my-immo",
     "title": "MyImmo",
     "date": "2025",
-    "shortDescription": "Développement d'un site d'annonces immobilières. Ce projet m'a permis d'apprendre les bases de Angular",
-    "description": "MyImmo est un site d'annonces immobilières développé avec Angular. Sur MyImmo il est possible de rechercher par ville, de trier des annonces immobilières et de mettre en favoris les annonces. Je me suis inspiré de sites similaires comme Logic Immo ou SeLoger. L'enregistrement des annonces en favoris marche en local, j'enregistre les IDs des annonces dans le localstorage du navigateur. Pour le back-end j'ai utilisé Strapi, un headless CMS open source.",
+    "shortDescription": "Site d'annonces immobilières développée avec Angular.",
+    "description": "MyImmo est une application web développée avec Angular, permettant la consultation et la recherche d'annonces immobilières par ville. L'utilisateur peut trier les résultats, consulter les détails des biens et ajouter des annonces à ses favoris. L'inspiration du projet provient de plateformes bien établies comme Logic-Immo ou SeLoger. Le système de favoris fonctionne en local grâce à l'enregistrement des identifiants d'annonces dans le localStorage du navigateur. Côté back-end, l'application s'appuie sur Strapi, un CMS headless open source, utilisé pour la gestion et l'exposition des données via une API.",
     "type": "perso",
     "pictures": ["/images/myimmo/my-immo-1.jpg", "/images/myimmo/my-immo-2.jpg", "/images/myimmo/my-immo-3.jpg", "/images/myimmo/my-immo-4.jpg", "/images/myimmo/my-immo-5.jpg", "/images/myimmo/my-immo-6.jpg", "/images/myimmo/my-immo-7.jpg", "/images/myimmo/my-immo-8.jpg"],
     "technos": [
@@ -30,8 +30,8 @@
     "name": "griddy",
     "title": "Griddy",
     "date": "2025",
-    "shortDescription": "Développement d'une plateforme de gestion des tâches comme Trello ou Jira.",
-    "description": "Griddy est une plateforme de création et de gestion de tâches, développé en React. Sur Griddy il est possible de créer, trier, modifier et supprimer des colonnes et des tâches. Je me suis notamment inspiré de plateformes similaire (comme Jira, Trello..etc) et d'un ancien test technique. Griddy fonctionne en local, les données sont enregistrées dans le localstorage du navigateur. J'utilise Zustand pour la gestion de l'état, React DnD pour le drag and drop des tâches et React Router.",
+    "shortDescription": "Application de gestion des tâches comme Trello ou Jira.",
+    "description": "Griddy est une application de gestion de tâches développée avec React, pensée pour offrir une interface intuitive de type kanban. Elle permet de créer, modifier, trier, déplacer et supprimer des colonnes ainsi que des tâches. Le projet s'inspire de solutions existantes comme Trello ou Jira, ainsi que d'un ancien test technique que j'ai souhaité approfondir. L'application fonctionne entièrement en local : les données sont stockées dans le localStorage du navigateur pour garantir une expérience fluide sans back-end. Côté technique, Griddy repose sur Zustand pour la gestion d'état, React DnD pour les fonctionnalités de drag and drop, et React Router pour la navigation.",
     "type": "perso",
     "pictures": ["/images/griddy/griddy-1.webp", "/images/griddy/griddy-2.webp", "/images/griddy/griddy-3.webp", "/images/griddy/griddy-4.webp", "/images/griddy/griddy-5.webp", "/images/griddy/griddy-6.webp", "/images/griddy/griddy-7.webp", "/images/griddy/griddy-8.webp"],
     "technos": [
@@ -48,8 +48,8 @@
     "name": "daitem",
     "title": "Daitem",
     "date": "2024",
-    "shortDescription": "Intégration des sites Daitem, fournisseur de systèmes de sécurité et filiale du groupe Atraltech.",
-    "description": "Daitem est un fournisseur de systèmes de sécurité et filiale du groupe Atraltech. J'ai réalisé l'intégration des sites \"Daitem pro\", accecibles par les installateurs pour commander les produits, et \"daitem com\", accessibles par tout le monde pour présenter la marque.",
+    "shortDescription": "Intégration des sites Daitem, filiale du groupe Atraltech, un acteur reconnu dans le domaine des systèmes de sécurité.",
+    "description": "Daitem, filiale du groupe Atraltech, est un acteur reconnu dans le domaine des systèmes de sécurité. J'ai pris en charge l'intégration de deux de leurs sites, \"Daitem pro\", une plateforme dédiée aux installateurs professionnels, leur permettant de passer commande et gérer leurs produits et \"daitem com\", le site vitrine grand public présentant la marque, ses solutions et ses engagements.",
     "type": "pro",
     "pictures": ["/images/daitem/daitem-1.webp", "/images/daitem/daitem-2.webp", "/images/daitem/daitem-3.webp", "/images/daitem/daitem-4.webp", "/images/daitem/daitem-5.webp", "/images/daitem/daitem-6.webp", "/images/daitem/daitem-7.webp", "/images/daitem/daitem-8.webp", "/images/daitem/daitem-9.webp"],
     "technos": [
@@ -66,8 +66,8 @@
     "name": "bongenie",
     "title": "Bongénie",
     "date": "2024",
-    "shortDescription": "Intégration du site e-commerce de Bongénie, une marque suisse type \"Galeries Lafayette\".",
-    "description": "Bongénie est une marque suisse type \"Galeries Lafayette\" de vente de produits de luxe. J'ai réalisé l'intégration en collaboration avec un collègue intégrateur en utilisant StimulusJS, un mini framework js léger qui permet de créer du code js réutilisable facilement.",
+    "shortDescription": "Intégration du site e-commerce de Bongénie, une marque suisse spécialisée dans la vente de produits de luxe.",
+    "description": "Bongénie est une marque suisse spécialisée dans la vente de produits de luxe, comparable aux Galeries Lafayette. Dans le cadre de ce projet, j'ai collaboré avec un autre intégrateur pour réaliser l'intégration du site. Nous avons utilisé StimulusJS, un micro-framework JavaScript léger, qui permet de structurer du code réutilisable de manière simple et efficace, tout en conservant une intégration propre et maintenable.",
     "type": "pro",
     "pictures": ["/images/bongenie/bongenie-1.webp", "/images/bongenie/bongenie-2.webp", "/images/bongenie/bongenie-3.webp", "/images/bongenie/bongenie-4.webp"],
     "technos": [
@@ -84,8 +84,8 @@
     "name": "clap",
     "title": "Clap",
     "date": "2024",
-    "shortDescription": "Pour approfondir mes connaissances en VueJS j'ai dev un site type \"Allociné\" avec l'api TMDB.",
-    "description": "Pour approfondir mes connaissances en VueJS j'ai dev un site type \"Allociné\" en utilisant l'api TMDB. J'ai pu également avoir une première expérience avec Algolia pour ma page recherche. J'ai créé un script qui permet d'envoyer des données à la base d'Algolia pour pouvoir ensuite réaliser une recherche poussé an utilisant des facets.",
+    "shortDescription": "Site web inspirée d'Allociné, développée avec Vue.js et connectée à l'API TMDB.",
+    "description": "Clap est un site web inspirée d'Allociné, développée avec Vue.js et connectée à l'API TMDB (The Movie Database) pour l'affichage des données cinématographiques. Ce projet m'a également permis d'explorer Algolia pour la mise en place d'un moteur de recherche performant. J'ai conçu un script d'indexation permettant d'envoyer les données à la base Algolia, afin de proposer une recherche avancée avec l'utilisation de facettes (facets), offrant une expérience utilisateur rapide et filtrée.",
     "type": "perso",
     "pictures": ["/images/clap/clap-1.webp", "/images/clap/clap-2.webp", "/images/clap/clap-3.webp", "/images/clap/clap-4.webp", "/images/clap/clap-5.webp"],
     "technos": [
@@ -107,7 +107,7 @@
     "title": "Qpark France",
     "date": "2023",
     "shortDescription": "Refonte de l'application web de gestion d'équipes internes de Qpark France",
-    "description": "Refonte de l'application web de gestion d'équipes internes de Qpark France. Développement des outils de gestion des formulaires, tableaux de données, gestion des droits, gestion du temps, gestion et historique des missions, tunnels d'étapes et gestion des accès selon les droits des utilisateurs. Première phase d'intégration et test des composants sur Storybook avant dynamisation.",
+    "description": "Refonte complète de l'application web de gestion des équipes internes pour Q-Park France. Le projet a consisté à développer un ensemble d'outils métier, incluant : la gestion des formulaires et des tableaux de données, la gestion des droits utilisateurs et des accès, le suivi du temps et des missions, avec historique et la mise en place de tunnels d'étapes pour encadrer les workflows. La première phase du projet a porté sur l'intégration et les tests des composants dans Storybook, avant leur dynamisation et leur intégration finale dans l'application.",
     "type": "pro",
     "pictures": ["/images/qpark.webp"],
     "technos": [
@@ -132,8 +132,8 @@
     "name": "qui-veut-du-fromage",
     "title": "Qui veut du fromage ?",
     "date": "2023",
-    "shortDescription": "Refonte du site de \"Qui veut du fromage ?\", une filiale du groupe Savencia.",
-    "description": "Refonte du site de \"Qui veut du fromage ?\", une filiale du groupe Savencia. Site multipage avec connexion à une API. Première phase d'intégration des composants sur Storybook avant dynamisation.",
+    "shortDescription": "Refonte du site Qui veut du fromage ?, une filiale du groupe Savencia.",
+    "description": "Refonte du site vitrine multipage de Qui Veut Du Fromage, une marque du groupe agroalimentaire Savencia. Le site est connecté à une API pour l'affichage dynamique des contenus. La première phase du développement a consisté à intégrer et tester les composants via Storybook, afin d'assurer leur conformité et leur réutilisabilité avant leur dynamisation et intégration finale dans le site.",
     "type": "pro",
     "pictures": ["/images/qvdf/qvdf-1.webp", "/images/qvdf/qvdf-2.webp", "/images/qvdf/qvdf-3.webp", "/images/qvdf/qvdf-4.webp", "/images/qvdf/qvdf-5.webp", "/images/qvdf/qvdf-6.webp"],
     "technos": [
@@ -158,8 +158,8 @@
     "name": "balenciaga-sustainability",
     "title": "Balenciaga Sustainability",
     "date": "2023",
-    "shortDescription": "Dev d'un site pour Balenciaga qui sert à donner les infos légales d'un produit",
-    "description": "Dev d'un site pour Balenciaga qui sert à donner les infos légales d'un produit en scannant directement le code barre sur mobile ou en rentrant manuellement l'id du produit ou le numéro du code barre.",
+    "shortDescription": "Développement d'un site dédié à Balenciaga, permettant d'accéder rapidement aux informations légales d'un produit.",
+    "description": "Développement d'un site dédié à Balenciaga, permettant d'accéder rapidement aux informations légales d'un produit. L'utilisateur peut scanner directement le code-barres via son smartphone ou saisir manuellement l'identifiant produit ou le numéro de code-barres pour obtenir les détails associés.",
     "type": "pro",
     "pictures": ["/images/bal/bal-1.webp", "/images/bal/bal-2.webp"],
     "technos": [
@@ -181,11 +181,24 @@
   },
   {
     "id": 8,
+    "name": "bridelice",
+    "title": "Bridelice",
+    "date": "2023",
+    "shortDescription": "Refonte du site vitrine de Bridelice sur Wordpress.",
+    "description": "Le projet consistait à repenser entièrement le site vitrine de Bridelice. Initialement développé en React, le client a finalement opté pour une intégration sous WordPress en cours de route. Nous avons su faire preuve de réactivité et d'adaptabilité pour répondre à ce changement",
+    "type": "pro",
+    "pictures": ["/images/bridelice/bridelice-1.webp", "/images/bridelice/bridelice-2.webp", "/images/bridelice/bridelice-3.webp", "/images/bridelice/bridelice-4.webp", "/images/bridelice/bridelice-5.webp", "/images/bridelice/bridelice-6.webp", "/images/bridelice/bridelice-7.webp", "/images/bridelice/bridelice-8.webp", "/images/bridelice/bridelice-9.webp", "/images/bridelice/bridelice-10.webp"],
+    "technos": [],
+    "link": "https://www.bridelice.fr/",
+    "github": null
+  },
+  {
+    "id": 9,
     "name": "gmf",
     "title": "Landing GMF",
     "date": "2022",
-    "shortDescription": "Dev d'une landing page pour GMF lors de mon alternance chez TBWA/Paris",
-    "description": "Dev d'une landing page pour GMF lors de mon alternance chez TBWA/Paris",
+    "shortDescription": "Développement d'une landing page pour GMF lors de mon alternance chez TBWA/Paris",
+    "description": "Développement d'une landing page pour GMF lors de mon alternance chez TBWA/Paris",
     "type": "pro",
     "pictures": ["/images/gmf/gmf.webp", "/images/gmf/gmf2.webp", "/images/gmf/gmf3.webp"],
     "technos": [
@@ -198,12 +211,12 @@
     "github": null
   },
   {
-    "id": 9,
+    "id": 10,
     "name": "izicarte",
     "title": "La caisse d'épargne",
     "date": "2022",
-    "shortDescription": "Dev d'un mini-jeu de Noël pour La Caisse d'Épargne lors de mon alternance.",
-    "description": "Lors de mon alternance, j'ai pu dev un mini-jeu de Noël pour La Caisse d'Épargne. Le but du jeu est de retrouver des élements cachés dans une vitrine de Noël pour pouvoir s'inscrire à un tirage au sort.",
+    "shortDescription": "Développement d'un mini-jeu de Noël pour La Caisse d'Épargne lors de mon alternance.",
+    "description": "Lors de mon alternance, j'ai pu développer un mini-jeu de Noël pour La Caisse d'Épargne. Le but du jeu est de retrouver des élements cachés dans une vitrine de Noël pour pouvoir s'inscrire à un tirage au sort.",
     "type": "pro",
     "pictures": ["/images/izicarte/izicarte.webp", "/images/izicarte/izicarte2.webp", "/images/izicarte/izicarte3.webp"],
     "technos": [
