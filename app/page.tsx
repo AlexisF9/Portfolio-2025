@@ -252,19 +252,21 @@ export default function Home() {
           <h3 className="translate-anim text-xl md:text-2xl font-gothic dark:text-white mb-9">
             Qui suis-je ?
           </h3>
+          <p className="translate-anim dark:text-white mb-4">
+            Je suis Alexis, j&apos;ai 23 ans et je suis développeur front-end à
+            Grenoble depuis 2022. Durant mon parcours j'ai pu travailler sur des
+            projets variés allant de la création de site vitrine à des
+            applications web complexes, collaborer étroitement avec des équipes
+            créatives et techniques où j&apos;ai appris à traduire les maquettes
+            visuelles Figma en code propre et fonctionnel et à concevoir des
+            interfaces dynamiques et fluides tout en respectant les contraintes
+            et les spécifications de chaque projets.
+          </p>
           <p className="translate-anim dark:text-white">
-            Je suis Alexis, j&apos;ai 23 ans et je suis développeur front-end
-            depuis 2022. J&apos;ai tout d&apos;abord fait un{" "}
-            <span className="font-bold">DUT MMI</span> (Métiers du Multimédia et
-            de l&apos;Internet) à Grenoble en 2 ans. A la fin de ce DUT
-            j&apos;ai réalisé un stage en tant qu&apos;intégrateur web et
-            webdesigner dans l&apos;agence{" "}
-            <span className="font-bold">6tematik</span>. Puis je me suis
-            spécialisé dans le développement web en faisant la troisième année
-            du <span className="font-bold">Bachelor Développeur Web</span> à
-            l&apos;école <span className="font-bold">Hetic</span> à Paris, en
-            alternance en tant que développeur front-end dans l&apos;agence de
-            pub <span className="font-bold">TBWA\Paris</span>.
+            Aujourd&apos;hui, ma maîtrise de l&apos;écosystème JavaScript et des
+            technologies front-end indispensables me permettent de concevoir des
+            interfaces performantes et accessibles, centrées sur
+            l&apos;utilisateur.
           </p>
           <div className="opacity-anim flex gap-4 mt-4">
             <Link
@@ -284,7 +286,35 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mt-16">
+        <div className="mt-20" id="skills">
+          <h3 className="translate-anim text-xl md:text-2xl font-gothic dark:text-white mb-9">
+            Mes compétences clés
+          </h3>
+          <ul className="flex flex-wrap items-center gap-4 md:gap-9">
+            {skills.map((skill, index) => {
+              return (
+                <li
+                  key={index}
+                  ref={(el) => {
+                    skillsRef.current[index] = el;
+                  }}
+                  className="flex items-center gap-2 dark:text-white"
+                >
+                  <Image
+                    src={`/images/logos/logo-${skill.name}.png`}
+                    width={24}
+                    height={24}
+                    alt={`logo ${skill.name}`}
+                    className="h-[24px] w-auto"
+                  />
+                  <span className="text-sm">{skill.label}</span>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+
+        <div className="mt-20">
           <h3 className="translate-anim text-xl md:text-2xl font-gothic dark:text-white mb-9">
             Mes expériences
           </h3>
@@ -324,34 +354,6 @@ export default function Home() {
                       )}
                     </div>
                   </div>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-
-        <div className="mt-16">
-          <h3 className="translate-anim text-xl md:text-2xl font-gothic dark:text-white mb-9">
-            Mes compétences clés
-          </h3>
-          <ul className="flex flex-wrap items-center gap-4 md:gap-9">
-            {skills.map((skill, index) => {
-              return (
-                <li
-                  key={index}
-                  ref={(el) => {
-                    skillsRef.current[index] = el;
-                  }}
-                  className="flex items-center gap-2 dark:text-white"
-                >
-                  <Image
-                    src={`/images/logos/logo-${skill.name}.png`}
-                    width={24}
-                    height={24}
-                    alt={`logo ${skill.name}`}
-                    className="h-[24px] w-auto"
-                  />
-                  <span className="text-sm">{skill.label}</span>
                 </li>
               );
             })}
