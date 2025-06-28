@@ -17,9 +17,7 @@ export async function generateMetadata({
   const rea = realisations.find((el: Realisation) => el.name === slug);
 
   if (!rea) {
-    return {
-      title: "404",
-    };
+    notFound();
   }
 
   return {
