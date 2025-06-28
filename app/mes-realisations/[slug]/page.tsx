@@ -10,9 +10,11 @@ import { Metadata } from "next";
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const rea = realisations.find((el: Realisation) => el.name === params.slug);
+  const { slug } = await params;
+
+  const rea = realisations.find((el: Realisation) => el.name === slug);
 
   if (!rea) {
     return {
