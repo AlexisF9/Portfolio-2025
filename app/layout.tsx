@@ -7,7 +7,7 @@ import { Navbar } from "@/src/components/navbar";
 export const metadata: Metadata = {
   title: "Alexis Flacher - Portfolio",
   description:
-    "Bienvenue sur mon portfolio ! Je suis Alexis Flacher, développeur front-end à Grenoble.",
+    "Bienvenue sur mon portfolio ! Je suis Alexis Flacher, développeur front-end à Grenoble depuis 2022.",
   icons: {
     icon: [{ url: "/favicon.ico" }, { url: "/favicon.jpg", type: "image/jpg" }],
   },
