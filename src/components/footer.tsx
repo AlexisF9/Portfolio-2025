@@ -29,7 +29,7 @@ export function Footer() {
       </div>
       <div className="flex flex-col gap-2 items-center justify-center w-full mx-auto p-12 border-t md:border border-neutral-900 dark:border-white md:rounded-full text-neutral-950 dark:text-white ">
         <p className="w-max font-gothic text-2xl md:text-4xl">Alexis Flacher</p>
-        <p className="text-sm opacity-70">
+        <p className="text-sm opacity-70 text-center">
           © 2025 Alexis Flacher. Tous droits réservés.
         </p>
       </div>

@@ -159,7 +159,7 @@ export function Intro() {
           interfaces performantes et accessibles, centrées sur
           l&apos;utilisateur.
         </p>
-        <div ref={buttonsRef} className="flex gap-4 mt-4">
+        <div ref={buttonsRef} className="flex flex-wrap gap-4 mt-4">
           <div className="opacity-anim">
             <IconButton
               label="Linkedin"
@@ -174,7 +174,6 @@ export function Intro() {
               icon={<Github />}
             />
           </div>
-
           <Link
             className="opacity-anim block font-gothic w-fit border border-transparent rounded-full py-2 px-4 bg-linear-to-r hover:from-transparent hover:to-transparent hover:dark:text-white hover:border-neutral-600 hover:dark:border-white from-react to-vue transition-border transition-colors duration-300 ease-in-out"
             href={"./alexis-flacher-cv.pdf"}
