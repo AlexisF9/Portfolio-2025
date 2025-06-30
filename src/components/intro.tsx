@@ -11,6 +11,7 @@ import { IconButton } from "./icon-button";
 gsap.registerPlugin(ScrollTrigger);
 
 export function Intro() {
+  const buttonsRef = useRef(null);
   const skillsRef = useRef<(HTMLLIElement | null)[]>([]);
 
   useEffect(() => {
@@ -36,22 +37,21 @@ export function Intro() {
 
     const buttons = gsap.utils.toArray(".opacity-anim");
 
-    buttons.forEach((el) => {
-      const t = el as HTMLElement;
-      gsap.fromTo(
-        t,
-        { opacity: 0 },
-        {
-          opacity: 1,
-          duration: 1,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: t,
-            start: "top 80%",
-          },
-        }
-      );
-    });
+    gsap.fromTo(
+      buttons,
+      { opacity: 0, y: 30 },
+      {
+        opacity: 1,
+        y: 0,
+        stagger: 0.2,
+        duration: 0.6,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: buttonsRef.current,
+          start: "top 80%",
+        },
+      }
+    );
 
     gsap.fromTo(
       skillsRef.current,
@@ -136,6 +136,7 @@ export function Intro() {
       label: "Algolia",
     },
   ];
+
   return (
     <div className="overflow-x-hidden">
       <div className="flex flex-col">
@@ -158,17 +159,29 @@ export function Intro() {
           interfaces performantes et accessibles, centrées sur
           l&apos;utilisateur.
         </p>
-        <div className="opacity-anim flex gap-4 mt-4">
-          <IconButton
-            label="Linkedin"
-            url="https://www.linkedin.com/in/alexis-flacher-772ba7197/"
-            icon={<Linkedin />}
-          />
-          <IconButton
-            label="Github"
-            url="https://github.com/AlexisF9"
-            icon={<Github />}
-          />
+        <div ref={buttonsRef} className="flex gap-4 mt-4">
+          <div className="opacity-anim">
+            <IconButton
+              label="Linkedin"
+              url="https://www.linkedin.com/in/alexis-flacher-772ba7197/"
+              icon={<Linkedin />}
+            />
+          </div>
+          <div className="opacity-anim">
+            <IconButton
+              label="Github"
+              url="https://github.com/AlexisF9"
+              icon={<Github />}
+            />
+          </div>
+
+          <Link
+            className="opacity-anim block font-gothic w-fit border border-transparent rounded-full py-2 px-4 bg-linear-to-r hover:from-transparent hover:to-transparent hover:dark:text-white hover:border-neutral-600 hover:dark:border-white from-react to-vue transition-border transition-colors duration-300 ease-in-out"
+            href={"./alexis-flacher-cv.pdf"}
+            target="_blank"
+          >
+            Télécharger mon CV
+          </Link>
         </div>
       </div>
 
@@ -244,16 +257,6 @@ export function Intro() {
             );
           })}
         </ul>
-      </div>
-
-      <div className="opacity-anim flex justify-center mt-20">
-        <Link
-          className="block font-gothic w-fit border border-transparent rounded-full py-2 px-4 bg-linear-to-r hover:from-transparent hover:to-transparent hover:dark:text-white hover:border-neutral-600 hover:dark:border-white from-react to-vue transition duration-300 ease-in-out"
-          href={"./alexis-flacher-cv.pdf"}
-          target="_blank"
-        >
-          Télécharger mon CV
-        </Link>
       </div>
     </div>
   );
