@@ -112,21 +112,6 @@ export function Hero() {
     }
   }, [animationIsOver]);
 
-  const scales = [
-    {
-      scale: 1.2,
-      anim: "animate-radar1",
-    },
-    {
-      scale: 1.4,
-      anim: "animate-radar2",
-    },
-    {
-      scale: 1.6,
-      anim: "animate-radar3",
-    },
-  ];
-
   return (
     <div
       ref={intro}
