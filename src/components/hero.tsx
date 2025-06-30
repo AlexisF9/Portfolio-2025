@@ -64,6 +64,22 @@ export function Hero() {
       }
     );
 
+    const elements = gsap.utils.toArray(".test");
+
+    elements.forEach((el) => {
+      const t = el as HTMLElement;
+      gsap.fromTo(
+        t,
+        { opacity: 0 },
+        {
+          opacity: 1,
+          duration: 1.8,
+          delay: 1.8,
+          ease: "power3.out",
+        }
+      );
+    });
+
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
@@ -96,18 +112,41 @@ export function Hero() {
     }
   }, [animationIsOver]);
 
+  const scales = [
+    {
+      scale: 1.2,
+      anim: "animate-radar1",
+    },
+    {
+      scale: 1.4,
+      anim: "animate-radar2",
+    },
+    {
+      scale: 1.6,
+      anim: "animate-radar3",
+    },
+  ];
+
   return (
-    <div ref={intro} className="h-dvh flex justify-center items-center">
-      <img
-        src={"/Alexis.webp"}
-        alt="Photo Alexis Flacher"
-        ref={pictureRef}
-        className="picture-animation-reset rounded-full absolute aspect-[2/3] w-auto h-[400px] md:h-[65%] md:max-h-[700px] portrait:max-h-[500px] object-cover z-[0] p-4"
-      />
-      <div className="flex flex-col dark:text-white w-full gap-9 md:gap-4 h-[440px] md:h-[70%] md:max-h-[740px] portrait:max-h-[540px] justify-between">
+    <div
+      ref={intro}
+      className="h-dvh flex justify-center items-center -ml-4 -mr-4 md:-ml-9 md:-mr-9 overflow-x-hidden"
+    >
+      <div className="flex flex-col items-center justify-center relative dark:text-white w-full gap-9 md:gap-4 h-[400px] md:h-[60%] md:max-h-[650px] portrait:max-h-[500px]">
+        <span className="absolute aspect-[2/3] w-auto h-full opacity-0 test">
+          <span
+            className={`absolute aspect-[2/3] w-auto h-full scale-[1.2] border border-neutral-900 dark:border-white rounded-full animate-radar1`}
+          ></span>
+          <span
+            className={`absolute aspect-[2/3] w-auto h-full scale-[1.4] border border-neutral-900 dark:border-white rounded-full animate-radar2`}
+          ></span>
+          <span
+            className={`absolute aspect-[2/3] w-auto h-full scale-[1.6] border border-neutral-900 dark:border-white rounded-full animate-radar3`}
+          ></span>
+        </span>
         <h1
           ref={h1Ref}
-          className="font-gothic text-fluid flex flex-col text-center md:max-w-[90%] md:w-full leading-none mx-auto uppercase text-white mix-blend-difference"
+          className="absolute -top-8 font-gothic text-fluid flex flex-col text-center md:max-w-[90%] md:w-full leading-none mx-auto uppercase text-white mix-blend-difference z-[1]"
         >
           <span ref={titleRef} className="opacity-[0] md:self-start">
             Alexis
@@ -116,7 +155,16 @@ export function Hero() {
             Flacher
           </span>
         </h1>
-        <h2 ref={subtitleRef} className="opacity-[0] text-xl text-center">
+        <img
+          src={"/Alexis.webp"}
+          alt="Photo Alexis Flacher"
+          ref={pictureRef}
+          className="picture-animation-reset rounded-full aspect-[2/3] w-auto h-full object-cover z-[0]"
+        />
+        <h2
+          ref={subtitleRef}
+          className="absolute -bottom-16 opacity-[0] text-2xl text-center z-[1]"
+        >
           Développeur Front-end
         </h2>
       </div>

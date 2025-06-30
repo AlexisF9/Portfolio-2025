@@ -25,15 +25,25 @@
 
   --color-react: #60d9f8;
   --color-vue: #3fb984;
+    
 }
 
 @layer utilities {
   .text-fluid {
     font-size: clamp(48px, 8vw, 100px);
   }
-
   .base-fluid {
     font-size: clamp(14px, 280px, .95vw);
+  }
+
+  .animate-radar1 {
+    animation: radarPulse1 4s infinite ease-in-out;
+  }
+  .animate-radar2 {
+    animation: radarPulse2 4s infinite ease-in-out 0.2s;
+  }
+  .animate-radar3 {
+    animation: radarPulse3 4s infinite ease-in-out 0.4s;
   }
 }
 
@@ -44,4 +54,17 @@ body {
 .picture-animation-reset {
   opacity: 0;
   clip-path: inset(0% 0% 100% 0%);
+}
+
+@keyframes radarPulse1 {
+  0%, 100% { transform: scale(.95); opacity: 0.4; }
+  50% { transform: scale(1); opacity: 0.1; }
+}
+@keyframes radarPulse2 {
+  0%, 100% { transform: scale(.95); opacity: 0.1; }
+  50% { transform: scale(1); opacity: 0.05; }
+}
+@keyframes radarPulse3 {
+  0%, 100% { transform: scale(.95); opacity: 0.05; }
+  50% { transform: scale(1); opacity: 0.01; }
 }
