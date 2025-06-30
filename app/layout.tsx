@@ -11,6 +11,14 @@ export const metadata: Metadata = {
   icons: {
     icon: [{ url: "/favicon.ico" }, { url: "/favicon.jpg", type: "image/jpg" }],
   },
+  openGraph: {
+    title: "Alexis Flacher - Développeur Front-end",
+    description:
+      "Développeur web spécialisé en développement front React, Next.Js, Vue.Js",
+    images: "https://www.alexisflacher.fr/Alexis.webp",
+    url: "https://www.alexisflacher.fr/",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
