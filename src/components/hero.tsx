@@ -148,7 +148,7 @@ export function Hero() {
         />
         <h2
           ref={subtitleRef}
-          className="absolute -bottom-16 opacity-[0] text-2xl text-center z-[1]"
+          className="absolute -bottom-16 opacity-[0] text-xl md:text-2xl text-center z-[1]"
         >
           Développeur Front-end
         </h2>
