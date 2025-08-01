@@ -146,7 +146,7 @@ export function Intro() {
   ];
 
   return (
-    <div className="overflow-x-hidden">
+    <section className="overflow-x-hidden">
       <div className="flex flex-col">
         <h3 className="translate-anim text-xl md:text-2xl font-gothic dark:text-white mb-9">
           Qui suis-je ?
@@ -265,6 +265,6 @@ export function Intro() {
           })}
         </ul>
       </div>
-    </div>
+    </section>
   );
 }
