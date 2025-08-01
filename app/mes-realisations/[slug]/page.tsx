@@ -40,7 +40,7 @@ export default async function Page({
   }
 
   return (
-    <div className="pt-30 md:pt-40">
+    <article className="pt-30 md:pt-40">
       <div className="flex items-center flex-wrap-reverse justify-between mb-9">
         <h1 className="text-xl md:text-4xl dark:text-white font-gothic">
           {rea.title}
@@ -91,6 +91,6 @@ export default async function Page({
           )}
         </div>
       )}
-    </div>
+    </article>
   );
 }
