@@ -76,16 +76,24 @@ export function Intro() {
 
   const skills = [
     {
+      name: "html",
+      label: "Html",
+    },
+    {
+      name: "css",
+      label: "CSS",
+    },
+    {
+      name: "sass",
+      label: "SCSS",
+    },
+    {
       name: "js",
       label: "JavaScript",
     },
     {
       name: "ts",
       label: "TypeScript",
-    },
-    {
-      name: "sass",
-      label: "Sass",
     },
     {
       name: "react",
