@@ -25,7 +25,13 @@ export function Slider({ pictures }: { pictures: string[] }) {
           {pictures.map((el: string, index) => {
             return (
               <SwiperSlide key={index}>
-                <img className="w-full" src={el} alt="" />
+                <img
+                  className="w-full"
+                  width={950}
+                  height={450}
+                  src={el}
+                  alt=""
+                />
               </SwiperSlide>
             );
           })}
