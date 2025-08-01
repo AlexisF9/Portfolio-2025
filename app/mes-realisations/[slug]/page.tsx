@@ -6,6 +6,7 @@ import { Slider } from "@/src/components/slider";
 import { Github, SquareArrowOutUpRight } from "lucide-react";
 import Image from "next/image";
 import { Metadata } from "next";
+import { IconButton } from "@/src/components/icon-button";
 
 export async function generateMetadata({
   params,
@@ -81,13 +82,7 @@ export default async function Page({
             </Link>
           )}
           {rea.github && (
-            <Link
-              className="block font-gothic w-fit border border-neutral-600 rounded-full p-2 dark:text-white dark:border-white"
-              href={rea.github}
-              target="_blank"
-            >
-              <Github />
-            </Link>
+            <IconButton label="Github" url={rea.github} icon={<Github />} />
           )}
         </div>
       )}
