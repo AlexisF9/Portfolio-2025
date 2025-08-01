@@ -31,7 +31,7 @@ export default function RootLayout({
       <body className="max-w-5xl mx-auto bg-white dark:bg-neutral-900 overflow-x-hidden">
         <LenisScroll />
         <Navbar />
-        <div className="pr-4 pl-4 md:pr-9 md:pl-9">{children}</div>
+        <main className="pr-4 pl-4 md:pr-9 md:pl-9">{children}</main>
         <Footer />
       </body>
     </html>

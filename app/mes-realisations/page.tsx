@@ -19,8 +19,8 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <div className="pt-30 md:pt-40">
+    <section className="pt-30 md:pt-40">
       <Projects />
-    </div>
+    </section>
   );
 }
