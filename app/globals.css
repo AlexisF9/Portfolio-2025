@@ -1,5 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap');
+@font-face {
+  font-family: "Inconsolata";
+  src: url("/fonts/Inconsolata.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: "SpecialGothic";
+  src: url("/fonts/SpecialGothicExpandedOne.ttf") format('truetype');
+}
 
 @import "tailwindcss";
 @tailwind utilities;
@@ -21,11 +28,10 @@
 
 @theme {
   --font-inconsolata: "Inconsolata", monospace;
-  --font-gothic: "Special Gothic Expanded One", sans-serif;
+  --font-gothic: "SpecialGothic", sans-serif;
 
   --color-react: #60d9f8;
   --color-vue: #3fb984;
-    
 }
 
 @layer utilities {
