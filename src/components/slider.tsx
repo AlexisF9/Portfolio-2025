@@ -50,10 +50,16 @@ export function Slider({ pictures }: { pictures: string[] }) {
         )}
 
         <div className="dark:text-white">
-          <button className="custom-prev absolute z-1 top-[50%] -translate-y-[50%] left-2 md:left-4 cursor-pointer bg-neutral-200 dark:bg-neutral-600 rounded-full p-2">
+          <button
+            className="custom-prev absolute z-1 top-[50%] -translate-y-[50%] left-2 md:left-4 cursor-pointer bg-neutral-200 dark:bg-neutral-600 rounded-full p-2"
+            aria-label="Précédent"
+          >
             <ChevronLeft className="w-[20px] md:w-[30px] h-auto" />
           </button>
-          <button className="custom-next absolute z-1 top-[50%] -translate-y-[50%] right-2 md:right-4 cursor-pointer bg-neutral-200 dark:bg-neutral-600 rounded-full p-2">
+          <button
+            className="custom-next absolute z-1 top-[50%] -translate-y-[50%] right-2 md:right-4 cursor-pointer bg-neutral-200 dark:bg-neutral-600 rounded-full p-2"
+            aria-label="Suivant"
+          >
             <ChevronRight className="w-[20px] md:w-[30px] h-auto" />
           </button>
         </div>
