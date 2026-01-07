@@ -1,15 +1,6 @@
 [
     {
         "id": 1,
-        "company": "Capgemini",
-        "date": "Oct2025 - Aujourd'hui",
-        "type": "CDI",
-        "role": "Développeur Full-stack",
-        "loc": "Montbonnot-Saint-Martin",
-        "technos": ["react", "java"]
-    },
-    {
-        "id": 2,
         "company": "Mezcalito",
         "date": "Dec2023 - Dec2024",
         "type": "CDI",
@@ -18,7 +9,7 @@
         "technos": ["stimulus"]
     },
     {
-        "id": 3,
+        "id": 2,
         "company": "Big Boss Studio",
         "date": "Dec2022 - Dec2023",
         "type": "CDI",
@@ -27,7 +18,7 @@
         "technos": ["react", "next", "storybook", "styled"]
     },
     {
-        "id": 4,
+        "id": 3,
         "company": "Ascanio",
         "date": "Sept2022 - Nov2022",
         "type": "CDI",
@@ -36,7 +27,7 @@
         "technos": ["react"]
     },
     {
-        "id": 5,
+        "id": 4,
         "company": "TBWA/Paris",
         "date": "Sept2021 - Aout2022",
         "type": "Alternance",
@@ -45,7 +36,7 @@
         "technos": ["next"]
     }, 
     {
-        "id": 6,
+        "id": 5,
         "company": "6tematik",
         "date": "2021",
         "type": "Stage",
