@@ -6,7 +6,7 @@
         "type": "CDI",
         "role": "Développeur Full-stack",
         "loc": "Montbonnot-Saint-Martin",
-        "technos": ["react", "java"]
+        "technos": ["react", "java", "spring-boot"]
     },
     {
         "id": 2,
@@ -42,7 +42,7 @@
         "type": "Alternance",
         "role": "Développeur Front-end",
         "loc": "Boulogne-Billancourt",
-        "technos": ["next"]
+        "technos": ["react", "next"]
     }, 
     {
         "id": 6,
