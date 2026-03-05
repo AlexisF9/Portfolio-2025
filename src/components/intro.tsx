@@ -229,7 +229,7 @@ export function Intro() {
             return (
               <li key={index} className="translate-anim dark:text-white">
                 <div className="flex flex-col gap-2">
-                  <div className="flex flex-wrap items-center justify-between">
+                  <div className="flex flex-wrap flex-col md:flex-row md:items-center justify-between">
                     <div className="flex items-center gap-2">
                       <h4 className="font-gothic">{exp.company}</h4>
                       <p className="text-sm border px-2 rounded-full">

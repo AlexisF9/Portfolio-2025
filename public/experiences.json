@@ -2,7 +2,7 @@
     {
         "id": 1,
         "company": "Capgemini",
-        "date": "Oct2025 - Aujourd'hui",
+        "date": "Octobre 2025 à Aujourd'hui",
         "type": "CDI",
         "role": "Développeur Full-stack",
         "loc": "Montbonnot-Saint-Martin",
@@ -11,7 +11,7 @@
     {
         "id": 2,
         "company": "Mezcalito",
-        "date": "Dec2023 - Dec2024",
+        "date": "Décembre 2023 à Décembre 2024",
         "type": "CDI",
         "role": "Intégrateur web",
         "loc": "Grenoble",
@@ -20,7 +20,7 @@
     {
         "id": 3,
         "company": "Big Boss Studio",
-        "date": "Dec2022 - Dec2023",
+        "date": "Décembre 2022 à Décembre 2023",
         "type": "CDI",
         "role": "Développeur Front-end",
         "loc": "Full remote",
@@ -29,7 +29,7 @@
     {
         "id": 4,
         "company": "Ascanio",
-        "date": "Sept2022 - Nov2022",
+        "date": "Septembre 2022 à Novembre 2022",
         "type": "CDI",
         "role": "Développeur Front-end",
         "loc": "Montbonnot-Saint-Martin",
@@ -38,7 +38,7 @@
     {
         "id": 5,
         "company": "TBWA/Paris",
-        "date": "Sept2021 - Aout2022",
+        "date": "Septembre 2021 à Août 2022",
         "type": "Alternance",
         "role": "Développeur Front-end",
         "loc": "Boulogne-Billancourt",
