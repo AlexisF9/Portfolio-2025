@@ -130,6 +130,7 @@ export function Navbar() {
         <button
           onClick={() => setOpenMenu(true)}
           className="cursor-pointer text-neutral-950 dark:text-white block md:hidden"
+          aria-label="Menu"
         >
           <Menu />
         </button>
@@ -182,7 +183,7 @@ export function Navbar() {
                     }}
                   >
                     <Link
-                      className={`text-xl dark:text-white ${
+                      className={`text-2xl dark:text-white ${
                         pathname === link.link && "opacity-50"
                       }`}
                       href={link.link}

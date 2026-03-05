@@ -7,12 +7,12 @@ import { Navbar } from "@/src/components/navbar";
 export const metadata: Metadata = {
   title: "Alexis Flacher - Portfolio",
   description:
-    "Bienvenue sur mon portfolio ! Je suis Alexis Flacher, développeur front-end à Grenoble depuis 2022. Je suis à l'écoute d'opportunités freelance comme développeur front ou intégrateur web.",
+    "Bienvenue sur mon portfolio ! Je suis Alexis Flacher, développeur Front-end à Grenoble depuis 2022. Je suis à l'écoute d'opportunités freelance comme développeur front ou intégrateur web.",
   icons: {
     icon: [{ url: "/favicon.ico" }, { url: "/favicon.jpg", type: "image/jpg" }],
   },
   openGraph: {
-    title: "Alexis Flacher - Développeur Front-end",
+    title: "Alexis Flacher - Développeur Front-end à Grenoble",
     description:
       "Développeur web spécialisé en développement front React, Next.Js, Vue.Js",
     images: "https://www.alexisflacher.fr/Alexis.webp",
