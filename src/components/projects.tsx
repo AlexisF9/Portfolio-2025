@@ -62,28 +62,31 @@ export function Projects() {
   ];
   return (
     <>
-      <h1 className="fade-in text-xl mb-4 md:text-2xl dark:text-white font-gothic">
-        Mes réalisations
-      </h1>
-      <div className="fade-in flex items-center flex-wrap gap-2 mb-9">
-        {filters.map((item, index) => {
-          return (
-            <button
-              key={index}
-              className={`cursor-pointer border rounded-full px-2 transition duration-300 ease-out ${
-                filter === item.name
-                  ? "bg-linear-to-r from-react to-vue text-neutral-950 dark:border-transparent"
-                  : "dark:text-white dark:border-white"
-              }`}
-              onClick={() =>
-                handleFilterChange(item.name as "all" | "perso" | "pro")
-              }
-            >
-              {item.label}
-            </button>
-          );
-        })}
+      <div className="flex flex-col mb-9 gap-4 md:flex-row md:justify-between">
+        <h1 className="fade-in text-xl md:text-2xl dark:text-white font-gothic">
+          Mes réalisations
+        </h1>
+        <div className="fade-in flex items-center flex-wrap gap-2">
+          {filters.map((item, index) => {
+            return (
+              <button
+                key={index}
+                className={`cursor-pointer border rounded-full px-2 transition duration-300 ease-out ${
+                  filter === item.name
+                    ? "bg-linear-to-r from-react to-vue text-neutral-950 dark:border-transparent"
+                    : "dark:text-white dark:border-white"
+                }`}
+                onClick={() =>
+                  handleFilterChange(item.name as "all" | "perso" | "pro")
+                }
+              >
+                {item.label}
+              </button>
+            );
+          })}
+        </div>
       </div>
+
       <CardsList filter={filter} />
     </>
   );
