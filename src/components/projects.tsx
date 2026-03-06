@@ -32,7 +32,7 @@ export function Projects() {
             trigger: t,
             start: "top 95%",
           },
-        }
+        },
       );
     });
 
@@ -70,7 +70,7 @@ export function Projects() {
           return (
             <button
               key={index}
-              className={`cursor-pointer border rounded-full px-2 ${
+              className={`cursor-pointer border rounded-full px-2 transition duration-300 ease-out ${
                 filter === item.name
                   ? "bg-linear-to-r from-react to-vue text-neutral-950 dark:border-transparent"
                   : "dark:text-white dark:border-white"
