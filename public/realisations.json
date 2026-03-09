@@ -221,10 +221,10 @@
   {
     "id": 1,
     "name": "gmf",
-    "title": "Landing GMF",
+    "title": "GMF",
     "date": "2022",
     "shortDescription": "Développement d'une landing page pour GMF lors de mon alternance chez TBWA/Paris",
-    "description": "Développement d'une landing page pour GMF lors de mon alternance chez TBWA/Paris",
+    "description": "Développée avec Next.js, cette landing page a été réalisée durant mon alternance chez TBWA/Paris. Une attention particulière a été portée à la performance, à l'accessibilité et au responsive design.",
     "type": "pro",
     "pictures": ["/images/gmf/gmf.webp", "/images/gmf/gmf2.webp", "/images/gmf/gmf3.webp"],
     "technos": [
