@@ -31,7 +31,7 @@ export function Intro() {
             trigger: t,
             start: "top 80%",
           },
-        }
+        },
       );
     });
 
@@ -50,7 +50,7 @@ export function Intro() {
           trigger: buttonsRef.current,
           start: "top 80%",
         },
-      }
+      },
     );
 
     gsap.fromTo(
@@ -66,7 +66,7 @@ export function Intro() {
           trigger: skillsRef.current,
           start: "top 80%",
         },
-      }
+      },
     );
 
     return () => {
@@ -110,6 +110,10 @@ export function Intro() {
     {
       name: "stimulus",
       label: "Stimulus",
+    },
+    {
+      name: "git",
+      label: "Git",
     },
     {
       name: "tailwind",

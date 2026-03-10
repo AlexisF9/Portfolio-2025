@@ -25,7 +25,7 @@ export function Card({ card }: { card: Realisation }) {
               Projet {card.type}
             </p>
             <div className="flex items-center gap-2">
-              {card.technos.map((techno, index) => {
+              {card?.mainTechnos?.map((techno, index) => {
                 return (
                   <Image
                     key={index}

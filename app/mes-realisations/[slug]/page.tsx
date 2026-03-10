@@ -51,24 +51,36 @@ export default async function Page({
           <p className="border rounded-full px-2 py-px w-fit text-sm">
             Projet {rea.type}
           </p>
-          <div className="flex items-center gap-2">
-            {rea.technos.map((techno, index) => {
-              return (
-                <Image
-                  key={index}
-                  src={`/images/logos/logo-${techno.name}.png`}
-                  width={20}
-                  height={20}
-                  alt={`logo ${techno.label}`}
-                />
-              );
-            })}
-          </div>
         </div>
       </div>
       <p className="pb-9 dark:text-white">{rea.description}</p>
 
       <Slider pictures={rea.pictures} />
+
+      <div className="pt-9">
+        <h2 className="text-xl md:text-2xl font-gothic dark:text-white mb-4">
+          Les technos :
+        </h2>
+        <div className="flex items-center flex-wrap gap-2">
+          {rea.technos.map((skill, index) => {
+            return (
+              <li
+                key={index}
+                className="flex items-center gap-2 dark:text-white"
+              >
+                <Image
+                  src={`/images/logos/logo-${skill.name}.png`}
+                  width={24}
+                  height={24}
+                  alt={`logo ${skill.name}`}
+                  className="h-[24px] w-auto"
+                />
+                <span className="text-sm">{skill.label}</span>
+              </li>
+            );
+          })}
+        </div>
+      </div>
 
       {(rea.link || rea.github) && (
         <div className="flex items-center gap-4 w-fit mx-auto pt-9">

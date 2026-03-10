@@ -1,6 +1,5 @@
 "use client";
-
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { CardsList } from "@/src/components/cards-list";
@@ -21,11 +20,11 @@ export function Projects() {
       const t = el as HTMLElement;
       gsap.fromTo(
         t,
-        { opacity: 0, y: 40 },
+        { opacity: 0, y: -30 },
         {
           opacity: 1,
           y: 0,
-          delay: 0.3,
+          delay: 0.5,
           duration: 1,
           ease: "power3.out",
           scrollTrigger: {
