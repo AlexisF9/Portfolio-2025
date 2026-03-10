@@ -10,7 +10,7 @@ export function Slider({ pictures }: { pictures: string[] }) {
   const [currentSlide, setCurrentSlide] = useState(1);
 
   return (
-    <div className="relative">
+    <div className="fade-in relative">
       <div className="shadow-lg">
         <Swiper
           slidesPerView={1}

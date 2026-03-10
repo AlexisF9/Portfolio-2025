@@ -8,10 +8,12 @@ export interface Realisation {
   pictures: string[];
   description: string;
   shortDescription: string;
-  mainTechnos?: { name: string; label: string }[];
+  mainTechnos: { name: string; label: string }[];
   technos: { name: string; label: string }[];
   type: string;
   date: string;
+  link: string | null;
+  github: string | null;
 }
 
 export const metadata: Metadata = {
