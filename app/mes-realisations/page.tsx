@@ -8,6 +8,7 @@ export interface Realisation {
   pictures: string[];
   description: string;
   shortDescription: string;
+  mainTechnos?: { name: string; label: string }[];
   technos: { name: string; label: string }[];
   type: string;
   date: string;
