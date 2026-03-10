@@ -44,9 +44,9 @@ export function RealisationDetails(props: { rea: Realisation }) {
         <h1 className="fade-in text-xl md:text-4xl dark:text-white font-gothic">
           {rea.title}
         </h1>
-        <div className="flex items-center gap-2 dark:text-white">
-          <p className="fade-in text-sm">{rea.date}</p>
-          <p className="fade-in border rounded-full px-2 py-px w-fit text-sm">
+        <div className="fade-in flex items-center gap-2 dark:text-white">
+          <p className="text-sm">{rea.date}</p>
+          <p className="border rounded-full px-2 py-px w-fit text-sm">
             Projet {rea.type}
           </p>
         </div>
