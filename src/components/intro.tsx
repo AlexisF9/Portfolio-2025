@@ -97,15 +97,19 @@ export function Intro() {
     },
     {
       name: "react",
-      label: "ReactJs",
+      label: "React",
     },
     {
       name: "next",
-      label: "NextJs",
+      label: "Next.Js",
     },
     {
       name: "vue",
-      label: "VueJs",
+      label: "Vue",
+    },
+    {
+      name: "node-js",
+      label: "Node.Js",
     },
     {
       name: "stimulus",
