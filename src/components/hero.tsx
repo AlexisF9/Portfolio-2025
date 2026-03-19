@@ -25,7 +25,7 @@ export function Hero() {
         duration: 1,
         delay: 1,
         onComplete: () => setAnimationIsOver(true),
-      }
+      },
     );
 
     gsap.fromTo(
@@ -36,7 +36,7 @@ export function Hero() {
         x: 0,
         duration: 1,
         delay: 1,
-      }
+      },
     );
 
     gsap.fromTo(
@@ -47,7 +47,7 @@ export function Hero() {
         y: 0,
         duration: 1,
         delay: 1,
-      }
+      },
     );
 
     gsap.fromTo(
@@ -61,7 +61,7 @@ export function Hero() {
         clipPath: "inset(0% 0% 0% 0%)",
         duration: 1.8,
         ease: "power2.inOut",
-      }
+      },
     );
 
     const elements = gsap.utils.toArray(".test");
@@ -76,7 +76,7 @@ export function Hero() {
           duration: 1.8,
           delay: 1.8,
           ease: "power3.out",
-        }
+        },
       );
     });
 
@@ -103,11 +103,6 @@ export function Hero() {
             },
           });
         },
-
-        //"(max-width: 768px)": () => {
-        //  // Tu peux soit ne rien faire, soit reset le style :
-        //  gsap.set(home.current, { clearProps: "all" });
-        //},
       });
     }
   }, [animationIsOver]);

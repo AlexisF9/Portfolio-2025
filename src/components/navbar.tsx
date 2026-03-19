@@ -29,7 +29,7 @@ export function Navbar() {
           onComplete: () => {
             sessionStorage.setItem("fadeAnimated", "true");
           },
-        }
+        },
       );
     }
   }, []);
@@ -89,7 +89,7 @@ export function Navbar() {
           duration: 0.6,
           delay: 0.5,
           ease: "power2.out",
-        }
+        },
       );
     }
   }, [openMenu]);
