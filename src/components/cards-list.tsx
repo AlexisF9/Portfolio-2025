@@ -13,13 +13,14 @@ export function CardsList(props: { filter: string }) {
   useEffect(() => {
     gsap.fromTo(
       skillsRef.current,
-      { opacity: 0, y: 30 },
+      { opacity: 0, y: 30, webkitFilter: "blur(" + 5 + "px)" },
       {
         opacity: 1,
         y: 0,
+        webkitFilter: "blur(" + 0 + "px)",
         stagger: 0.2,
         delay: 1,
-        duration: 1,
+        duration: 0.8,
         ease: "power2.out",
         scrollTrigger: {
           trigger: skillsRef.current,

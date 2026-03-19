@@ -200,7 +200,7 @@ export function Intro() {
         </div>
       </div>
 
-      <div className="mt-20" id="skills">
+      <div className="mt-20 md:mt-24" id="skills">
         <h3 className="translate-anim text-xl md:text-2xl font-gothic dark:text-white mb-9">
           Mes compétences clés
         </h3>
@@ -228,7 +228,7 @@ export function Intro() {
         </ul>
       </div>
 
-      <div className="mt-20">
+      <div className="mt-20 md:mt-24">
         <h3 className="translate-anim text-xl md:text-2xl font-gothic dark:text-white mb-9">
           Mes expériences
         </h3>
