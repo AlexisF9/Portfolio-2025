@@ -1,56 +1,56 @@
 [
-    {
-        "id": 1,
-        "company": "Capgemini",
-        "date": "Octobre 2025 à Aujourd'hui",
-        "type": "CDI",
-        "role": "Développeur Full-stack",
-        "loc": "Montbonnot-Saint-Martin",
-        "technos": ["react", "java", "spring-boot"]
-    },
-    {
-        "id": 2,
-        "company": "Mezcalito",
-        "date": "Décembre 2023 à Décembre 2024",
-        "type": "CDI",
-        "role": "Intégrateur web",
-        "loc": "Grenoble",
-        "technos": ["stimulus"]
-    },
-    {
-        "id": 3,
-        "company": "Big Boss Studio",
-        "date": "Décembre 2022 à Décembre 2023",
-        "type": "CDI",
-        "role": "Développeur Front-end",
-        "loc": "Full remote",
-        "technos": ["react", "next", "storybook", "styled"]
-    },
-    {
-        "id": 4,
-        "company": "Ascanio",
-        "date": "Septembre 2022 à Novembre 2022",
-        "type": "CDI",
-        "role": "Développeur Front-end",
-        "loc": "Montbonnot-Saint-Martin",
-        "technos": ["react"]
-    },
-    {
-        "id": 5,
-        "company": "TBWA/Paris",
-        "date": "Septembre 2021 à Août 2022",
-        "type": "Alternance",
-        "role": "Développeur Front-end",
-        "loc": "Boulogne-Billancourt",
-        "technos": ["react", "next"]
-    }, 
-    {
-        "id": 6,
-        "company": "6tematik",
-        "date": "2021",
-        "type": "Stage",
-        "role": "Intégrateur web et webdesigner",
-        "loc": "Romans-sur-Isère",
-        "technos": null
-    }
+  {
+    "id": 1,
+    "company": "Capgemini",
+    "date": "Octobre 2025 à Avril 2026",
+    "type": "CDI",
+    "role": "Développeur Full-stack",
+    "loc": "Montbonnot-Saint-Martin",
+    "technos": ["react", "java", "spring-boot"]
+  },
+  {
+    "id": 2,
+    "company": "Mezcalito",
+    "date": "Décembre 2023 à Décembre 2024",
+    "type": "CDI",
+    "role": "Intégrateur web",
+    "loc": "Grenoble",
+    "technos": ["stimulus"]
+  },
+  {
+    "id": 3,
+    "company": "Big Boss Studio",
+    "date": "Décembre 2022 à Décembre 2023",
+    "type": "CDI",
+    "role": "Développeur Front-end",
+    "loc": "Full remote",
+    "technos": ["react", "next", "storybook", "styled"]
+  },
+  {
+    "id": 4,
+    "company": "Ascanio",
+    "date": "Septembre 2022 à Novembre 2022",
+    "type": "CDI",
+    "role": "Développeur Front-end",
+    "loc": "Montbonnot-Saint-Martin",
+    "technos": ["react"]
+  },
+  {
+    "id": 5,
+    "company": "TBWA/Paris",
+    "date": "Septembre 2021 à Août 2022",
+    "type": "Alternance",
+    "role": "Développeur Front-end",
+    "loc": "Boulogne-Billancourt",
+    "technos": ["react", "next"]
+  },
+  {
+    "id": 6,
+    "company": "6tematik",
+    "date": "2021",
+    "type": "Stage",
+    "role": "Intégrateur web et webdesigner",
+    "loc": "Romans-sur-Isère",
+    "technos": null
+  }
 ]

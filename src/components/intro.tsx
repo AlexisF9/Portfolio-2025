@@ -101,15 +101,15 @@ export function Intro() {
     },
     {
       name: "next",
-      label: "Next.Js",
+      label: "Next.js",
     },
     {
       name: "vue",
-      label: "Vue",
+      label: "Vue.js",
     },
     {
       name: "node-js",
-      label: "Node.Js",
+      label: "Node.js",
     },
     {
       name: "stimulus",
@@ -124,20 +124,16 @@ export function Intro() {
       label: "TailwindCSS",
     },
     {
-      name: "strapi",
-      label: "Strapi",
-    },
-    {
-      name: "gsap",
-      label: "GSAP",
-    },
-    {
-      name: "twig",
-      label: "Twig",
+      name: "bootstrap",
+      label: "Bootstrap",
     },
     {
       name: "figma",
       label: "Figma",
+    },
+    {
+      name: "wordpress",
+      label: "WordPress",
     },
     {
       name: "styled",
@@ -146,6 +142,18 @@ export function Intro() {
     {
       name: "storybook",
       label: "Storybook",
+    },
+    {
+      name: "twig",
+      label: "Twig",
+    },
+    {
+      name: "strapi",
+      label: "Strapi",
+    },
+    {
+      name: "gsap",
+      label: "GSAP",
     },
     {
       name: "algolia",
