@@ -73,14 +73,13 @@
     "description": "MyImmo est une application web développée avec Angular, permettant la consultation et la recherche d'annonces immobilières par ville. L'utilisateur peut trier les résultats, consulter les détails des biens et ajouter des annonces à ses favoris. L'inspiration du projet provient de plateformes bien établies comme Logic-Immo ou SeLoger. Le système de favoris fonctionne en local grâce à l'enregistrement des identifiants d'annonces dans le localStorage du navigateur. Côté back-end, l'application s'appuie sur Strapi, un CMS headless open source, utilisé pour la gestion et l'exposition des données via une API.",
     "type": "perso",
     "pictures": [
-      "/images/myimmo/my-immo-1.jpg",
-      "/images/myimmo/my-immo-2.jpg",
-      "/images/myimmo/my-immo-3.jpg",
-      "/images/myimmo/my-immo-4.jpg",
-      "/images/myimmo/my-immo-5.jpg",
-      "/images/myimmo/my-immo-6.jpg",
-      "/images/myimmo/my-immo-7.jpg",
-      "/images/myimmo/my-immo-8.jpg"
+      "/images/myimmo/my-immo-1.webp",
+      "/images/myimmo/my-immo-2.webp",
+      "/images/myimmo/my-immo-3.webp",
+      "/images/myimmo/my-immo-4.webp",
+      "/images/myimmo/my-immo-5.webp",
+      "/images/myimmo/my-immo-6.webp",
+      "/images/myimmo/my-immo-7.webp"
     ],
     "mainTechnos": [
       {
