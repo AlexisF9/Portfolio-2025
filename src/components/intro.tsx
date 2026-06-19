@@ -1,10 +1,11 @@
 "use client";
 import gsap from "gsap";
-import { Github, Linkedin } from "lucide-react";
+import { Github, Linkedin, SquareArrowOutUpRight } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import experiences from "@/public/experiences.json";
+import benevolat from "@/public/benevolat.json";
 import Image from "next/image";
 import { IconButton } from "./icon-button";
 
@@ -275,6 +276,40 @@ export function Intro() {
                       </div>
                     )}
                   </div>
+                </div>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+
+      <div className="mt-20 md:mt-24">
+        <h3 className="translate-anim text-xl md:text-2xl font-gothic dark:text-white mb-9">
+          Bénévolat
+        </h3>
+        <ul className="flex flex-col gap-4">
+          {benevolat.map((exp, index) => {
+            return (
+              <li key={index} className="translate-anim dark:text-white">
+                <div className="flex flex-col gap-2">
+                  <div className="flex flex-wrap flex-col md:flex-row md:items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <h4 className="font-gothic">{exp.title}</h4>
+                      {exp.link && (
+                        <Link
+                          href={`${exp.link}`}
+                          aria-label="En savoir plus"
+                          target="_blank"
+                        >
+                          <SquareArrowOutUpRight />
+                        </Link>
+                      )}
+                    </div>
+                    <p>
+                      {exp.date} | {exp.school}
+                    </p>
+                  </div>
+                  <p>{exp.description}</p>
                 </div>
               </li>
             );
