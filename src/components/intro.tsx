@@ -168,8 +168,8 @@ export function Intro() {
           Qui suis-je ?
         </h3>
         <p className="translate-anim dark:text-white mb-4">
-          Je suis Alexis, j&apos;ai 24 ans et je suis développeur front-end à
-          Grenoble depuis 2022. Durant mon parcours j&apos;ai pu travailler sur
+          Je suis Alexis, j&apos;ai 24 ans et je suis développeur front-end
+          freelance à Grenoble. Durant mon parcours j&apos;ai pu travailler sur
           des projets variés allant de la création de site vitrine à des
           applications web complexes. J&apos;ai pu collaborer étroitement avec
           des équipes créatives et techniques où j&apos;ai appris à traduire les
