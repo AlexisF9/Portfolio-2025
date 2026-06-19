@@ -169,20 +169,19 @@ export function Intro() {
           Qui suis-je ?
         </h3>
         <p className="translate-anim dark:text-white mb-4">
-          Je suis Alexis, j&apos;ai 24 ans et je suis développeur front-end
-          freelance à Grenoble. Durant mon parcours j&apos;ai pu travailler sur
-          des projets variés allant de la création de site vitrine à des
-          applications web complexes. J&apos;ai pu collaborer étroitement avec
-          des équipes créatives et techniques où j&apos;ai appris à traduire les
-          maquettes visuelles Figma en code propre et fonctionnel et j&apos;ai
-          appris à concevoir des interfaces dynamiques et fluides tout en
-          respectant les contraintes et les spécifications de chaque projets.
+          Développeur front-end freelance basé à Grenoble, j'accompagne les
+          entreprises dans la création d'interfaces web modernes, rapides et
+          centrées sur l'utilisateur.
         </p>
         <p className="translate-anim dark:text-white">
-          Aujourd&apos;hui, ma maîtrise de l&apos;écosystème JavaScript et des
-          technologies front-end indispensables me permettent de concevoir des
-          interfaces performantes et accessibles, centrées sur
-          l&apos;utilisateur.
+          Fort de plusieurs années d'expérience en agence digitale et en ESN, je
+          m'appuie sur des stacks modernes avec React, Next.js, Vue.js et
+          TypeScript, pour créer des interfaces rapides, maintenables et
+          évolutives. Au-delà du code, j'apporte une vraie sensibilité au détail
+          visuel et à l'expérience utilisateur, héritée de mon goût pour le
+          webdesign et l'intégration web. Aujourd'hui, je mets cette double
+          expertise technique et créative au service de vos projets. Je suis
+          disponible pour vos missions ponctuelles ou longues durée.
         </p>
         <div ref={buttonsRef} className="flex flex-wrap gap-4 mt-4">
           <div className="opacity-anim">
