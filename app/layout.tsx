@@ -40,9 +40,9 @@ export const metadata: Metadata = {
   authors: [{ name: "Alexis Flacher" }],
   creator: "Alexis Flacher",
   openGraph: {
-    title: "Alexis Flacher - Développeur Front-end freelance à Grenoble",
+    title: "Alexis Flacher - Développeur web front-end freelance à Grenoble",
     description:
-      "Développeur web freelance spécialisé en développement Front React, Next.Js, Vue.Js. Disponible pour des missions.",
+      "Développeur web freelance spécialisé en développement front-end React, Next.Js, Vue.Js. Disponible pour des missions.",
     images: "https://www.alexisflacher.fr/Alexis.webp",
     url: "https://www.alexisflacher.fr/",
     type: "website",

@@ -169,9 +169,9 @@ export function Intro() {
           Qui suis-je ?
         </h3>
         <p className="translate-anim dark:text-white mb-4">
-          Développeur front-end freelance basé à Grenoble, j'accompagne les
-          entreprises dans la création d'interfaces web modernes, rapides et
-          centrées sur l'utilisateur.
+          Développeur web freelance basé à Grenoble, spécialisé en front-end,
+          j'accompagne les entreprises dans la création d'interfaces web
+          modernes, rapides et centrées sur l'utilisateur.
         </p>
         <p className="translate-anim dark:text-white">
           Fort de plusieurs années d'expérience en agence digitale et en ESN, je
