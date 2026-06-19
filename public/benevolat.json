@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "Membre du jury Multimédi'Alpes",
+    "description": "Multimédi'Alpes est un festival dédié à la valorisation des talents des étudiants MMI, en mettant en lumière leurs projets créatifs.",
+    "school": "BUT MMI Grenoble",
+    "link": "https://2026.multimedialpes.fr/",
+    "date": 2026
+  },
+  {
+    "id": 2,
+    "title": "Membre du jury oraux Bachelor 1 et 2",
+    "description": "Je rejoins le jury professionnel dans le cadre des soutenances de rapport d’entreprise des étudiants en Bachelor 1 et 2 de MyDigitalSchool Grenoble.",
+    "school": "MyDigitalSchool Grenoble",
+    "link": null,
+    "date": 2026
+  }
+]
