@@ -245,7 +245,7 @@ export function Intro() {
           Mes expériences
         </h3>
         <ul className="flex flex-col gap-4">
-          {experiences.reverse().map((exp, index) => {
+          {experiences.map((exp, index) => {
             return (
               <li key={index} className="translate-anim dark:text-white">
                 <div className="flex flex-col gap-2">
