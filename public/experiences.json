@@ -1,6 +1,15 @@
 [
   {
-    "id": 1,
+    "id": 7,
+    "company": "Rectorat Grenoble",
+    "date": "Juin 2026 à aujourd'hui",
+    "type": "Freelance",
+    "role": "Développeur Front-end",
+    "loc": "Grenoble",
+    "technos": ["stencil", "storybook"]
+  },
+  {
+    "id": 6,
     "company": "Capgemini",
     "date": "Octobre 2025 à Avril 2026",
     "type": "CDI",
@@ -9,7 +18,7 @@
     "technos": ["react", "java", "spring-boot"]
   },
   {
-    "id": 2,
+    "id": 5,
     "company": "Mezcalito",
     "date": "Décembre 2023 à Décembre 2024",
     "type": "CDI",
@@ -18,7 +27,7 @@
     "technos": ["stimulus"]
   },
   {
-    "id": 3,
+    "id": 4,
     "company": "Big Boss Studio",
     "date": "Décembre 2022 à Décembre 2023",
     "type": "CDI",
@@ -27,7 +36,7 @@
     "technos": ["react", "next", "storybook", "styled"]
   },
   {
-    "id": 4,
+    "id": 3,
     "company": "Ascanio",
     "date": "Septembre 2022 à Novembre 2022",
     "type": "CDI",
@@ -36,7 +45,7 @@
     "technos": ["react"]
   },
   {
-    "id": 5,
+    "id": 2,
     "company": "TBWA/Paris",
     "date": "Septembre 2021 à Août 2022",
     "type": "Alternance",
@@ -45,7 +54,7 @@
     "technos": ["react", "next"]
   },
   {
-    "id": 6,
+    "id": 1,
     "company": "6tematik",
     "date": "2021",
     "type": "Stage",

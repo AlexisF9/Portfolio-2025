@@ -109,6 +109,10 @@ export function Intro() {
       label: "Vue.js",
     },
     {
+      name: "stencil",
+      label: "Stencil.js",
+    },
+    {
       name: "node-js",
       label: "Node.js",
     },
@@ -241,7 +245,7 @@ export function Intro() {
           Mes expériences
         </h3>
         <ul className="flex flex-col gap-4">
-          {experiences.map((exp, index) => {
+          {experiences.reverse().map((exp, index) => {
             return (
               <li key={index} className="translate-anim dark:text-white">
                 <div className="flex flex-col gap-2">
