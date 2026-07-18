@@ -141,7 +141,7 @@ export function Navbar() {
                 <li
                   key={index}
                   className={`dark:text-white ${
-                    pathname === link.link && "opacity-50"
+                    pathname === link.link && "font-bold"
                   }`}
                 >
                   <Link href={link.link}>{link.label}</Link>
