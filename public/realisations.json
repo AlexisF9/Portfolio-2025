@@ -1,5 +1,65 @@
 [
   {
+    "id": 12,
+    "name": "rectorat",
+    "title": "Rectorat de Grenoble",
+    "date": "2026",
+    "shortDescription": "Développement d'une librairie de Web Components réutilisables et audits d'accessibilité des composants.",
+    "description": "Pour ma première mission freelance, j'ai été recruté par Norsys pour travailler sur le projet SIECLE INTEGRE du Rectorat de Grenoble. La mission consistait à développer et maintenir une librairie de Web Components réutilisables, en utilisant Stencil.js pour la création des composants. Cette librairie est utilisée pour le développement de l'application Base Éleve de l'Éducation Nationale. J'ai également participé au développement ponctuel sur une autre librairie en Angular. J'ai utilisé Storybook pour documenter et tester les composants, assurant ainsi leur qualité et leur maintenabilité. J'ai appris à réaliser des audits complets d'accessibilité (critères RGAA, lecteur d'écran NVDA, pattern W3C...).",
+    "type": "pro",
+    "pictures": ["/images/rectorat/rectorat.webp"],
+    "mainTechnos": [
+      {
+        "name": "stencil",
+        "label": "Stencil.js"
+      },
+      {
+        "name": "angular",
+        "label": "Angular"
+      },
+      {
+        "name": "storybook",
+        "label": "Storybook"
+      }
+    ],
+    "technos": [
+      {
+        "name": "html",
+        "label": "HTML"
+      },
+      {
+        "name": "css",
+        "label": "CSS"
+      },
+      {
+        "name": "sass",
+        "label": "SCSS"
+      },
+      {
+        "name": "js",
+        "label": "JavaScript"
+      },
+      {
+        "name": "ts",
+        "label": "TypeScript"
+      },
+      {
+        "name": "stencil",
+        "label": "Stencil.js"
+      },
+      {
+        "name": "angular",
+        "label": "Angular"
+      },
+      {
+        "name": "storybook",
+        "label": "Storybook"
+      }
+    ],
+    "link": null,
+    "github": null
+  },
+  {
     "id": 11,
     "name": "cda",
     "title": "La Compagnie des Alpes",
