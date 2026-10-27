@@ -6,7 +6,7 @@
     "type": "Freelance",
     "role": "Développeur Front-end",
     "loc": "Grenoble",
-    "technos": ["stencil", "storybook"]
+    "technos": ["stencil", "angular", "storybook"]
   },
   {
     "id": 6,
