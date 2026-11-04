@@ -3,7 +3,7 @@
     "id": 7,
     "company": "Rectorat Grenoble",
     "start": "2026-06",
-    "end": null,
+    "end": "2026-10",
     "type": "freelance",
     "role": { "fr": "Développeur Front-end", "en": "Front-end Developer" },
     "loc": "Grenoble",
