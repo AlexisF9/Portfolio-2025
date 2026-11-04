@@ -1,0 +1,94 @@
+import type { Dictionary } from "./fr";
+
+export const en: Dictionary = {
+  meta: {
+    siteTitle: "Alexis Flacher - Portfolio",
+    description:
+      "Welcome to my portfolio! I'm Alexis Flacher, a freelance web developer based in Grenoble, France, specialised in front-end development. I build well-designed, high-performance websites and web applications. I'm open to new front-end or full-stack developer assignments.",
+    keywords: [
+      "freelance web developer",
+      "freelance front-end developer",
+      "freelance full-stack developer",
+      "freelance developer Grenoble",
+      "web developer Grenoble",
+      "front-end developer France",
+      "React developer",
+      "Next.js developer",
+      "Vue.js developer",
+      "TypeScript developer",
+      "JavaScript developer",
+      "freelance developer French Alps",
+      "web developer Isère",
+      "website development Grenoble",
+      "freelance developer Geneva",
+    ],
+    ogTitle: "Alexis Flacher - Freelance web developer in Grenoble",
+    ogDescription:
+      "Freelance web developer specialised in front-end development with React, Next.js and TypeScript. Available for new assignments.",
+    ogLocale: "en_US",
+    homeTitle: "Alexis Flacher - Freelance Front-end Developer in Grenoble",
+    projectsTitle: "My projects",
+    notFoundTitle: "404 - Page not found",
+  },
+  nav: {
+    home: "Home",
+    projects: "My projects",
+    menu: "Menu",
+    darkMode: "Dark mode",
+    lightMode: "Light mode",
+    switchLang: "Version française",
+    switchLangShort: "FR",
+  },
+  hero: {
+    subtitle: "Freelance web developer",
+    pictureAlt: "Photo of Alexis Flacher",
+  },
+  intro: {
+    aboutTitle: "About me",
+    about1:
+      "I'm a freelance web developer based in Grenoble, France, specialised in front-end development. I help companies build modern, fast and user-centred web interfaces.",
+    about2:
+      "With several years of experience in digital agencies and IT consulting firms, I rely on modern stacks such as React, Next.js, Vue.js and TypeScript to build fast, maintainable and scalable interfaces. Beyond code, I bring a real eye for visual detail and user experience, rooted in my passion for web design and front-end integration. Today, I put this combined technical and creative expertise to work on your projects. I'm available for both short-term and long-term assignments.",
+    cv: "Download my resume",
+    cvUrl: "/alexis-flacher-cv.pdf",
+    skillsTitle: "Key skills",
+    experiencesTitle: "Experience",
+    volunteeringTitle: "Volunteering",
+    learnMore: "Learn more",
+    periodSeparator: "to",
+    present: "present",
+    experienceTypes: {
+      freelance: "Freelance",
+      cdi: "Full-time",
+      alternance: "Work-study",
+      stage: "Internship",
+    },
+  },
+  projects: {
+    title: "My projects",
+    filters: {
+      all: "All",
+      pro: "Professional",
+      perso: "Personal",
+    },
+    types: {
+      pro: "Professional project",
+      perso: "Personal project",
+    },
+    learnMore: "Learn more",
+    technos: "Tech stack:",
+    visit: "Visit the website",
+    previous: "Previous",
+    next: "Next",
+  },
+  footer: {
+    connect: "Let's connect:",
+    email: "Or send me an email:",
+    rights: "All rights reserved.",
+  },
+  notFound: {
+    title: "404 - Page not found",
+    text: "Sorry, the page you're looking for doesn't exist.",
+    back: "Back to home",
+  },
+};

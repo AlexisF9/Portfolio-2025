@@ -5,8 +5,10 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { useState } from "react";
+import { useI18n } from "@/src/i18n/i18n-provider";
 
 export function Slider({ pictures }: { pictures: string[] }) {
+  const { t } = useI18n();
   const [currentSlide, setCurrentSlide] = useState(1);
 
   return (
@@ -58,13 +60,13 @@ export function Slider({ pictures }: { pictures: string[] }) {
         <div className="dark:text-white">
           <button
             className="custom-prev absolute z-1 top-[50%] -translate-y-[50%] left-2 md:left-4 cursor-pointer bg-neutral-200 dark:bg-neutral-600 rounded-full p-2"
-            aria-label="Précédent"
+            aria-label={t.projects.previous}
           >
             <ChevronLeft className="w-[20px] md:w-[30px] h-auto" />
           </button>
           <button
             className="custom-next absolute z-1 top-[50%] -translate-y-[50%] right-2 md:right-4 cursor-pointer bg-neutral-200 dark:bg-neutral-600 rounded-full p-2"
-            aria-label="Suivant"
+            aria-label={t.projects.next}
           >
             <ChevronRight className="w-[20px] md:w-[30px] h-auto" />
           </button>

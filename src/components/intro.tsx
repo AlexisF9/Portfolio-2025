@@ -8,10 +8,13 @@ import experiences from "@/public/experiences.json";
 import benevolat from "@/public/benevolat.json";
 import Image from "next/image";
 import { IconButton } from "./icon-button";
+import { useI18n } from "@/src/i18n/i18n-provider";
+import { formatPeriod } from "@/src/i18n";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export function Intro() {
+  const { lang, t } = useI18n();
   const buttonsRef = useRef(null);
   const skillsRef = useRef<(HTMLLIElement | null)[]>([]);
 
@@ -105,6 +108,10 @@ export function Intro() {
       label: "Next.js",
     },
     {
+      name: "angular",
+      label: "Angular",
+    },
+    {
       name: "vue",
       label: "Vue.js",
     },
@@ -127,10 +134,6 @@ export function Intro() {
     {
       name: "tailwind",
       label: "TailwindCSS",
-    },
-    {
-      name: "bootstrap",
-      label: "Bootstrap",
     },
     {
       name: "figma",
@@ -156,37 +159,16 @@ export function Intro() {
       name: "strapi",
       label: "Strapi",
     },
-    {
-      name: "gsap",
-      label: "GSAP",
-    },
-    {
-      name: "algolia",
-      label: "Algolia",
-    },
   ];
 
   return (
     <section className="overflow-x-hidden">
       <div className="flex flex-col">
         <h3 className="translate-anim text-xl md:text-2xl font-gothic dark:text-white mb-9">
-          Qui suis-je ?
+          {t.intro.aboutTitle}
         </h3>
-        <p className="translate-anim dark:text-white mb-4">
-          Développeur web freelance basé à Grenoble, spécialisé en front-end,
-          j'accompagne les entreprises dans la création d'interfaces web
-          modernes, rapides et centrées sur l'utilisateur.
-        </p>
-        <p className="translate-anim dark:text-white">
-          Fort de plusieurs années d'expérience en agence digitale et en ESN, je
-          m'appuie sur des stacks modernes avec React, Next.js, Vue.js et
-          TypeScript, pour créer des interfaces rapides, maintenables et
-          évolutives. Au-delà du code, j'apporte une vraie sensibilité au détail
-          visuel et à l'expérience utilisateur, héritée de mon goût pour le
-          webdesign et l'intégration web. Aujourd'hui, je mets cette double
-          expertise technique et créative au service de vos projets. Je suis
-          disponible pour vos missions ponctuelles ou longues durée.
-        </p>
+        <p className="translate-anim dark:text-white mb-4">{t.intro.about1}</p>
+        <p className="translate-anim dark:text-white">{t.intro.about2}</p>
         <div ref={buttonsRef} className="flex flex-wrap gap-4 mt-4">
           <div className="opacity-anim">
             <IconButton
@@ -204,17 +186,17 @@ export function Intro() {
           </div>
           <Link
             className="opacity-anim block font-gothic w-fit border border-transparent rounded-full py-2 px-4 bg-linear-to-r hover:from-transparent hover:to-transparent hover:dark:text-white hover:border-neutral-600 hover:dark:border-white from-react to-vue transition-border transition-colors duration-300 ease-in-out"
-            href={"./alexis-flacher-cv.pdf"}
+            href={t.intro.cvUrl}
             target="_blank"
           >
-            Télécharger mon CV
+            {t.intro.cv}
           </Link>
         </div>
       </div>
 
       <div className="mt-20 md:mt-24" id="skills">
         <h3 className="translate-anim text-xl md:text-2xl font-gothic dark:text-white mb-9">
-          Mes compétences clés
+          {t.intro.skillsTitle}
         </h3>
         <ul className="flex flex-wrap items-center gap-4 md:gap-9">
           {skills.map((skill, index) => {
@@ -242,7 +224,7 @@ export function Intro() {
 
       <div className="mt-20 md:mt-24">
         <h3 className="translate-anim text-xl md:text-2xl font-gothic dark:text-white mb-9">
-          Mes expériences
+          {t.intro.experiencesTitle}
         </h3>
         <ul className="flex flex-col gap-4">
           {experiences.map((exp, index) => {
@@ -253,15 +235,19 @@ export function Intro() {
                     <div className="flex items-center gap-2">
                       <h4 className="font-gothic">{exp.company}</h4>
                       <p className="text-sm border px-2 rounded-full">
-                        {exp.type}
+                        {
+                          t.intro.experienceTypes[
+                            exp.type as keyof typeof t.intro.experienceTypes
+                          ]
+                        }
                       </p>
                     </div>
                     <p>
-                      {exp.date} | {exp.loc}
+                      {formatPeriod(exp.start, exp.end, lang)} | {exp.loc}
                     </p>
                   </div>
                   <div className="flex flex-wrap items-center gap-4">
-                    <p>{exp.role}</p>
+                    <p>{exp.role[lang]}</p>
                     {exp.technos && (
                       <div className="flex items-center gap-2">
                         {exp.technos.map((techno, index) => {
@@ -288,7 +274,7 @@ export function Intro() {
 
       <div className="mt-20 md:mt-24">
         <h3 className="translate-anim text-xl md:text-2xl font-gothic dark:text-white mb-9">
-          Bénévolat
+          {t.intro.volunteeringTitle}
         </h3>
         <ul className="flex flex-col gap-4">
           {benevolat.map((exp, index) => {
@@ -297,11 +283,11 @@ export function Intro() {
                 <div className="flex flex-col gap-2">
                   <div className="flex flex-wrap flex-col md:flex-row md:items-center justify-between">
                     <div className="flex items-center gap-2">
-                      <h4 className="font-gothic">{exp.title}</h4>
+                      <h4 className="font-gothic">{exp.title[lang]}</h4>
                       {exp.link && (
                         <Link
                           href={`${exp.link}`}
-                          aria-label="En savoir plus"
+                          aria-label={t.intro.learnMore}
                           target="_blank"
                         >
                           <SquareArrowOutUpRight />
@@ -312,7 +298,7 @@ export function Intro() {
                       {exp.date} | {exp.school}
                     </p>
                   </div>
-                  <p>{exp.description}</p>
+                  <p>{exp.description[lang]}</p>
                 </div>
               </li>
             );

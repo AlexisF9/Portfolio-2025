@@ -1,6 +1,6 @@
 import { Card } from "@/src/components/card";
 import realisations from "@/public/realisations.json";
-import { Realisation } from "@/app/mes-realisations/page";
+import { Realisation } from "@/src/types";
 import { useEffect, useRef } from "react";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import gsap from "gsap";

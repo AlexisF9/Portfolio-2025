@@ -4,8 +4,14 @@
     "name": "rectorat",
     "title": "Rectorat de Grenoble",
     "date": "2026",
-    "shortDescription": "Développement d'une librairie de Web Components réutilisables et audits d'accessibilité des composants.",
-    "description": "Pour ma première mission freelance, j'ai été recruté par Norsys pour travailler sur le projet SIECLE INTEGRE du Rectorat de Grenoble. La mission consistait à développer et maintenir une librairie de Web Components réutilisables, en utilisant Stencil.js pour la création des composants. Cette librairie est utilisée pour le développement de l'application Base Éleve de l'Éducation Nationale. J'ai également participé au développement ponctuel sur une autre librairie en Angular. J'ai utilisé Storybook pour documenter et tester les composants, assurant ainsi leur qualité et leur maintenabilité. J'ai appris à réaliser des audits complets d'accessibilité (critères RGAA, lecteur d'écran NVDA, pattern W3C...).",
+    "shortDescription": {
+      "fr": "Développement d'une librairie de Web Components réutilisables et audits d'accessibilité des composants.",
+      "en": "Development of a reusable Web Components library and accessibility audits of the components."
+    },
+    "description": {
+      "fr": "Pour ma première mission freelance, j'ai été recruté par Norsys pour travailler sur le projet SIECLE INTEGRE du Rectorat de Grenoble. La mission consistait à développer et maintenir une librairie de Web Components réutilisables, en utilisant Stencil.js pour la création des composants. Cette librairie est utilisée pour le développement de l'application Base Éleve de l'Éducation Nationale. J'ai également participé au développement ponctuel sur une autre librairie en Angular. J'ai utilisé Storybook pour documenter et tester les composants, assurant ainsi leur qualité et leur maintenabilité. J'ai appris à réaliser des audits complets d'accessibilité (critères RGAA, lecteur d'écran NVDA, pattern W3C...).",
+      "en": "For my first freelance assignment, I was hired by Norsys to work on the SIECLE INTEGRE project for the Grenoble Education Authority (Rectorat de Grenoble). The assignment involved developing and maintaining a library of reusable Web Components, built with Stencil.js. This library is used to develop Base Élève, the French Ministry of Education's student records application. I also contributed occasionally to another library built with Angular. I used Storybook to document and test the components, ensuring their quality and maintainability. I learned to carry out full accessibility audits (RGAA criteria, NVDA screen reader, W3C patterns...)."
+    },
     "type": "pro",
     "pictures": ["/images/rectorat/rectorat.webp"],
     "mainTechnos": [
@@ -64,8 +70,14 @@
     "name": "cda",
     "title": "La Compagnie des Alpes",
     "date": "2025/2026",
-    "shortDescription": "Développement et maintenance d'applications web e-commerce pour les stations du groupe Compagnie des Alpes",
-    "description": "Développement et maintenance d'applications web e-commerce pour les stations du groupe Compagnie des Alpes, avec une participation à l'évolution des interfaces de caisse ainsi que des bornes en libre-service. Incluant l'intégration et l'utilisation d'APIs REST permettant la communication entre un front-end développé en React et des services back-end en Java Spring Boot, tout en portant une attention particulière à l'optimisation des performances et à l'accessibilité des interfaces. Les projets sont menés dans un environnement Agile, en collaboration étroite avec les équipes back-end et QA afin d'assurer la qualité et la fiabilité des solutions déployées.",
+    "shortDescription": {
+      "fr": "Développement et maintenance d'applications web e-commerce pour les stations du groupe Compagnie des Alpes",
+      "en": "Development and maintenance of e-commerce web applications for the Compagnie des Alpes ski resorts"
+    },
+    "description": {
+      "fr": "Développement et maintenance d'applications web e-commerce pour les stations du groupe Compagnie des Alpes, avec une participation à l'évolution des interfaces de caisse ainsi que des bornes en libre-service. Incluant l'intégration et l'utilisation d'APIs REST permettant la communication entre un front-end développé en React et des services back-end en Java Spring Boot, tout en portant une attention particulière à l'optimisation des performances et à l'accessibilité des interfaces. Les projets sont menés dans un environnement Agile, en collaboration étroite avec les équipes back-end et QA afin d'assurer la qualité et la fiabilité des solutions déployées.",
+      "en": "Development and maintenance of e-commerce web applications for the Compagnie des Alpes ski resorts, including work on the evolution of point-of-sale interfaces and self-service kiosks. This involved integrating and consuming REST APIs connecting a React front-end with Java Spring Boot back-end services, with particular attention to performance optimisation and interface accessibility. Projects were run in an Agile environment, in close collaboration with the back-end and QA teams to ensure the quality and reliability of the deployed solutions."
+    },
     "type": "pro",
     "pictures": [
       "/images/cda/cda-1.webp",
@@ -129,8 +141,14 @@
     "name": "my-immo",
     "title": "MyImmo",
     "date": "2025",
-    "shortDescription": "Site d'annonces immobilières développée avec Angular.",
-    "description": "MyImmo est une application web développée avec Angular, permettant la consultation et la recherche d'annonces immobilières par ville. L'utilisateur peut trier les résultats, consulter les détails des biens et ajouter des annonces à ses favoris. L'inspiration du projet provient de plateformes bien établies comme Logic-Immo ou SeLoger. Le système de favoris fonctionne en local grâce à l'enregistrement des identifiants d'annonces dans le localStorage du navigateur. Côté back-end, l'application s'appuie sur Strapi, un CMS headless open source, utilisé pour la gestion et l'exposition des données via une API.",
+    "shortDescription": {
+      "fr": "Site d'annonces immobilières développée avec Angular.",
+      "en": "Real estate listings website built with Angular."
+    },
+    "description": {
+      "fr": "MyImmo est une application web développée avec Angular, permettant la consultation et la recherche d'annonces immobilières par ville. L'utilisateur peut trier les résultats, consulter les détails des biens et ajouter des annonces à ses favoris. L'inspiration du projet provient de plateformes bien établies comme Logic-Immo ou SeLoger. Le système de favoris fonctionne en local grâce à l'enregistrement des identifiants d'annonces dans le localStorage du navigateur. Côté back-end, l'application s'appuie sur Strapi, un CMS headless open source, utilisé pour la gestion et l'exposition des données via une API.",
+      "en": "MyImmo is a web application built with Angular for browsing and searching real estate listings by city. Users can sort results, view property details and add listings to their favourites. The project was inspired by well-established platforms such as Logic-Immo and SeLoger. The favourites feature works locally by storing listing IDs in the browser's localStorage. On the back-end, the application relies on Strapi, an open-source headless CMS, to manage the data and expose it through an API."
+    },
     "type": "perso",
     "pictures": [
       "/images/myimmo/my-immo-1.webp",
@@ -198,8 +216,14 @@
     "name": "griddy",
     "title": "Griddy",
     "date": "2025",
-    "shortDescription": "Application de gestion des tâches comme Trello ou Jira.",
-    "description": "Griddy est une application de gestion de tâches développée avec React, pensée pour offrir une interface intuitive de type kanban. Elle permet de créer, modifier, trier, déplacer et supprimer des colonnes ainsi que des tâches. Le projet s'inspire de solutions existantes comme Trello ou Jira, ainsi que d'un ancien test technique que j'ai souhaité approfondir. L'application fonctionne entièrement en local : les données sont stockées dans le localStorage du navigateur pour garantir une expérience fluide sans back-end. Côté technique, Griddy repose sur Zustand pour la gestion d'état, React DnD pour les fonctionnalités de drag and drop, et React Router pour la navigation.",
+    "shortDescription": {
+      "fr": "Application de gestion des tâches comme Trello ou Jira.",
+      "en": "Task management app similar to Trello or Jira."
+    },
+    "description": {
+      "fr": "Griddy est une application de gestion de tâches développée avec React, pensée pour offrir une interface intuitive de type kanban. Elle permet de créer, modifier, trier, déplacer et supprimer des colonnes ainsi que des tâches. Le projet s'inspire de solutions existantes comme Trello ou Jira, ainsi que d'un ancien test technique que j'ai souhaité approfondir. L'application fonctionne entièrement en local : les données sont stockées dans le localStorage du navigateur pour garantir une expérience fluide sans back-end. Côté technique, Griddy repose sur Zustand pour la gestion d'état, React DnD pour les fonctionnalités de drag and drop, et React Router pour la navigation.",
+      "en": "Griddy is a task management application built with React, designed to provide an intuitive kanban-style interface. It lets you create, edit, sort, move and delete both columns and tasks. The project draws inspiration from existing tools such as Trello and Jira, as well as from a past technical test I wanted to take further. The application runs entirely locally: data is stored in the browser's localStorage for a smooth experience without a back-end. Technically, Griddy relies on Zustand for state management, React DnD for drag and drop, and React Router for navigation."
+    },
     "type": "perso",
     "pictures": [
       "/images/griddy/griddy-1.webp",
@@ -251,8 +275,14 @@
     "name": "daitem",
     "title": "Daitem",
     "date": "2024",
-    "shortDescription": "Intégration des sites Daitem, filiale du groupe Atraltech, un acteur reconnu dans le domaine des systèmes de sécurité.",
-    "description": "Daitem, filiale du groupe Atraltech, est un acteur reconnu dans le domaine des systèmes de sécurité. J'ai pris en charge l'intégration de deux de leurs sites, \"Daitem pro\", une plateforme dédiée aux installateurs professionnels, leur permettant de passer commande et gérer leurs produits et \"daitem com\", le site vitrine grand public présentant la marque, ses solutions et ses engagements.",
+    "shortDescription": {
+      "fr": "Intégration des sites Daitem, filiale du groupe Atraltech, un acteur reconnu dans le domaine des systèmes de sécurité.",
+      "en": "Front-end integration of the websites of Daitem, a subsidiary of the Atraltech group and a well-known player in security systems."
+    },
+    "description": {
+      "fr": "Daitem, filiale du groupe Atraltech, est un acteur reconnu dans le domaine des systèmes de sécurité. J'ai pris en charge l'intégration de deux de leurs sites, \"Daitem pro\", une plateforme dédiée aux installateurs professionnels, leur permettant de passer commande et gérer leurs produits et \"daitem com\", le site vitrine grand public présentant la marque, ses solutions et ses engagements.",
+      "en": "Daitem, a subsidiary of the Atraltech group, is a well-known player in security systems. I was in charge of the front-end integration of two of their websites: \"Daitem pro\", a platform for professional installers to place orders and manage their products, and \"daitem com\", the consumer-facing showcase site presenting the brand, its solutions and its commitments."
+    },
     "type": "pro",
     "pictures": [
       "/images/daitem/daitem-1.webp",
@@ -313,8 +343,14 @@
     "name": "bongenie",
     "title": "Bongénie",
     "date": "2024",
-    "shortDescription": "Intégration du site e-commerce de Bongénie, une marque suisse spécialisée dans la vente de produits de luxe.",
-    "description": "Bongénie est une marque suisse spécialisée dans la vente de produits de luxe, comparable aux Galeries Lafayette. Dans le cadre de ce projet, j'ai collaboré avec un autre intégrateur pour réaliser l'intégration du site. Nous avons utilisé StimulusJS, un micro-framework JavaScript léger, qui permet de structurer du code réutilisable de manière simple et efficace, tout en conservant une intégration propre et maintenable.",
+    "shortDescription": {
+      "fr": "Intégration du site e-commerce de Bongénie, une marque suisse spécialisée dans la vente de produits de luxe.",
+      "en": "Front-end integration of the e-commerce website of Bongénie, a Swiss luxury retailer."
+    },
+    "description": {
+      "fr": "Bongénie est une marque suisse spécialisée dans la vente de produits de luxe, comparable aux Galeries Lafayette. Dans le cadre de ce projet, j'ai collaboré avec un autre intégrateur pour réaliser l'intégration du site. Nous avons utilisé StimulusJS, un micro-framework JavaScript léger, qui permet de structurer du code réutilisable de manière simple et efficace, tout en conservant une intégration propre et maintenable.",
+      "en": "Bongénie is a Swiss luxury retailer, comparable to Galeries Lafayette. On this project, I worked with another front-end integrator to build the website's front-end. We used StimulusJS, a lightweight JavaScript micro-framework that makes it simple and efficient to structure reusable code while keeping the integration clean and maintainable."
+    },
     "type": "pro",
     "pictures": [
       "/images/bongenie/bongenie-1.webp",
@@ -370,8 +406,14 @@
     "name": "clap",
     "title": "Clap",
     "date": "2024",
-    "shortDescription": "Site web inspirée d'Allociné, développée avec Vue.js et connectée à l'API TMDB.",
-    "description": "Clap est un site web inspirée d'Allociné, développée avec Vue.js et connectée à l'API TMDB (The Movie Database) pour l'affichage des données cinématographiques. Ce projet m'a également permis d'explorer Algolia pour la mise en place d'un moteur de recherche performant. J'ai conçu un script d'indexation permettant d'envoyer les données à la base Algolia, afin de proposer une recherche avancée avec l'utilisation de facettes (facets), offrant une expérience utilisateur rapide et filtrée.",
+    "shortDescription": {
+      "fr": "Site web inspirée d'Allociné, développée avec Vue.js et connectée à l'API TMDB.",
+      "en": "Movie website inspired by Allociné, built with Vue.js and connected to the TMDB API."
+    },
+    "description": {
+      "fr": "Clap est un site web inspirée d'Allociné, développée avec Vue.js et connectée à l'API TMDB (The Movie Database) pour l'affichage des données cinématographiques. Ce projet m'a également permis d'explorer Algolia pour la mise en place d'un moteur de recherche performant. J'ai conçu un script d'indexation permettant d'envoyer les données à la base Algolia, afin de proposer une recherche avancée avec l'utilisation de facettes (facets), offrant une expérience utilisateur rapide et filtrée.",
+      "en": "Clap is a movie website inspired by Allociné, built with Vue.js and connected to the TMDB (The Movie Database) API to display film data. This project also gave me the opportunity to explore Algolia to build a fast search engine. I wrote an indexing script that sends the data to Algolia, enabling advanced faceted search for a fast, filterable user experience."
+    },
     "type": "perso",
     "pictures": [
       "/images/clap/clap-1.webp",
@@ -428,8 +470,14 @@
     "name": "qpark",
     "title": "Qpark France",
     "date": "2023",
-    "shortDescription": "Refonte de l'application web de gestion d'équipes internes de Qpark France",
-    "description": "Refonte complète de l'application web de gestion des équipes internes pour Q-Park France. Le projet a consisté à développer un ensemble d'outils métier, incluant : la gestion des formulaires et des tableaux de données, la gestion des droits utilisateurs et des accès, le suivi du temps et des missions, avec historique et la mise en place de tunnels d'étapes pour encadrer les workflows. La première phase du projet a porté sur l'intégration et les tests des composants dans Storybook, avant leur dynamisation et leur intégration finale dans l'application.",
+    "shortDescription": {
+      "fr": "Refonte de l'application web de gestion d'équipes internes de Qpark France",
+      "en": "Redesign of Q-Park France's internal team management web application"
+    },
+    "description": {
+      "fr": "Refonte complète de l'application web de gestion des équipes internes pour Q-Park France. Le projet a consisté à développer un ensemble d'outils métier, incluant : la gestion des formulaires et des tableaux de données, la gestion des droits utilisateurs et des accès, le suivi du temps et des missions, avec historique et la mise en place de tunnels d'étapes pour encadrer les workflows. La première phase du projet a porté sur l'intégration et les tests des composants dans Storybook, avant leur dynamisation et leur intégration finale dans l'application.",
+      "en": "Complete redesign of Q-Park France's internal team management web application. The project involved building a set of business tools, including: forms and data tables, user roles and access management, time and assignment tracking with history, and multi-step flows to guide workflows. The first phase focused on building and testing the components in Storybook, before wiring them up to data and integrating them into the application."
+    },
     "type": "pro",
     "pictures": ["/images/qpark.webp"],
     "mainTechnos": [
@@ -488,8 +536,14 @@
     "name": "qui-veut-du-fromage",
     "title": "Qui veut du fromage ?",
     "date": "2023",
-    "shortDescription": "Refonte du site Qui veut du fromage ?, une filiale du groupe Savencia.",
-    "description": "Refonte du site vitrine multipage de Qui Veut Du Fromage, une marque du groupe agroalimentaire Savencia. Le site est connecté à une API pour l'affichage dynamique des contenus. La première phase du développement a consisté à intégrer et tester les composants via Storybook, afin d'assurer leur conformité et leur réutilisabilité avant leur dynamisation et intégration finale dans le site.",
+    "shortDescription": {
+      "fr": "Refonte du site Qui veut du fromage ?, une filiale du groupe Savencia.",
+      "en": "Redesign of the Qui veut du fromage ? website, a brand of the Savencia group."
+    },
+    "description": {
+      "fr": "Refonte du site vitrine multipage de Qui Veut Du Fromage, une marque du groupe agroalimentaire Savencia. Le site est connecté à une API pour l'affichage dynamique des contenus. La première phase du développement a consisté à intégrer et tester les composants via Storybook, afin d'assurer leur conformité et leur réutilisabilité avant leur dynamisation et intégration finale dans le site.",
+      "en": "Redesign of the multi-page showcase website of Qui Veut Du Fromage, a brand of the Savencia food group. The site is connected to an API to display content dynamically. The first development phase consisted of building and testing the components in Storybook to ensure they matched the designs and were reusable, before wiring them up to data and integrating them into the site."
+    },
     "type": "pro",
     "pictures": [
       "/images/qvdf/qvdf-1.webp",
@@ -555,8 +609,14 @@
     "name": "balenciaga-sustainability",
     "title": "Balenciaga Sustainability",
     "date": "2023",
-    "shortDescription": "Développement d'un site dédié à Balenciaga, permettant d'accéder rapidement aux informations légales d'un produit.",
-    "description": "Développement d'un site dédié à Balenciaga, permettant d'accéder rapidement aux informations légales d'un produit. L'utilisateur peut scanner directement le code-barres via son smartphone ou saisir manuellement l'identifiant produit ou le numéro de code-barres pour obtenir les détails associés.",
+    "shortDescription": {
+      "fr": "Développement d'un site dédié à Balenciaga, permettant d'accéder rapidement aux informations légales d'un produit.",
+      "en": "Development of a dedicated Balenciaga website giving quick access to a product's legal information."
+    },
+    "description": {
+      "fr": "Développement d'un site dédié à Balenciaga, permettant d'accéder rapidement aux informations légales d'un produit. L'utilisateur peut scanner directement le code-barres via son smartphone ou saisir manuellement l'identifiant produit ou le numéro de code-barres pour obtenir les détails associés.",
+      "en": "Development of a dedicated Balenciaga website giving quick access to a product's legal information. Users can scan the barcode directly with their smartphone, or manually enter the product ID or barcode number to get the related details."
+    },
     "type": "pro",
     "pictures": ["/images/bal/bal-1.webp", "/images/bal/bal-2.webp"],
     "mainTechnos": [
@@ -615,8 +675,14 @@
     "name": "bridelice",
     "title": "Bridelice",
     "date": "2023",
-    "shortDescription": "Refonte du site vitrine de Bridelice sur Wordpress.",
-    "description": "Le projet consistait à repenser entièrement le site vitrine de Bridelice. Initialement développé en React, le client a finalement opté pour une intégration sous WordPress en cours de route. Nous avons su faire preuve de réactivité et d'adaptabilité pour répondre à ce changement.",
+    "shortDescription": {
+      "fr": "Refonte du site vitrine de Bridelice sur Wordpress.",
+      "en": "Redesign of the Bridelice showcase website on WordPress."
+    },
+    "description": {
+      "fr": "Le projet consistait à repenser entièrement le site vitrine de Bridelice. Initialement développé en React, le client a finalement opté pour une intégration sous WordPress en cours de route. Nous avons su faire preuve de réactivité et d'adaptabilité pour répondre à ce changement.",
+      "en": "The project involved a complete redesign of the Bridelice showcase website. Initially built with React, the client eventually decided mid-project to switch to WordPress. We responded quickly and adapted to this change."
+    },
     "type": "pro",
     "pictures": [
       "/images/bridelice/bridelice-1.webp",
@@ -662,8 +728,14 @@
     "name": "gmf",
     "title": "GMF",
     "date": "2022",
-    "shortDescription": "Développement d'une landing page pour GMF lors de mon alternance chez TBWA/Paris",
-    "description": "Développée avec Next.js, cette landing page a été réalisée durant mon alternance chez TBWA/Paris. Une attention particulière a été portée à la performance, à l'accessibilité et au responsive design.",
+    "shortDescription": {
+      "fr": "Développement d'une landing page pour GMF lors de mon alternance chez TBWA/Paris",
+      "en": "Development of a landing page for GMF during my work-study at TBWA/Paris"
+    },
+    "description": {
+      "fr": "Développée avec Next.js, cette landing page a été réalisée durant mon alternance chez TBWA/Paris. Une attention particulière a été portée à la performance, à l'accessibilité et au responsive design.",
+      "en": "Built with Next.js, this landing page was developed during my work-study at TBWA/Paris. Particular attention was paid to performance, accessibility and responsive design."
+    },
     "type": "pro",
     "pictures": [
       "/images/gmf/gmf.webp",
@@ -710,8 +782,14 @@
     "name": "izicarte",
     "title": "La caisse d'épargne",
     "date": "2022",
-    "shortDescription": "Développement d'un mini-jeu de Noël pour La Caisse d'Épargne lors de mon alternance.",
-    "description": "Lors de mon alternance, j'ai développé un mini-jeu de Noël pour La Caisse d'Épargne. Le but du jeu est de retrouver des élements cachés dans une vitrine de Noël pour pouvoir s'inscrire à un tirage au sort.",
+    "shortDescription": {
+      "fr": "Développement d'un mini-jeu de Noël pour La Caisse d'Épargne lors de mon alternance.",
+      "en": "Development of a Christmas mini-game for La Caisse d'Épargne during my work-study."
+    },
+    "description": {
+      "fr": "Lors de mon alternance, j'ai développé un mini-jeu de Noël pour La Caisse d'Épargne. Le but du jeu est de retrouver des élements cachés dans une vitrine de Noël pour pouvoir s'inscrire à un tirage au sort.",
+      "en": "During my work-study, I developed a Christmas mini-game for the French bank La Caisse d'Épargne. Players have to find hidden items in a Christmas shop window to enter a prize draw."
+    },
     "type": "pro",
     "pictures": [
       "/images/izicarte/izicarte.webp",
