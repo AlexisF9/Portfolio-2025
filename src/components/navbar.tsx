@@ -4,21 +4,28 @@ import { Menu, Moon, Sun, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
+import { routes, translatePath } from "@/src/i18n/config";
+import { useI18n } from "@/src/i18n/i18n-provider";
 
 export function Navbar() {
   const pathname = usePathname();
+  const { lang, t } = useI18n();
+  const otherLang = lang === "fr" ? "en" : "fr";
+  const isHome = pathname === routes.home[lang];
   const [theme, setTheme] = useState<"light" | "dark">("light");
   const [openMenu, setOpenMenu] = useState(false);
   const [hasAlreadyAnimated, setHasAlreadyAnimated] = useState(false);
 
   const headerRef = useRef(null);
-  const linksRef = useRef<(HTMLLIElement | HTMLButtonElement | null)[]>([]);
+  const linksRef = useRef<
+    (HTMLLIElement | HTMLButtonElement | HTMLAnchorElement | null)[]
+  >([]);
 
   useEffect(() => {
     const alreadyAnimated = sessionStorage.getItem("fadeAnimated");
-    setHasAlreadyAnimated(alreadyAnimated || pathname !== "/" ? true : false);
+    setHasAlreadyAnimated(alreadyAnimated || !isHome ? true : false);
 
-    if (!alreadyAnimated && pathname === "/" && headerRef.current) {
+    if (!alreadyAnimated && isHome && headerRef.current) {
       gsap.fromTo(
         headerRef.current,
         { y: -150 },
@@ -110,14 +117,21 @@ export function Navbar() {
 
   const links = [
     {
-      label: "Accueil",
-      link: "/",
+      label: t.nav.home,
+      link: routes.home[lang],
     },
     {
-      label: "Mes réalisations",
-      link: "/mes-realisations",
+      label: t.nav.projects,
+      link: routes.projects[lang],
     },
   ];
+
+  const langSwitchProps = {
+    href: translatePath(pathname, otherLang),
+    hrefLang: otherLang,
+    lang: otherLang,
+    "aria-label": t.nav.switchLang,
+  };
 
   return (
     <nav>
@@ -130,7 +144,7 @@ export function Navbar() {
         <button
           onClick={() => setOpenMenu(true)}
           className="cursor-pointer text-neutral-950 dark:text-white block md:hidden"
-          aria-label="Menu"
+          aria-label={t.nav.menu}
         >
           <Menu />
         </button>
@@ -154,10 +168,16 @@ export function Navbar() {
             className="cursor-pointer text-neutral-950 dark:text-white"
           >
             <span className="sr-only">
-              {theme === "dark" ? "Dark mode" : "Light mode"}
+              {theme === "dark" ? t.nav.darkMode : t.nav.lightMode}
             </span>
             {theme === "dark" ? <Sun /> : <Moon />}
           </button>
+          <Link
+            {...langSwitchProps}
+            className="text-md text-neutral-950 dark:text-white"
+          >
+            {t.nav.switchLangShort}
+          </Link>
         </div>
       </div>
       <div
@@ -172,7 +192,7 @@ export function Navbar() {
           <X />
         </button>
         <div className="flex items-center justify-center h-full">
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-10">
             <ul className="flex flex-col gap-4">
               {links.map((link, index) => {
                 return (
@@ -183,7 +203,7 @@ export function Navbar() {
                     }}
                   >
                     <Link
-                      className={`text-2xl dark:text-white ${
+                      className={`text-3xl dark:text-white ${
                         pathname === link.link && "opacity-50"
                       }`}
                       href={link.link}
@@ -194,18 +214,29 @@ export function Navbar() {
                 );
               })}
             </ul>
-            <button
-              onClick={toggleTheme}
-              ref={(el) => {
-                linksRef.current[links.length] = el;
-              }}
-              className="cursor-pointer text-neutral-950 dark:text-white"
-            >
-              <span className="sr-only">
-                {theme === "dark" ? "Dark mode" : "Light mode"}
-              </span>
-              {theme === "dark" ? <Sun /> : <Moon />}
-            </button>
+            <div className="absolute bottom-4 flex gap-6">
+              <button
+                onClick={toggleTheme}
+                ref={(el) => {
+                  linksRef.current[links.length] = el;
+                }}
+                className="cursor-pointer text-neutral-950 dark:text-white"
+              >
+                <span className="sr-only">
+                  {theme === "dark" ? t.nav.darkMode : t.nav.lightMode}
+                </span>
+                {theme === "dark" ? <Sun /> : <Moon />}
+              </button>
+              <Link
+                {...langSwitchProps}
+                ref={(el) => {
+                  linksRef.current[links.length + 1] = el;
+                }}
+                className="text-xl dark:text-white"
+              >
+                {t.nav.switchLangShort}
+              </Link>
+            </div>
           </div>
         </div>
       </div>

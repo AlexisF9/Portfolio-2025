@@ -1,9 +1,13 @@
-import { Realisation } from "@/app/mes-realisations/page";
 import { MoveRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { projectRoute } from "@/src/i18n/config";
+import { useI18n } from "@/src/i18n/i18n-provider";
+import { Realisation } from "@/src/types";
 
 export function Card({ card }: { card: Realisation }) {
+  const { lang, t } = useI18n();
+
   return (
     <div className="relative group">
       <div className="rounded-2xl shadow-lg overflow-hidden">
@@ -22,7 +26,7 @@ export function Card({ card }: { card: Realisation }) {
           <div className="flex items-center gap-2">
             <p className="text-sm">{card.date}</p>
             <p className="border rounded-full px-2 py-px w-fit text-sm">
-              Projet {card.type}
+              {t.projects.types[card.type as keyof typeof t.projects.types]}
             </p>
             <div className="flex items-center gap-2">
               {card?.mainTechnos?.map((techno, index) => {
@@ -39,12 +43,12 @@ export function Card({ card }: { card: Realisation }) {
             </div>
           </div>
         </div>
-        <p className="text-sm">{card.shortDescription}</p>
+        <p className="text-sm">{card.shortDescription[lang]}</p>
         <Link
-          href={`/mes-realisations/${card.name}`}
+          href={projectRoute(card.name)[lang]}
           className="font-gothic text-sm w-fit flex items-center gap-2 after:absolute after:inset-[0]"
         >
-          En savoir plus{" "}
+          {t.projects.learnMore}{" "}
           <span className="group-hover:translate-x-2 transition duration-300 ease-in-out">
             <MoveRight />
           </span>

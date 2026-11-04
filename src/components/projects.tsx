@@ -3,10 +3,12 @@ import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { CardsList } from "@/src/components/cards-list";
+import { useI18n } from "@/src/i18n/i18n-provider";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export function Projects() {
+  const { t } = useI18n();
   const [filter, setFilter] = useState<"all" | "perso" | "pro">("all");
 
   useEffect(() => {
@@ -48,22 +50,22 @@ export function Projects() {
   const filters = [
     {
       name: "all",
-      label: "Tout",
+      label: t.projects.filters.all,
     },
     {
       name: "pro",
-      label: "Projets pro",
+      label: t.projects.filters.pro,
     },
     {
       name: "perso",
-      label: "Projets perso",
+      label: t.projects.filters.perso,
     },
   ];
   return (
     <>
       <div className="flex flex-col mb-9 gap-4 md:flex-row md:justify-between">
         <h1 className="fade-in text-xl md:text-2xl dark:text-white font-gothic">
-          Mes réalisations
+          {t.projects.title}
         </h1>
         <div className="fade-in flex items-center flex-wrap gap-2">
           {filters.map((item, index) => {

@@ -1,0 +1,103 @@
+export const fr = {
+  meta: {
+    siteTitle: "Alexis Flacher - Portfolio",
+    description:
+      "Bienvenue sur mon portfolio ! Je suis Alexis Flacher, développeur web freelance à Grenoble spécialisé en développement Front-end. Je développe des sites et applications web design et performants. Je suis à l'écoute de nouvelles missions comme développeur Front-end ou Full-stack.",
+    keywords: [
+      "développeur web freelance",
+      "développeur freelance Grenoble",
+      "développeur front-end",
+      "développeur full-stack",
+      "création site web",
+      "création site vitrine",
+      "développeur React",
+      "développeur Next.js",
+      "développeur Vue.js",
+      "développeur Javascript",
+      "développeur",
+      "freelance Grenoble",
+      "freelance Voiron",
+      "freelance Isère",
+      "développeur web Voiron",
+      "développeur web Grenoble",
+      "développeur web Isère",
+      "développeur web Auvergne-Rhône-Alpes",
+      "création site internet Grenoble",
+      "agence web Grenoble",
+      "développeur Voiron",
+      "développeur Grenoble",
+      "développeur Isère",
+      "développeur Auvergne-Rhône-Alpes",
+    ],
+    ogTitle: "Alexis Flacher - Développeur web freelance à Grenoble",
+    ogDescription:
+      "Développeur web freelance spécialisé en développement front-end React, Next.Js, TypeScript. Disponible pour des missions.",
+    ogLocale: "fr_FR",
+    homeTitle: "Alexis Flacher - Développeur Front-end freelance à Grenoble",
+    projectsTitle: "Mes réalisations",
+    notFoundTitle: "404 - Page introuvable",
+  },
+  nav: {
+    home: "Accueil",
+    projects: "Mes réalisations",
+    menu: "Menu",
+    darkMode: "Mode sombre",
+    lightMode: "Mode clair",
+    switchLang: "English version",
+    switchLangShort: "EN",
+  },
+  hero: {
+    subtitle: "Développeur web freelance",
+    pictureAlt: "Photo Alexis Flacher",
+  },
+  intro: {
+    aboutTitle: "Qui suis-je ?",
+    about1:
+      "Développeur web freelance basé à Grenoble, spécialisé en front-end, j'accompagne les entreprises dans la création d'interfaces web modernes, rapides et centrées sur l'utilisateur.",
+    about2:
+      "Fort de plusieurs années d'expérience en agence digitale et en ESN, je m'appuie sur des stacks modernes avec React, Next.js, Vue.js et TypeScript, pour créer des interfaces rapides, maintenables et évolutives. Au-delà du code, j'apporte une vraie sensibilité au détail visuel et à l'expérience utilisateur, héritée de mon goût pour le webdesign et l'intégration web. Aujourd'hui, je mets cette double expertise technique et créative au service de vos projets. Je suis disponible pour vos missions ponctuelles ou longues durée.",
+    cv: "Télécharger mon CV",
+    cvUrl: "/alexis-flacher-cv.pdf",
+    skillsTitle: "Mes compétences clés",
+    experiencesTitle: "Mes expériences",
+    volunteeringTitle: "Bénévolat",
+    learnMore: "En savoir plus",
+    periodSeparator: "à",
+    present: "aujourd'hui",
+    experienceTypes: {
+      freelance: "Freelance",
+      cdi: "CDI",
+      alternance: "Alternance",
+      stage: "Stage",
+    },
+  },
+  projects: {
+    title: "Mes réalisations",
+    filters: {
+      all: "Tout",
+      pro: "Projets pro",
+      perso: "Projets perso",
+    },
+    types: {
+      pro: "Projet pro",
+      perso: "Projet perso",
+    },
+    learnMore: "En savoir plus",
+    technos: "Les technos :",
+    visit: "Voir le site",
+    previous: "Précédent",
+    next: "Suivant",
+  },
+  footer: {
+    connect: "Connectons-nous :",
+    email: "Ou envoyez-moi un email :",
+    rights: "Tous droits réservés.",
+  },
+  notFound: {
+    title: "404 - Page introuvable",
+    text: "Désolé, la page que vous recherchez n'existe pas.",
+    back: "Retour à l'accueil",
+  },
+};
+
+export type Dictionary = typeof fr;

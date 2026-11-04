@@ -2,10 +2,12 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import { useI18n } from "@/src/i18n/i18n-provider";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export function Hero() {
+  const { t } = useI18n();
   const intro = useRef(null);
   const h1Ref = useRef(null);
   const titleRef = useRef(null);
@@ -137,7 +139,7 @@ export function Hero() {
         </h1>
         <img
           src={"/Alexis.webp"}
-          alt="Photo Alexis Flacher"
+          alt={t.hero.pictureAlt}
           ref={pictureRef}
           className="picture-animation-reset rounded-full aspect-[2/3] w-auto h-full object-cover z-[0]"
         />
@@ -145,7 +147,7 @@ export function Hero() {
           ref={subtitleRef}
           className="absolute -bottom-16 opacity-[0] text-xl md:text-2xl text-center z-[1]"
         >
-          Développeur web freelance
+          {t.hero.subtitle}
         </h2>
       </div>
     </div>

@@ -5,7 +5,8 @@ import Link from "next/link";
 import { Slider } from "@/src/components/slider";
 import { Github, SquareArrowOutUpRight } from "lucide-react";
 import Image from "next/image";
-import { Realisation } from "@/app/mes-realisations/page";
+import { Realisation } from "@/src/types";
+import { useI18n } from "@/src/i18n/i18n-provider";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
@@ -13,6 +14,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export function RealisationDetails(props: { rea: Realisation }) {
   const { rea } = props;
+  const { lang, t } = useI18n();
 
   useEffect(() => {
     const elements = gsap.utils.toArray(".fade-in");
@@ -47,17 +49,17 @@ export function RealisationDetails(props: { rea: Realisation }) {
         <div className="fade-in flex items-center gap-2 dark:text-white">
           <p className="text-sm">{rea.date}</p>
           <p className="border rounded-full px-2 py-px w-fit text-sm">
-            Projet {rea.type}
+            {t.projects.types[rea.type as keyof typeof t.projects.types]}
           </p>
         </div>
       </div>
-      <p className="fade-in pb-9 dark:text-white">{rea.description}</p>
+      <p className="fade-in pb-9 dark:text-white">{rea.description[lang]}</p>
 
       <Slider pictures={rea.pictures} />
 
       <div className="pt-9">
         <h2 className="fade-in text-xl md:text-2xl font-gothic dark:text-white mb-4">
-          Les technos :
+          {t.projects.technos}
         </h2>
         <div className="fade-in flex items-center flex-wrap gap-2">
           {rea.technos.map((skill, index) => {
@@ -88,7 +90,7 @@ export function RealisationDetails(props: { rea: Realisation }) {
               href={rea.link}
               target="_blank"
             >
-              Voir le site <SquareArrowOutUpRight className="w-[20px]" />
+              {t.projects.visit} <SquareArrowOutUpRight className="w-[20px]" />
             </Link>
           )}
           {rea.github && (
