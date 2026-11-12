@@ -84,8 +84,8 @@ export const fr = {
   projects: {
     title: "Mes réalisations",
     filters: {
-      pro: "Projets pro",
-      perso: "Projets perso",
+      pro: "Professionnel",
+      perso: "Personnel",
     },
     types: {
       pro: "Projet pro",
