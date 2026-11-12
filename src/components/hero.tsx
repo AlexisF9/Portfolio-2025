@@ -288,7 +288,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="relative shrink-0 w-[260px] lg:w-[400px] max-w-full aspect-[3/4] mr-10 ml-10 mb-6">
+      <div className="relative shrink-0 w-[260px] lg:w-[400px] max-w-full aspect-[3/4] mr-2 mb-2 md:mr-4 md:mb-4">
         <span
           aria-hidden="true"
           ref={pictureBackgroundRef}
