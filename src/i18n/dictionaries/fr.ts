@@ -56,9 +56,6 @@ export const fr = {
     available: "Je suis disponible",
     talk: "Parlons de votre projet",
     projects: "Voir mes réalisations",
-    rgaa: "Audit RGAA",
-    stack: "React, Vue, Next.js",
-    since: "Développeur depuis 2022",
   },
   intro: {
     aboutTitle: "Qui suis-je ?",

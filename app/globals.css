@@ -96,12 +96,14 @@ body {
   }
 }
 
-@keyframes hero-float {
+/* Dégradé derrière la photo du hero : glisse en boucle pour passer
+   d'une couleur à l'autre (le fond fait 200 % de la taille du bloc) */
+@keyframes gradient-shift {
   0%,
   100% {
-    transform: translateY(0) rotate(0deg);
+    background-position: 0% 0%;
   }
   50% {
-    transform: translateY(-10px) rotate(-1deg);
+    background-position: 100% 100%;
   }
 }

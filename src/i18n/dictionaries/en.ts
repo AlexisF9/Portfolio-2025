@@ -49,9 +49,6 @@ export const en: Dictionary = {
     available: "I'm available",
     talk: "Talk about your project",
     projects: "View my work",
-    rgaa: "Accessibility audit",
-    stack: "React, Vue, Next.js",
-    since: "Developer since 2022",
   },
   intro: {
     aboutTitle: "About me",
