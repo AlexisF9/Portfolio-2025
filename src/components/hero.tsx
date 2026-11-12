@@ -30,7 +30,6 @@ export default function Hero() {
   const pictureRef = useRef(null);
   const actionsRef = useRef<HTMLDivElement>(null);
   const subActionsRef = useRef<HTMLDivElement>(null);
-  const labelsRef = useRef<HTMLDivElement>(null);
 
   // Annonce la séquence desktop avant que les autres composants ne lancent
   // leurs animations (les useLayoutEffect passent avant tous les useEffect)
@@ -127,14 +126,6 @@ export default function Hero() {
         // Mobile : en même temps que le titre
         mobile: { trigger: titleRef.current, at: 0 },
       },
-      {
-        targets: labelsRef.current,
-        from: { opacity: 0 },
-        to: { opacity: 1, duration: 1.8, ease: "power3.out" },
-        at: 3.2,
-        // Mobile : juste après la fin de l'animation de la photo (2,6 + 1,5)
-        mobile: { trigger: pictureRef.current, at: 4.1 },
-      },
     ];
 
     const mm = gsap.matchMedia();
@@ -216,7 +207,7 @@ export default function Hero() {
   );
 
   return (
-    <div className="flex flex-col md:flex-row gap-8 items-center mt-26 mb-20 md:mt-34 md:mb-34">
+    <div className="flex flex-col md:flex-row gap-20 md:gap-8 items-center mt-26 mb-20 md:mt-34 md:mb-34">
       <div>
         <div
           ref={disponibilityRef}
@@ -234,7 +225,7 @@ export default function Hero() {
           {lang === "fr" ? (
             <>
               <span>{t.hero.title1}</span>
-              <span className="relative px-2 rounded-xl bg-linear-160 from-react to-vue text-black w-fit">
+              <span className="relative px-2 rounded-xl bg-linear-160 from-react via-vue to-react bg-size-[200%_200%] motion-safe:animate-[gradient-shift_6s_ease-in-out_infinite] text-black w-fit">
                 {t.hero.title2}
               </span>
               <span>{t.hero.title3}</span>
@@ -245,7 +236,7 @@ export default function Hero() {
               <span>{t.hero.title1}</span>
               <span>{t.hero.title2}</span>
               <span>{t.hero.title3}</span>
-              <span className="relative px-2 rounded-xl bg-linear-160 from-react to-vue text-black w-fit">
+              <span className="relative px-2 rounded-xl bg-linear-160 from-react via-vue to-react bg-size-[200%_200%] motion-safe:animate-[gradient-shift_6s_ease-in-out_infinite] text-black w-fit">
                 {t.hero.title4}
               </span>
             </>
@@ -253,7 +244,7 @@ export default function Hero() {
         </h1>
         <p
           ref={introRef}
-          className="opacity-0 text-lg lg:text-xl mt-8 dark:text-white"
+          className="opacity-0 text-md lg:text-xl mt-8 dark:text-white"
         >
           {t.intro.about1}
         </p>
@@ -296,22 +287,12 @@ export default function Hero() {
           </Link>
         </div>
       </div>
-      <div className="relative shrink-0 w-[260px] lg:w-[460px] max-w-full aspect-[3/4] mr-10 ml-10 mb-6">
-        <div ref={labelsRef} className="absolute inset-0 z-1 opacity-0">
-          <span className="flex items-center gap-2 absolute top-10 left-0 border rounded-4xl px-3 py-2 z-1 text-sm lg:text-lg bg-white shadow-lg motion-safe:animate-[hero-float_5s_ease-in-out_infinite]">
-            <PersonStanding width={20} /> {t.hero.rgaa}
-          </span>
-          <span className="flex items-center gap-2 absolute top-[50%] -right-10 border rounded-4xl px-3 py-2 z-1 text-sm lg:text-lg bg-white shadow-lg motion-safe:animate-[hero-float_6s_ease-in-out_infinite] [animation-delay:-2s]">
-            <CodeXml width={20} /> {t.hero.stack}
-          </span>
-          <span className="flex items-center gap-2 absolute bottom-10 -left-10 border rounded-4xl px-3 py-2 z-1 text-sm lg:text-lg bg-white shadow-lg motion-safe:animate-[hero-float_5.5s_ease-in-out_infinite] [animation-delay:-4s]">
-            <Calendar width={20} /> {t.hero.since}
-          </span>
-        </div>
+
+      <div className="relative shrink-0 w-[260px] lg:w-[400px] max-w-full aspect-[3/4] mr-10 ml-10 mb-6">
         <span
           aria-hidden="true"
           ref={pictureBackgroundRef}
-          className="opacity-0 absolute inset-0 rounded-t-full bg-linear-160 from-react to-vue translate-x-3 translate-y-3 lg:translate-x-6 lg:translate-y-6 z-0"
+          className="opacity-0 absolute inset-0 rounded-t-full bg-linear-160 from-react via-vue to-react bg-size-[200%_200%] motion-safe:animate-[gradient-shift_6s_ease-in-out_infinite] translate-x-2 translate-y-2 lg:translate-x-4 lg:translate-y-4 z-0"
         />
         <Image
           src="/Alexis.webp"
