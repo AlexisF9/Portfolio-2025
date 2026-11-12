@@ -10,6 +10,7 @@ import Image from "next/image";
 import { IconButton } from "./icon-button";
 import { useI18n } from "@/src/i18n/i18n-provider";
 import { formatPeriod } from "@/src/i18n";
+import { isHeroSequencePlaying, onHeroSequenceEnd } from "./hero-sequence";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -19,61 +20,83 @@ export function Intro() {
   const skillsRef = useRef<(HTMLLIElement | null)[]>([]);
 
   useEffect(() => {
+    const ctx = gsap.context(() => {});
     const elements = gsap.utils.toArray(".translate-anim");
-
-    elements.forEach((el) => {
-      const t = el as HTMLElement;
-      gsap.fromTo(
-        t,
-        { opacity: 0, x: 40 },
-        {
-          opacity: 1,
-          x: 0,
-          duration: 1,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: t,
-            start: "top 80%",
-          },
-        },
-      );
-    });
-
     const buttons = gsap.utils.toArray(".opacity-anim");
-
-    gsap.fromTo(
-      buttons,
-      { opacity: 0, y: 30 },
-      {
-        opacity: 1,
-        y: 0,
-        stagger: 0.2,
-        duration: 0.6,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: buttonsRef.current,
-          start: "top 80%",
-        },
-      },
+    // Copie des éléments au montage : React remet les refs à null au
+    // démontage, alors que l'animation peut être créée plus tard
+    const skillItems = skillsRef.current.filter(
+      (el): el is HTMLLIElement => el !== null,
     );
 
-    gsap.fromTo(
-      skillsRef.current,
-      { opacity: 0, y: 30 },
-      {
-        opacity: 1,
-        y: 0,
-        stagger: 0.1,
-        duration: 0.6,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: skillsRef.current,
-          start: "top 80%",
-        },
-      },
+    // Desktop : tant que le hero s'anime, les éléments restent masqués
+    if (isHeroSequencePlaying()) {
+      ctx.add(() =>
+        gsap.set([...elements, ...buttons, ...skillItems], {
+          opacity: 0,
+        }),
+      );
+    }
+
+    // Les animations ne sont créées qu'à la fin de celles du hero
+    // (tout de suite s'il n'y en a pas)
+    const unsubscribe = onHeroSequenceEnd(() =>
+      ctx.add(() => {
+        elements.forEach((el) => {
+          const t = el as HTMLElement;
+          gsap.fromTo(
+            t,
+            { opacity: 0, x: 40 },
+            {
+              opacity: 1,
+              x: 0,
+              duration: 1,
+              ease: "power3.out",
+              scrollTrigger: {
+                trigger: t,
+                start: "top 80%",
+              },
+            },
+          );
+        });
+
+        gsap.fromTo(
+          buttons,
+          { opacity: 0, y: 30 },
+          {
+            opacity: 1,
+            y: 0,
+            stagger: 0.2,
+            duration: 0.6,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: buttonsRef.current,
+              start: "top 80%",
+            },
+          },
+        );
+
+        gsap.fromTo(
+          skillItems,
+          { opacity: 0, y: 30 },
+          {
+            opacity: 1,
+            y: 0,
+            stagger: 0.1,
+            duration: 0.6,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: skillItems[0],
+              start: "top 80%",
+            },
+          },
+        );
+      }),
     );
 
     return () => {
+      unsubscribe();
+      ctx.revert();
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
@@ -163,38 +186,7 @@ export function Intro() {
 
   return (
     <section className="overflow-x-hidden">
-      <div className="flex flex-col">
-        <h3 className="translate-anim text-xl md:text-2xl font-gothic dark:text-white mb-9">
-          {t.intro.aboutTitle}
-        </h3>
-        <p className="translate-anim dark:text-white mb-4">{t.intro.about1}</p>
-        <p className="translate-anim dark:text-white">{t.intro.about2}</p>
-        <div ref={buttonsRef} className="flex flex-wrap gap-4 mt-4">
-          <div className="opacity-anim">
-            <IconButton
-              label="Linkedin"
-              url="https://www.linkedin.com/in/alexis-flacher-772ba7197/"
-              icon={<Linkedin />}
-            />
-          </div>
-          <div className="opacity-anim">
-            <IconButton
-              label="Github"
-              url="https://github.com/AlexisF9"
-              icon={<Github />}
-            />
-          </div>
-          <Link
-            className="opacity-anim block font-gothic w-fit border border-transparent rounded-full py-2 px-4 bg-linear-to-r hover:from-transparent hover:to-transparent hover:dark:text-white hover:border-neutral-600 hover:dark:border-white from-react to-vue transition-border transition-colors duration-300 ease-in-out"
-            href={t.intro.cvUrl}
-            target="_blank"
-          >
-            {t.intro.cv}
-          </Link>
-        </div>
-      </div>
-
-      <div className="mt-20 md:mt-24" id="skills">
+      <div id="skills">
         <h3 className="translate-anim text-xl md:text-2xl font-gothic dark:text-white mb-9">
           {t.intro.skillsTitle}
         </h3>

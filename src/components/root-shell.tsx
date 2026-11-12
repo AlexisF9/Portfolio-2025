@@ -44,7 +44,7 @@ export function RootShell({
 }>) {
   return (
     <html lang={lang}>
-      <body className="max-w-5xl mx-auto bg-white dark:bg-neutral-900 overflow-x-hidden">
+      <body className="max-w-7xl mx-auto bg-white dark:bg-neutral-900 overflow-x-hidden">
         <I18nProvider lang={lang}>
           <LenisScroll />
           <Navbar />

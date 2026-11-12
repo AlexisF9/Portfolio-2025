@@ -3,7 +3,7 @@ import { IconButton } from "@/src/components/icon-button";
 import { useEffect } from "react";
 import Link from "next/link";
 import { Slider } from "@/src/components/slider";
-import { Github, SquareArrowOutUpRight } from "lucide-react";
+import { ArrowRight, Github } from "lucide-react";
 import Image from "next/image";
 import { Realisation } from "@/src/types";
 import { useI18n } from "@/src/i18n/i18n-provider";
@@ -86,11 +86,17 @@ export function RealisationDetails(props: { rea: Realisation }) {
         <div className="fade-in flex items-center gap-4 w-fit mx-auto pt-9">
           {rea.link && (
             <Link
-              className="flex items-center gap-2 font-gothic w-fit border border-transparent rounded-full py-2 px-4 bg-linear-to-r hover:from-transparent hover:to-transparent hover:dark:text-white hover:border-neutral-600 hover:dark:border-white from-react to-vue transition duration-300 ease-in-out"
+              className="group flex items-center font-gothic w-fit border border-transparent rounded-full py-2 px-4 bg-linear-to-r from-react to-vue"
               href={rea.link}
               target="_blank"
             >
-              {t.projects.visit} <SquareArrowOutUpRight className="w-[20px]" />
+              {t.projects.visit}
+              <span
+                aria-hidden="true"
+                className="inline-flex overflow-hidden w-0 opacity-0 -translate-x-2 transition-all duration-300 ease-out group-hover:w-6 group-hover:ml-2 group-hover:opacity-100 group-hover:translate-x-0 group-focus-visible:w-6 group-focus-visible:ml-2 group-focus-visible:opacity-100 group-focus-visible:translate-x-0 motion-reduce:transition-none"
+              >
+                <ArrowRight className="shrink-0" />
+              </span>
             </Link>
           )}
           {rea.github && (

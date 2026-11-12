@@ -1,4 +1,4 @@
-import { MoveRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { projectRoute } from "@/src/i18n/config";
@@ -20,7 +20,7 @@ export function Card({ card }: { card: Realisation }) {
         />
       </div>
 
-      <div className="flex flex-col mt-4 gap-2 dark:text-white">
+      <div className="flex flex-col mt-4 gap-4 dark:text-white">
         <div className="flex items-center gap-2 flex-wrap-reverse justify-between">
           <h2 className="text-lg font-bold">{card.title}</h2>
           <div className="flex items-center gap-2">
@@ -50,7 +50,7 @@ export function Card({ card }: { card: Realisation }) {
         >
           {t.projects.learnMore}{" "}
           <span className="group-hover:translate-x-2 transition duration-300 ease-in-out">
-            <MoveRight />
+            <ArrowRight />
           </span>
         </Link>
       </div>

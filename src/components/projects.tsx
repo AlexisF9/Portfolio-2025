@@ -9,11 +9,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 export function Projects() {
   const { t } = useI18n();
-  const [filter, setFilter] = useState<"all" | "perso" | "pro">("all");
+  const [filter, setFilter] = useState<"perso" | "pro">("pro");
 
   useEffect(() => {
     if (sessionStorage.getItem("filters")) {
-      setFilter(sessionStorage.getItem("filters") as "all" | "perso" | "pro");
+      setFilter(sessionStorage.getItem("filters") as "perso" | "pro");
     }
 
     const elements = gsap.utils.toArray(".fade-in");
@@ -42,16 +42,12 @@ export function Projects() {
     };
   }, []);
 
-  const handleFilterChange = (newFilter: "all" | "perso" | "pro") => {
+  const handleFilterChange = (newFilter: "perso" | "pro") => {
     setFilter(newFilter);
     sessionStorage.setItem("filters", newFilter);
   };
 
   const filters = [
-    {
-      name: "all",
-      label: t.projects.filters.all,
-    },
     {
       name: "pro",
       label: t.projects.filters.pro,
@@ -72,16 +68,19 @@ export function Projects() {
             return (
               <button
                 key={index}
-                className={`cursor-pointer border rounded-full px-2 transition duration-300 ease-out ${
+                className={`relative cursor-pointer border rounded-full px-3 py-1 transition duration-300 ease-out ${
                   filter === item.name
                     ? "bg-linear-to-r from-react to-vue text-neutral-950 dark:border-transparent"
                     : "dark:text-white dark:border-white"
                 }`}
-                onClick={() =>
-                  handleFilterChange(item.name as "all" | "perso" | "pro")
-                }
+                onClick={() => handleFilterChange(item.name as "perso" | "pro")}
               >
                 {item.label}
+                {/*item.name === "perso" && (
+                  <span className="absolute -top-4 -right-4 rotate-20 bg-neutral-950 text-white dark:bg-white dark:text-neutral-950 text-sm font-bold px-2 py-1 rounded-full">
+                    New
+                  </span>
+                )*/}
               </button>
             );
           })}

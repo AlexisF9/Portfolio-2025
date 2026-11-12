@@ -1,11 +1,11 @@
 @font-face {
   font-family: "Inconsolata";
-  src: url("/fonts/Inconsolata.ttf") format('truetype');
+  src: url("/fonts/Inconsolata.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "SpecialGothic";
-  src: url("/fonts/SpecialGothicExpandedOne.ttf") format('truetype');
+  src: url("/fonts/SpecialGothicExpandedOne.ttf") format("truetype");
 }
 
 @import "tailwindcss";
@@ -39,7 +39,7 @@
     font-size: clamp(48px, 8vw, 100px);
   }
   .base-fluid {
-    font-size: clamp(14px, 280px, .95vw);
+    font-size: clamp(14px, 280px, 0.95vw);
   }
 
   .animate-radar1 {
@@ -63,14 +63,45 @@ body {
 }
 
 @keyframes radarPulse1 {
-  0%, 100% { transform: scale(.95); opacity: 0.4; }
-  50% { transform: scale(1); opacity: 0.1; }
+  0%,
+  100% {
+    transform: scale(0.95);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 0.1;
+  }
 }
 @keyframes radarPulse2 {
-  0%, 100% { transform: scale(.95); opacity: 0.1; }
-  50% { transform: scale(1); opacity: 0.05; }
+  0%,
+  100% {
+    transform: scale(0.95);
+    opacity: 0.1;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 0.05;
+  }
 }
 @keyframes radarPulse3 {
-  0%, 100% { transform: scale(.95); opacity: 0.05; }
-  50% { transform: scale(1); opacity: 0.01; }
+  0%,
+  100% {
+    transform: scale(0.95);
+    opacity: 0.05;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 0.01;
+  }
+}
+
+@keyframes hero-float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(-1deg);
+  }
 }
