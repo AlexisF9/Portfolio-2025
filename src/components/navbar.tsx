@@ -26,7 +26,10 @@ export function Navbar() {
     const alreadyAnimated = sessionStorage.getItem("fadeAnimated");
     setHasAlreadyAnimated(alreadyAnimated || !isHome ? true : false);
 
-    if (!alreadyAnimated && isHome && headerRef.current) {
+    // Mobile : pas d'animation, le header est affiché dès l'arrivée
+    const isMobile = window.matchMedia("(max-width: 767px)").matches;
+
+    if (!alreadyAnimated && isHome && !isMobile && headerRef.current) {
       const header = headerRef.current;
       let tween: gsap.core.Tween | undefined;
 
@@ -171,8 +174,8 @@ export function Navbar() {
       {/* Header : pilule centrée (desktop), barre pleine largeur (mobile) */}
       <div
         ref={headerRef}
-        className={`fixed z-[9] top-3 md:top-4 left-[50%] translate-x-[-50%] w-[calc(100%-2rem)] md:w-auto flex items-center justify-between gap-6 py-1.5 pr-1.5 pl-5 md:py-4 md:px-6 border bg-white/80 dark:bg-neutral-900/80 border-neutral-600 dark:border-neutral-300 rounded-full backdrop-blur-sm ${
-          !hasAlreadyAnimated && "translate-y-[-150px]"
+        className={`fixed z-[9] top-4 left-[50%] translate-x-[-50%] w-[calc(100%-2rem)] md:w-auto flex items-center justify-between gap-6 py-1.5 pr-1.5 pl-5 md:py-4 md:px-6 border bg-white/80 dark:bg-neutral-900/80 border-neutral-600 dark:border-neutral-300 rounded-full backdrop-blur-sm ${
+          !hasAlreadyAnimated && "md:translate-y-[-150px]"
         }`}
       >
         {logo}

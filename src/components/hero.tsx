@@ -216,7 +216,7 @@ export default function Hero() {
   );
 
   return (
-    <div className="flex flex-col md:flex-row gap-8 items-center my-26 md:my-34">
+    <div className="flex flex-col md:flex-row gap-8 items-center mt-26 mb-20 md:mt-34 md:mb-34">
       <div>
         <div
           ref={disponibilityRef}
