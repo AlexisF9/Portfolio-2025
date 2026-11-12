@@ -187,9 +187,9 @@ export function Intro() {
   return (
     <section className="overflow-x-hidden">
       <div id="skills">
-        <h3 className="translate-anim text-xl md:text-2xl font-gothic dark:text-white mb-9">
+        <h2 className="translate-anim text-xl md:text-2xl font-gothic dark:text-white mb-9">
           {t.intro.skillsTitle}
-        </h3>
+        </h2>
         <ul className="flex flex-wrap items-center gap-4 md:gap-9">
           {skills.map((skill, index) => {
             return (
@@ -215,9 +215,9 @@ export function Intro() {
       </div>
 
       <div className="mt-20 md:mt-24">
-        <h3 className="translate-anim text-xl md:text-2xl font-gothic dark:text-white mb-9">
+        <h2 className="translate-anim text-xl md:text-2xl font-gothic dark:text-white mb-9">
           {t.intro.experiencesTitle}
-        </h3>
+        </h2>
         <ul className="flex flex-col gap-4">
           {experiences.map((exp, index) => {
             return (
@@ -225,7 +225,7 @@ export function Intro() {
                 <div className="flex flex-col gap-2">
                   <div className="flex flex-wrap flex-col md:flex-row md:items-center justify-between">
                     <div className="flex items-center gap-2">
-                      <h4 className="font-gothic">{exp.company}</h4>
+                      <h3 className="font-gothic">{exp.company}</h3>
                       <p className="text-sm border px-2 rounded-full">
                         {
                           t.intro.experienceTypes[
@@ -265,9 +265,9 @@ export function Intro() {
       </div>
 
       <div className="mt-20 md:mt-24">
-        <h3 className="translate-anim text-xl md:text-2xl font-gothic dark:text-white mb-9">
+        <h2 className="translate-anim text-xl md:text-2xl font-gothic dark:text-white mb-9">
           {t.intro.volunteeringTitle}
-        </h3>
+        </h2>
         <ul className="flex flex-col gap-4">
           {benevolat.map((exp, index) => {
             return (
@@ -275,7 +275,7 @@ export function Intro() {
                 <div className="flex flex-col gap-2">
                   <div className="flex flex-wrap flex-col md:flex-row md:items-center justify-between">
                     <div className="flex items-center gap-2">
-                      <h4 className="font-gothic">{exp.title[lang]}</h4>
+                      <h3 className="font-gothic">{exp.title[lang]}</h3>
                       {exp.link && (
                         <Link
                           href={`${exp.link}`}

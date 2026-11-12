@@ -8,7 +8,7 @@ export function Footer({ lang }: { lang: Locale }) {
   return (
     <footer className="mt-20 md:mt-26 md:mb-8">
       <div className="flex flex-col items-center gap-2 pr-4 pl-4 mb-10 md:pr-9 md:pl-9 dark:text-white text-center">
-        <p className="font-gothic text-xl md:text-2xl">{t.connect}</p>
+        <h2 className="font-gothic text-xl md:text-2xl">{t.connect}</h2>
         <div className="flex gap-2 dark:text-white">
           <Link
             className="underline"
