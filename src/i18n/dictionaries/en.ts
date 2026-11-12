@@ -42,6 +42,16 @@ export const en: Dictionary = {
   hero: {
     subtitle: "Freelance web developer",
     pictureAlt: "Photo of Alexis Flacher",
+    title1: "Alexis Flacher,",
+    title2: "freelance",
+    title3: "front-end",
+    title4: "developer.",
+    available: "I'm available",
+    talk: "Talk about your project",
+    projects: "View my work",
+    rgaa: "Accessibility audit",
+    stack: "React, Vue, Next.js",
+    since: "Developer since 2022",
   },
   intro: {
     aboutTitle: "About me",
@@ -67,7 +77,6 @@ export const en: Dictionary = {
   projects: {
     title: "My projects",
     filters: {
-      all: "All",
       pro: "Professional",
       perso: "Personal",
     },

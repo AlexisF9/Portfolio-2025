@@ -49,6 +49,16 @@ export const fr = {
   hero: {
     subtitle: "Développeur web freelance",
     pictureAlt: "Photo Alexis Flacher",
+    title1: "Alexis Flacher,",
+    title2: "développeur",
+    title3: "front-en",
+    title4: "freelance.",
+    available: "Je suis disponible",
+    talk: "Parlons de votre projet",
+    projects: "Voir mes réalisations",
+    rgaa: "Audit RGAA",
+    stack: "React, Vue, Next.js",
+    since: "Développeur depuis 2022",
   },
   intro: {
     aboutTitle: "Qui suis-je ?",
@@ -74,7 +84,6 @@ export const fr = {
   projects: {
     title: "Mes réalisations",
     filters: {
-      all: "Tout",
       pro: "Projets pro",
       perso: "Projets perso",
     },
