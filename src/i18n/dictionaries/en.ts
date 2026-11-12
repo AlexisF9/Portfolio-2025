@@ -81,8 +81,8 @@ export const en: Dictionary = {
       perso: "Personal",
     },
     types: {
-      pro: "Professional project",
-      perso: "Personal project",
+      pro: "Professional",
+      perso: "Personal",
     },
     learnMore: "Learn more",
     technos: "Tech stack:",
