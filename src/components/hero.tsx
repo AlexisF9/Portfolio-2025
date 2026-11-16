@@ -280,7 +280,7 @@ export default function Hero() {
           />
           <Link
             className="block w-fit rounded-full underline dark:text-white"
-            href="https://alexisflacher.fr/AlexisFlacher_CV.pdf"
+            href={t.intro.cvUrl}
             target="_blank"
           >
             {t.intro.cv}
