@@ -58,6 +58,24 @@ export const en: Dictionary = {
       "With several years of experience in digital agencies and IT consulting firms, I rely on modern stacks such as React, Next.js, Vue.js and TypeScript to build fast, maintainable and scalable interfaces. Beyond code, I bring a real eye for visual detail and user experience, rooted in my passion for web design and front-end integration. Today, I put this combined technical and creative expertise to work on your projects. I'm available for both short-term and long-term assignments.",
     cv: "Download my resume",
     cvUrl: "/alexis-flacher-cv.pdf",
+    numbersKeys: [
+      {
+        number: "+ 4 years",
+        text: "of experience",
+      },
+      {
+        number: "+ 10",
+        text: "brands supported",
+      },
+      {
+        number: "2022",
+        text: "graduated in",
+      },
+      {
+        number: "1st",
+        text: "successful freelance mission",
+      },
+    ],
     skillsTitle: "Key skills",
     experiencesTitle: "Experience",
     volunteeringTitle: "Volunteering",

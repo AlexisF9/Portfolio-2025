@@ -65,6 +65,24 @@ export const fr = {
       "Fort de plusieurs années d'expérience en agence digitale et en ESN, je m'appuie sur des stacks modernes avec React, Next.js, Vue.js et TypeScript, pour créer des interfaces rapides, maintenables et évolutives. Au-delà du code, j'apporte une vraie sensibilité au détail visuel et à l'expérience utilisateur, héritée de mon goût pour le webdesign et l'intégration web. Aujourd'hui, je mets cette double expertise technique et créative au service de vos projets. Je suis disponible pour vos missions ponctuelles ou longues durée.",
     cv: "Télécharger mon CV",
     cvUrl: "/alexis-flacher-cv.pdf",
+    numbersKeys: [
+      {
+        number: "+ 4 ans",
+        text: "d'expérience",
+      },
+      {
+        number: "+ 10",
+        text: "marques accompagnées",
+      },
+      {
+        number: "2022",
+        text: "diplômé en",
+      },
+      {
+        number: "1ère",
+        text: "mission freelance réussie",
+      },
+    ],
     skillsTitle: "Mes compétences clés",
     experiencesTitle: "Mes expériences",
     volunteeringTitle: "Bénévolat",

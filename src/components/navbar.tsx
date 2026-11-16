@@ -98,7 +98,7 @@ export function Navbar() {
   };
 
   useEffect(() => {
-    document.documentElement.style.overflow = openMenu ? "hidden" : "inherit";
+    document.documentElement.style.overflow = openMenu ? "hidden" : "";
 
     if (openMenu) {
       gsap.fromTo(
@@ -227,7 +227,7 @@ export function Navbar() {
       <div
         id="mobile-menu"
         inert={!openMenu}
-        className={`flex md:hidden fixed inset-0 z-[9] flex-col px-4 pt-3 pb-7 bg-neutral-100 dark:bg-neutral-900 transition-opacity duration-300 ease-in-out ${
+        className={`flex md:hidden fixed inset-0 z-[9] flex-col px-4 pt-4 pb-7 bg-neutral-100 dark:bg-neutral-900 transition-opacity duration-300 ease-in-out ${
           openMenu ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
       >

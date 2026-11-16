@@ -12,7 +12,7 @@ export function getProjectsMetadata(lang: Locale): Metadata {
 
 export function ProjectsPage() {
   return (
-    <section className="pt-30 md:pt-40">
+    <section className="max-w-7xl mx-auto pr-4 pl-4 md:pr-9 md:pl-9 pt-30 md:pt-40">
       <Projects />
     </section>
   );

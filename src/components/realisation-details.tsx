@@ -41,7 +41,7 @@ export function RealisationDetails(props: { rea: Realisation }) {
   }, []);
 
   return (
-    <article className="pt-30 md:pt-40">
+    <article className="max-w-7xl mx-auto pr-4 pl-4 md:pr-9 md:pl-9 pt-30 md:pt-40">
       <div className="flex items-center flex-wrap gap-2 justify-between mb-9">
         <h1 className="fade-in text-xl md:text-4xl dark:text-white font-gothic">
           {rea.title}

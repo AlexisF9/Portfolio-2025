@@ -16,25 +16,40 @@ gsap.registerPlugin(ScrollTrigger);
 
 export function Intro() {
   const { lang, t } = useI18n();
-  const buttonsRef = useRef(null);
   const skillsRef = useRef<(HTMLLIElement | null)[]>([]);
+  const line1Ref = useRef<HTMLSpanElement>(null);
+  const line2Ref = useRef<HTMLSpanElement>(null);
+  const keysRef = useRef<(HTMLLIElement | null)[]>([]);
 
   useEffect(() => {
     const ctx = gsap.context(() => {});
     const elements = gsap.utils.toArray(".translate-anim");
-    const buttons = gsap.utils.toArray(".opacity-anim");
     // Copie des éléments au montage : React remet les refs à null au
     // démontage, alors que l'animation peut être créée plus tard
     const skillItems = skillsRef.current.filter(
+      (el): el is HTMLLIElement => el !== null,
+    );
+    const line1 = line1Ref.current;
+    const line2 = line2Ref.current;
+    const keysItems = keysRef.current.filter(
       (el): el is HTMLLIElement => el !== null,
     );
 
     // Desktop : tant que le hero s'anime, les éléments restent masqués
     if (isHeroSequencePlaying()) {
       ctx.add(() =>
-        gsap.set([...elements, ...buttons, ...skillItems], {
-          opacity: 0,
-        }),
+        gsap.set(
+          [
+            ...elements,
+            ...skillItems,
+            ...(line1 ? [line1] : []),
+            ...(line2 ? [line2] : []),
+            ...keysItems,
+          ],
+          {
+            opacity: 0,
+          },
+        ),
       );
     }
 
@@ -50,18 +65,52 @@ export function Intro() {
             {
               opacity: 1,
               x: 0,
-              duration: 1,
+              duration: 1.5,
               ease: "power3.out",
               scrollTrigger: {
                 trigger: t,
-                start: "top 80%",
+                start: "top 90%",
               },
             },
           );
         });
 
+        if (line1) {
+          gsap.fromTo(
+            line1,
+            { opacity: 0, clipPath: "inset(0% 100% 0% 0%)" },
+            {
+              opacity: 1,
+              clipPath: "inset(0% 0% 0% 0%)",
+              duration: 1.5,
+              ease: "power2.out",
+              scrollTrigger: {
+                trigger: line1,
+                start: "top 90%",
+              },
+            },
+          );
+        }
+
+        if (line2) {
+          gsap.fromTo(
+            line2,
+            { opacity: 0, clipPath: "inset(0% 0% 0% 100%)" },
+            {
+              opacity: 1,
+              clipPath: "inset(0% 0% 0% 0%)",
+              duration: 1.5,
+              ease: "power2.out",
+              scrollTrigger: {
+                trigger: line2,
+                start: "top 90%",
+              },
+            },
+          );
+        }
+
         gsap.fromTo(
-          buttons,
+          keysItems,
           { opacity: 0, y: 30 },
           {
             opacity: 1,
@@ -70,8 +119,8 @@ export function Intro() {
             duration: 0.6,
             ease: "power2.out",
             scrollTrigger: {
-              trigger: buttonsRef.current,
-              start: "top 80%",
+              trigger: keysItems[0],
+              start: "top 90%",
             },
           },
         );
@@ -87,7 +136,7 @@ export function Intro() {
             ease: "power2.out",
             scrollTrigger: {
               trigger: skillItems[0],
-              start: "top 80%",
+              start: "top 90%",
             },
           },
         );
@@ -186,116 +235,147 @@ export function Intro() {
 
   return (
     <section className="overflow-x-hidden">
-      <div id="skills">
-        <h2 className="translate-anim text-xl md:text-2xl font-gothic dark:text-white mb-9">
-          {t.intro.skillsTitle}
-        </h2>
-        <ul className="flex flex-wrap items-center gap-4 md:gap-9">
-          {skills.map((skill, index) => {
+      <div className="flex flex-col gap-10 w-full">
+        <span
+          ref={line1Ref}
+          className="w-full h-0.5 bg-neutral-400 dark:bg-neutral-600"
+        ></span>
+        <ul className="max-w-7xl mx-auto w-full pr-4 pl-4 md:pr-9 md:pl-9 flex flex-col md:flex-row text-center md:text-start items-center gap-4 justify-between flex-wrap">
+          {t.intro.numbersKeys.map((key, index) => {
             return (
               <li
                 key={index}
+                className="flex flex-col text-md md:text-lg gap-2 text-neutral-600 dark:text-neutral-400"
                 ref={(el) => {
-                  skillsRef.current[index] = el;
+                  keysRef.current[index] = el;
                 }}
-                className="flex items-center gap-2 dark:text-white"
               >
-                <Image
-                  src={`/images/logos/logo-${skill.name}.png`}
-                  width={24}
-                  height={24}
-                  alt={`logo ${skill.name}`}
-                  className="h-[24px] w-auto"
-                />
-                <span className="text-sm">{skill.label}</span>
+                <span className="text-2xl md:text-3xl font-gothic text-black dark:text-white">
+                  {key.number}
+                </span>{" "}
+                {key.text}
               </li>
             );
           })}
         </ul>
+        <span
+          ref={line2Ref}
+          className="w-full h-0.5 bg-neutral-400 dark:bg-neutral-600"
+        ></span>
       </div>
 
-      <div className="mt-20 md:mt-24">
-        <h2 className="translate-anim text-xl md:text-2xl font-gothic dark:text-white mb-9">
-          {t.intro.experiencesTitle}
-        </h2>
-        <ul className="flex flex-col gap-4">
-          {experiences.map((exp, index) => {
-            return (
-              <li key={index} className="translate-anim dark:text-white">
-                <div className="flex flex-col gap-2">
-                  <div className="flex flex-wrap flex-col md:flex-row md:items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <h3 className="font-gothic">{exp.company}</h3>
-                      <p className="text-sm border px-2 rounded-full">
-                        {
-                          t.intro.experienceTypes[
-                            exp.type as keyof typeof t.intro.experienceTypes
-                          ]
-                        }
+      <div className="max-w-7xl mx-auto pr-4 pl-4 md:pr-9 md:pl-9">
+        <div id="skills" className="mt-20 md:mt-24">
+          <h2 className="translate-anim text-xl md:text-2xl font-gothic dark:text-white mb-9">
+            {t.intro.skillsTitle}
+          </h2>
+          <ul className="flex flex-wrap items-center gap-4 md:gap-9">
+            {skills.map((skill, index) => {
+              return (
+                <li
+                  key={index}
+                  ref={(el) => {
+                    skillsRef.current[index] = el;
+                  }}
+                  className="flex items-center gap-2 dark:text-white"
+                >
+                  <Image
+                    src={`/images/logos/logo-${skill.name}.png`}
+                    width={24}
+                    height={24}
+                    alt={`logo ${skill.name}`}
+                    className="h-[24px] w-auto"
+                  />
+                  <span className="text-sm">{skill.label}</span>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+
+        <div className="mt-20 md:mt-24">
+          <h2 className="translate-anim text-xl md:text-2xl font-gothic dark:text-white mb-9">
+            {t.intro.experiencesTitle}
+          </h2>
+          <ul className="flex flex-col gap-4">
+            {experiences.map((exp, index) => {
+              return (
+                <li key={index} className="translate-anim dark:text-white">
+                  <div className="flex flex-col gap-2">
+                    <div className="flex flex-wrap flex-col md:flex-row md:items-center justify-between">
+                      <div className="flex items-center gap-2">
+                        <h3 className="font-gothic">{exp.company}</h3>
+                        <p className="text-sm border px-2 rounded-full">
+                          {
+                            t.intro.experienceTypes[
+                              exp.type as keyof typeof t.intro.experienceTypes
+                            ]
+                          }
+                        </p>
+                      </div>
+                      <p>
+                        {formatPeriod(exp.start, exp.end, lang)} | {exp.loc}
                       </p>
                     </div>
-                    <p>
-                      {formatPeriod(exp.start, exp.end, lang)} | {exp.loc}
-                    </p>
-                  </div>
-                  <div className="flex flex-wrap items-center gap-4">
-                    <p>{exp.role[lang]}</p>
-                    {exp.technos && (
-                      <div className="flex items-center gap-2">
-                        {exp.technos.map((techno, index) => {
-                          return (
-                            <Image
-                              key={index}
-                              src={`/images/logos/logo-${techno}.png`}
-                              width={20}
-                              height={20}
-                              alt={`logo ${techno}`}
-                              className="h-[20px] w-auto"
-                            />
-                          );
-                        })}
-                      </div>
-                    )}
-                  </div>
-                </div>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-
-      <div className="mt-20 md:mt-24">
-        <h2 className="translate-anim text-xl md:text-2xl font-gothic dark:text-white mb-9">
-          {t.intro.volunteeringTitle}
-        </h2>
-        <ul className="flex flex-col gap-4">
-          {benevolat.map((exp, index) => {
-            return (
-              <li key={index} className="translate-anim dark:text-white">
-                <div className="flex flex-col gap-2">
-                  <div className="flex flex-wrap flex-col md:flex-row md:items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <h3 className="font-gothic">{exp.title[lang]}</h3>
-                      {exp.link && (
-                        <Link
-                          href={`${exp.link}`}
-                          aria-label={t.intro.learnMore}
-                          target="_blank"
-                        >
-                          <SquareArrowOutUpRight />
-                        </Link>
+                    <div className="flex flex-wrap items-center gap-4">
+                      <p>{exp.role[lang]}</p>
+                      {exp.technos && (
+                        <div className="flex items-center gap-2">
+                          {exp.technos.map((techno, index) => {
+                            return (
+                              <Image
+                                key={index}
+                                src={`/images/logos/logo-${techno}.png`}
+                                width={20}
+                                height={20}
+                                alt={`logo ${techno}`}
+                                className="h-[20px] w-auto"
+                              />
+                            );
+                          })}
+                        </div>
                       )}
                     </div>
-                    <p>
-                      {exp.date} | {exp.school}
-                    </p>
                   </div>
-                  <p>{exp.description[lang]}</p>
-                </div>
-              </li>
-            );
-          })}
-        </ul>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+
+        <div className="mt-20 md:mt-24">
+          <h2 className="translate-anim text-xl md:text-2xl font-gothic dark:text-white mb-9">
+            {t.intro.volunteeringTitle}
+          </h2>
+          <ul className="flex flex-col gap-4">
+            {benevolat.map((exp, index) => {
+              return (
+                <li key={index} className="translate-anim dark:text-white">
+                  <div className="flex flex-col gap-2">
+                    <div className="flex flex-wrap flex-col md:flex-row md:items-center justify-between">
+                      <div className="flex items-center gap-2">
+                        <h3 className="font-gothic">{exp.title[lang]}</h3>
+                        {exp.link && (
+                          <Link
+                            href={`${exp.link}`}
+                            aria-label={t.intro.learnMore}
+                            target="_blank"
+                          >
+                            <SquareArrowOutUpRight />
+                          </Link>
+                        )}
+                      </div>
+                      <p>
+                        {exp.date} | {exp.school}
+                      </p>
+                    </div>
+                    <p>{exp.description[lang]}</p>
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       </div>
     </section>
   );

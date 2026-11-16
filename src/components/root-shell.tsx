@@ -44,11 +44,11 @@ export function RootShell({
 }>) {
   return (
     <html lang={lang}>
-      <body className="max-w-7xl mx-auto bg-white dark:bg-neutral-900 overflow-x-hidden">
+      <body className="bg-white dark:bg-neutral-900 overflow-x-hidden">
         <I18nProvider lang={lang}>
           <LenisScroll />
           <Navbar />
-          <main className="pr-4 pl-4 md:pr-9 md:pl-9">{children}</main>
+          <main>{children}</main>
           <Footer lang={lang} />
         </I18nProvider>
       </body>
