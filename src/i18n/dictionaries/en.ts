@@ -22,14 +22,15 @@ export const en: Dictionary = {
       "website development Grenoble",
       "freelance developer Geneva",
     ],
-    ogTitle: "Alexis Flacher - Freelance web developer in Grenoble",
+    ogTitle:
+      "Alexis Flacher - Freelance web developer in Grenoble specialised in front-end development",
     ogDescription:
       "Freelance web developer specialised in front-end development with React, Next.js and TypeScript. Available for new assignments.",
     ogLocale: "en_US",
     homeTitle: "Alexis Flacher - Freelance Front-end Developer in Grenoble",
     projectsTitle: "My projects",
     projectsDescription:
-      "Explore my work as a freelance front-end developer in Grenoble: websites and web apps built with React, Next.js and Vue.js for Daitem, Bongénie, GMF and more.",
+      "Explore my work as a freelance web developer in Grenoble specialised in front-end development: websites, showcase websites, e-commerce websites, web applications and design systems.",
     notFoundTitle: "404 - Page not found",
   },
   nav: {
@@ -44,7 +45,7 @@ export const en: Dictionary = {
   hero: {
     subtitle: "Freelance web developer",
     pictureAlt:
-      "Portrait of Alexis Flacher, freelance front-end developer in Grenoble",
+      "Portrait of Alexis Flacher, freelance web developer in Grenoble",
     title1: "Alexis Flacher,",
     title2: "freelance",
     title3: "front-end",
