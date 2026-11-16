@@ -35,6 +35,8 @@ export const fr = {
     ogLocale: "fr_FR",
     homeTitle: "Alexis Flacher - Développeur Front-end freelance à Grenoble",
     projectsTitle: "Mes réalisations",
+    projectsDescription:
+      "Découvrez mes réalisations de développeur web freelance à Grenoble : sites web, sites vitrine, sites e-commerce, applications web et design system.",
     notFoundTitle: "404 - Page introuvable",
   },
   nav: {
@@ -48,7 +50,8 @@ export const fr = {
   },
   hero: {
     subtitle: "Développeur web freelance",
-    pictureAlt: "Photo Alexis Flacher",
+    pictureAlt:
+      "Portrait d'Alexis Flacher, développeur web freelance à Grenoble",
     title1: "Alexis Flacher,",
     title2: "développeur",
     title3: "front-end",
@@ -110,6 +113,9 @@ export const fr = {
     technos: "Les technos :",
     visit: "Voir le site",
     previous: "Précédent",
+    pictureAlt: "Aperçu du projet",
+    screenshot: "capture d'écran",
+    logo: "Logo",
     next: "Suivant",
   },
   footer: {

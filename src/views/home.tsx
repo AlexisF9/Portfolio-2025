@@ -3,6 +3,7 @@ import { Intro } from "@/src/components/intro";
 import { getAlternates, Locale, routes } from "@/src/i18n/config";
 import { getDictionary } from "@/src/i18n";
 import Hero from "../components/hero";
+import { getOpenGraph } from "@/src/components/root-shell";
 
 export function getHomeMetadata(lang: Locale): Metadata {
   const t = getDictionary(lang).meta;
@@ -11,6 +12,11 @@ export function getHomeMetadata(lang: Locale): Metadata {
     title: t.homeTitle,
     description: t.description,
     alternates: getAlternates(lang, routes.home),
+    openGraph: getOpenGraph(lang, {
+      title: t.ogTitle,
+      description: t.ogDescription,
+      path: routes.home[lang],
+    }),
   };
 }
 

@@ -16,7 +16,7 @@ export function Card({ card }: { card: Realisation }) {
           src={card.pictures[0]}
           width={500}
           height={300}
-          alt=""
+          alt={`${t.projects.pictureAlt} ${card.title}`}
         />
       </div>
 
@@ -36,7 +36,7 @@ export function Card({ card }: { card: Realisation }) {
                     src={`/images/logos/logo-${techno.name}.png`}
                     width={20}
                     height={20}
-                    alt={`logo ${techno.label}`}
+                    alt={`${t.projects.logo} ${techno.label}`}
                   />
                 );
               })}

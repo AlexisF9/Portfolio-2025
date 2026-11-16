@@ -7,7 +7,13 @@ import "swiper/css/navigation";
 import { useState } from "react";
 import { useI18n } from "@/src/i18n/i18n-provider";
 
-export function Slider({ pictures }: { pictures: string[] }) {
+export function Slider({
+  pictures,
+  title,
+}: {
+  pictures: string[];
+  title: string;
+}) {
   const { t } = useI18n();
   const [currentSlide, setCurrentSlide] = useState(1);
 
@@ -32,7 +38,7 @@ export function Slider({ pictures }: { pictures: string[] }) {
                   width={950}
                   height={450}
                   src={el}
-                  alt=""
+                  alt={`${title} - ${t.projects.screenshot} ${index + 1}/${pictures.length}`}
                 />
               </SwiperSlide>
             );

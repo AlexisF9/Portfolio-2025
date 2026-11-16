@@ -296,7 +296,7 @@ export default function Hero() {
         />
         <Image
           src="/Alexis.webp"
-          alt="Portrait d'Alexis Flacher"
+          alt={t.hero.pictureAlt}
           fill
           priority
           sizes="(min-width: 768px) 460px, 100vw"

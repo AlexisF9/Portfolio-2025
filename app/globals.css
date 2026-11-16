@@ -1,13 +1,3 @@
-@font-face {
-  font-family: "Inconsolata";
-  src: url("/fonts/Inconsolata.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "SpecialGothic";
-  src: url("/fonts/SpecialGothicExpandedOne.ttf") format("truetype");
-}
-
 @import "tailwindcss";
 @tailwind utilities;
 @custom-variant dark (&:where(.dark, .dark *));
@@ -26,10 +16,13 @@
 }
 */
 
-@theme {
-  --font-inconsolata: "Inconsolata", monospace;
-  --font-gothic: "SpecialGothic", sans-serif;
+/* Polices chargées par next/font (src/components/root-shell.tsx) */
+@theme inline {
+  --font-inconsolata: var(--font-inconsolata-src), monospace;
+  --font-gothic: var(--font-gothic-src), sans-serif;
+}
 
+@theme {
   --color-react: #60d9f8;
   --color-vue: #3fb984;
 }
@@ -54,7 +47,7 @@
 }
 
 body {
-  font-family: var(--font-inconsolata);
+  font-family: var(--font-inconsolata-src), monospace;
 }
 
 .picture-animation-reset {

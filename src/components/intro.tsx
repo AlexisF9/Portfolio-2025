@@ -233,6 +233,13 @@ export function Intro() {
     },
   ];
 
+  // Libellés des technos (pour les alt des logos des expériences)
+  const technoLabels: Record<string, string> = {
+    ...Object.fromEntries(skills.map((skill) => [skill.name, skill.label])),
+    java: "Java",
+    "spring-boot": "Spring Boot",
+  };
+
   return (
     <section className="overflow-x-hidden">
       <div className="flex flex-col gap-10 w-full">
@@ -283,7 +290,7 @@ export function Intro() {
                     src={`/images/logos/logo-${skill.name}.png`}
                     width={24}
                     height={24}
-                    alt={`logo ${skill.name}`}
+                    alt={`${t.projects.logo} ${skill.label}`}
                     className="h-[24px] w-auto"
                   />
                   <span className="text-sm">{skill.label}</span>
@@ -328,7 +335,7 @@ export function Intro() {
                                 src={`/images/logos/logo-${techno}.png`}
                                 width={20}
                                 height={20}
-                                alt={`logo ${techno}`}
+                                alt={`${t.projects.logo} ${technoLabels[techno] ?? techno}`}
                                 className="h-[20px] w-auto"
                               />
                             );
