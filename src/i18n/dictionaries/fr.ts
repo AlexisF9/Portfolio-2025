@@ -29,14 +29,15 @@ export const fr = {
       "développeur Isère",
       "développeur Auvergne-Rhône-Alpes",
     ],
-    ogTitle: "Alexis Flacher - Développeur web freelance à Grenoble",
+    ogTitle:
+      "Alexis Flacher - Développeur web freelance à Grenoble spécialisé en développement front-end",
     ogDescription:
       "Développeur web freelance spécialisé en développement front-end React, Next.Js, TypeScript. Disponible pour des missions.",
     ogLocale: "fr_FR",
     homeTitle: "Alexis Flacher - Développeur Front-end freelance à Grenoble",
     projectsTitle: "Mes réalisations",
     projectsDescription:
-      "Découvrez mes réalisations de développeur web freelance à Grenoble : sites web, sites vitrine, sites e-commerce, applications web et design system.",
+      "Découvrez mes réalisations de développeur web freelance à Grenoble spécialisé en développement front-end : sites web, sites vitrine, sites e-commerce, applications web et design system.",
     notFoundTitle: "404 - Page introuvable",
   },
   nav: {
