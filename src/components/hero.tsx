@@ -122,7 +122,7 @@ export default function Hero() {
         targets: disponibilityRef.current,
         from: { opacity: 0 },
         to: { opacity: 1, duration: 0.6, ease: "power2.out" },
-        at: 3.2,
+        at: 3,
         // Mobile : en même temps que le titre
         mobile: { trigger: titleRef.current, at: 0 },
       },
@@ -207,7 +207,7 @@ export default function Hero() {
   );
 
   return (
-    <div className="flex flex-col md:flex-row gap-20 md:gap-8 items-center mt-26 mb-20 md:mt-34 md:mb-34">
+    <div className="max-w-7xl mx-auto pr-4 pl-4 md:pr-9 md:pl-9 flex flex-col md:flex-row gap-20 md:gap-8 items-center mt-26 mb-20 md:mt-34 md:mb-34">
       <div>
         <div
           ref={disponibilityRef}
@@ -280,7 +280,7 @@ export default function Hero() {
           />
           <Link
             className="block w-fit rounded-full underline dark:text-white"
-            href="https://alexisflacher.fr/AlexisFlacher_CV.pdf"
+            href={t.intro.cvUrl}
             target="_blank"
           >
             {t.intro.cv}
@@ -296,7 +296,7 @@ export default function Hero() {
         />
         <Image
           src="/Alexis.webp"
-          alt="Portrait d'Alexis Flacher"
+          alt={t.hero.pictureAlt}
           fill
           priority
           sizes="(min-width: 768px) 460px, 100vw"

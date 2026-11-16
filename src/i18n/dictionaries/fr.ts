@@ -35,6 +35,8 @@ export const fr = {
     ogLocale: "fr_FR",
     homeTitle: "Alexis Flacher - Développeur Front-end freelance à Grenoble",
     projectsTitle: "Mes réalisations",
+    projectsDescription:
+      "Découvrez mes réalisations de développeur web freelance à Grenoble : sites web, sites vitrine, sites e-commerce, applications web et design system.",
     notFoundTitle: "404 - Page introuvable",
   },
   nav: {
@@ -48,7 +50,8 @@ export const fr = {
   },
   hero: {
     subtitle: "Développeur web freelance",
-    pictureAlt: "Photo Alexis Flacher",
+    pictureAlt:
+      "Portrait d'Alexis Flacher, développeur web freelance à Grenoble",
     title1: "Alexis Flacher,",
     title2: "développeur",
     title3: "front-end",
@@ -65,6 +68,24 @@ export const fr = {
       "Fort de plusieurs années d'expérience en agence digitale et en ESN, je m'appuie sur des stacks modernes avec React, Next.js, Vue.js et TypeScript, pour créer des interfaces rapides, maintenables et évolutives. Au-delà du code, j'apporte une vraie sensibilité au détail visuel et à l'expérience utilisateur, héritée de mon goût pour le webdesign et l'intégration web. Aujourd'hui, je mets cette double expertise technique et créative au service de vos projets. Je suis disponible pour vos missions ponctuelles ou longues durée.",
     cv: "Télécharger mon CV",
     cvUrl: "/alexis-flacher-cv.pdf",
+    numbersKeys: [
+      {
+        number: "+ 4 ans",
+        text: "d'expérience",
+      },
+      {
+        number: "+ 10",
+        text: "marques accompagnées",
+      },
+      {
+        number: "2022",
+        text: "diplômé en",
+      },
+      {
+        number: "1ère",
+        text: "mission freelance réussie",
+      },
+    ],
     skillsTitle: "Mes compétences clés",
     experiencesTitle: "Mes expériences",
     volunteeringTitle: "Bénévolat",
@@ -92,6 +113,9 @@ export const fr = {
     technos: "Les technos :",
     visit: "Voir le site",
     previous: "Précédent",
+    pictureAlt: "Aperçu du projet",
+    screenshot: "capture d'écran",
+    logo: "Logo",
     next: "Suivant",
   },
   footer: {

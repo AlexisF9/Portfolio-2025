@@ -4,6 +4,7 @@ import realisations from "@/public/realisations.json";
 import { RealisationDetails } from "@/src/components/realisation-details";
 import { getAlternates, Locale, projectRoute } from "@/src/i18n/config";
 import { Realisation } from "@/src/types";
+import { getOpenGraph } from "@/src/components/root-shell";
 
 export type ProjectParams = { params: Promise<{ slug: string }> };
 
@@ -27,11 +28,19 @@ export async function getProjectMetadata(
 ): Promise<Metadata> {
   const { slug } = await params;
   const rea = findRealisation(slug);
+  const route = projectRoute(slug);
 
   return {
     title: rea.title,
     description: rea.shortDescription[lang],
-    alternates: getAlternates(lang, projectRoute(slug)),
+    alternates: getAlternates(lang, route),
+    // Image de partage : la première image du projet
+    openGraph: getOpenGraph(lang, {
+      title: `${rea.title} - Alexis Flacher`,
+      description: rea.shortDescription[lang],
+      path: route[lang],
+      image: rea.pictures[0],
+    }),
   };
 }
 

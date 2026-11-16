@@ -41,7 +41,7 @@ export function RealisationDetails(props: { rea: Realisation }) {
   }, []);
 
   return (
-    <article className="pt-30 md:pt-40">
+    <article className="max-w-7xl mx-auto pr-4 pl-4 md:pr-9 md:pl-9 pt-30 md:pt-40">
       <div className="flex items-center flex-wrap gap-2 justify-between mb-9">
         <h1 className="fade-in text-xl md:text-4xl dark:text-white font-gothic">
           {rea.title}
@@ -55,13 +55,13 @@ export function RealisationDetails(props: { rea: Realisation }) {
       </div>
       <p className="fade-in pb-9 dark:text-white">{rea.description[lang]}</p>
 
-      <Slider pictures={rea.pictures} />
+      <Slider pictures={rea.pictures} title={rea.title} />
 
       <div className="pt-9">
         <h2 className="fade-in text-xl md:text-2xl font-gothic dark:text-white mb-4">
           {t.projects.technos}
         </h2>
-        <div className="fade-in flex items-center flex-wrap gap-2">
+        <ul className="fade-in flex items-center flex-wrap gap-2">
           {rea.technos.map((skill, index) => {
             return (
               <li
@@ -72,14 +72,14 @@ export function RealisationDetails(props: { rea: Realisation }) {
                   src={`/images/logos/logo-${skill.name}.png`}
                   width={24}
                   height={24}
-                  alt={`logo ${skill.name}`}
+                  alt={`${t.projects.logo} ${skill.label}`}
                   className="h-[24px] w-auto"
                 />
                 <span className="text-sm">{skill.label}</span>
               </li>
             );
           })}
-        </div>
+        </ul>
       </div>
 
       {(rea.link || rea.github) && (

@@ -28,6 +28,8 @@ export const en: Dictionary = {
     ogLocale: "en_US",
     homeTitle: "Alexis Flacher - Freelance Front-end Developer in Grenoble",
     projectsTitle: "My projects",
+    projectsDescription:
+      "Explore my work as a freelance front-end developer in Grenoble: websites and web apps built with React, Next.js and Vue.js for Daitem, Bongénie, GMF and more.",
     notFoundTitle: "404 - Page not found",
   },
   nav: {
@@ -41,7 +43,8 @@ export const en: Dictionary = {
   },
   hero: {
     subtitle: "Freelance web developer",
-    pictureAlt: "Photo of Alexis Flacher",
+    pictureAlt:
+      "Portrait of Alexis Flacher, freelance front-end developer in Grenoble",
     title1: "Alexis Flacher,",
     title2: "freelance",
     title3: "front-end",
@@ -57,7 +60,25 @@ export const en: Dictionary = {
     about2:
       "With several years of experience in digital agencies and IT consulting firms, I rely on modern stacks such as React, Next.js, Vue.js and TypeScript to build fast, maintainable and scalable interfaces. Beyond code, I bring a real eye for visual detail and user experience, rooted in my passion for web design and front-end integration. Today, I put this combined technical and creative expertise to work on your projects. I'm available for both short-term and long-term assignments.",
     cv: "Download my resume",
-    cvUrl: "/alexis-flacher-cv.pdf",
+    cvUrl: "/alexis-flacher-resume.pdf",
+    numbersKeys: [
+      {
+        number: "+ 4 years",
+        text: "of experience",
+      },
+      {
+        number: "+ 10",
+        text: "brands supported",
+      },
+      {
+        number: "2022",
+        text: "graduated in",
+      },
+      {
+        number: "1st",
+        text: "successful freelance mission",
+      },
+    ],
     skillsTitle: "Key skills",
     experiencesTitle: "Experience",
     volunteeringTitle: "Volunteering",
@@ -85,6 +106,9 @@ export const en: Dictionary = {
     technos: "Tech stack:",
     visit: "Visit the website",
     previous: "Previous",
+    pictureAlt: "Preview of the project",
+    screenshot: "screenshot",
+    logo: "Logo",
     next: "Next",
   },
   footer: {
